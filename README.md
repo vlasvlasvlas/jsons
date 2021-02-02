@@ -1,5 +1,7 @@
 # PanamaCompras 
 
+## generación CSV
+
 La idea del repo es tener disponible el total de compras covid19 de PanamaCompras en formato CSV.
 
 Para esto se descargaron los requests curl del datatables de la página https://www.panamacompra.gob.pa.
@@ -12,3 +14,10 @@ curl "https://www.panamacompra.gob.pa/Security/AmbientePublico.asmx/cargarActosO
 * el script "panamacomprasdf.py" recorre los json descargados y los concatena en un único archivo csv agregandole también la url de acceso a la compra especifica de cada registro.
 
 * Resultado: https://github.com/vlasvlasvlas/panamacompras_covid/blob/main/99.csv
+
+## data profile
+
+Se corrió un pandas data profile sobre el archivo csv generado.
+
+El resultado está en https://raw.githubusercontent.com/vlasvlasvlas/panamacompras_covid/main/99.html
+
