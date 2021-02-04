@@ -1,6 +1,14 @@
 # PanamaCompras 
 
-## generación CSV
+## Objetivo
+
+El objetivo de este repo es generar un análisis inicial de la data de contratos covid19 publicada en panamacompra.
+
+Para esto primero se procede a generar un csv con el total de contratos covid19 que contiene las uris de cada contratación.
+
+Luego se procederá a analizar cada contrato.
+
+## 1 generación CSV
 
 La idea del repo es tener disponible el total de compras covid19 de PanamaCompras en formato CSV.
 
@@ -15,9 +23,21 @@ curl "https://www.panamacompra.gob.pa/Security/AmbientePublico.asmx/cargarActosO
 
 * Resultado: https://github.com/vlasvlasvlas/panamacompras_covid/blob/main/99.csv
 
-## data profile
+## 2 data profile
 
-Se corrió un pandas data profile sobre el archivo csv generado.
+En base a los datos del csv listando el total de contratos se corrió un pandas data profile sobre el archivo csv generado.
 
 El resultado está en https://raw.githubusercontent.com/vlasvlasvlas/panamacompras_covid/main/99.html
+
+## 3 análisis por contrato
+
+TODO: Se realizará un análisis por cada contrato covid19 del listado CSV.
+
+## 4 Adjuntos
+
+Se adjunta una comparativa de las columnas disponibles en un contrato demo covid19 y su relación con un análogo dentro del estandar OCDS.
+
+https://docs.google.com/spreadsheets/d/1D8GiguWcUs6P1pk49nNyzXWgm9WblsoDsDcA6siUHcU/edit#gid=0
+
+
 
