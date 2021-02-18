@@ -30,6 +30,7 @@ En base a los datos del csv listando el total de contratos se corrió un pandas 
 El resultado está en:
 
 html descargar: https://raw.githubusercontent.com/vlasvlasvlas/panamacompras_covid/main/99.html
+
 html preview: https://htmlpreview.github.io/?https://raw.githubusercontent.com/vlasvlasvlas/panamacompras_covid/main/99.html
 
 ## 3 análisis por contrato
