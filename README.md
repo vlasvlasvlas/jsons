@@ -27,7 +27,7 @@ curl "https://www.panamacompra.gob.pa/Security/AmbientePublico.asmx/cargarActosO
 
 En base a los datos del csv listando el total de contratos se corrió un pandas data profile sobre el archivo csv generado.
 
-El resultado está en https://raw.githubusercontent.com/vlasvlasvlas/panamacompras_covid/main/99.html
+El resultado está en https://htmlpreview.github.io/?https://raw.githubusercontent.com/vlasvlasvlas/panamacompras_covid/main/99.html
 
 ## 3 análisis por contrato
 
