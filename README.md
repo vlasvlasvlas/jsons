@@ -45,3 +45,13 @@ https://docs.google.com/spreadsheets/d/1D8GiguWcUs6P1pk49nNyzXWgm9WblsoDsDcA6siU
 
 
 
+## Otros recursos
+
+https://www.panamacompra.gob.pa/Inicio/#!/busquedaAvanzada
+
+https://www.panamacompra.gob.pa/Inicio/#!/proveedores
+
+http://panamaenobras.gob.pa/inicio
+
+http://panamaenobras.gob.pa/inicio/costpanama
+
