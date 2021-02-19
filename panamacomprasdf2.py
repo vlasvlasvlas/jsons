@@ -24,7 +24,7 @@ for link in df['link']:
         html = browser.page_source
         soup = BeautifulSoup(html, 'lxml')
         div = soup.find("div", {"id": "elementToPDF"})
-        f = open( 'csv/'+url[62:86]+'.csv', 'w' )
+        f = open( 'csv/'+url[62:]+'.csv', 'w' )
         f.write( str(div) )
         f.close()
         browser.close()
