@@ -1,0 +1,595 @@
+<div class="col-sm-12 col-md-12" id="elementToPDF" ng-if="vpcp.list!=undefined &amp;&amp; vpcp.list!=false" style="font-size: 12px; background-color: rgb(255, 255, 255);">
+<!--Encabezado del pliego-->
+<!-- --><div class="well export-pdf table-responsive" ng-if="vpcp.list.header" style="margin-top:10px;">
+<table class="table table-condensed table-bordered last-line-table" style="margin:0;" width="100%">
+<tbody><!-- --><tr ng-repeat="item in vpcp.list.header.values">
+<td width="250"><b>Número:</b></td>
+<td>2020-0-12-119-04-EM-022837</td>
+</tr><!-- --><tr ng-repeat="item in vpcp.list.header.values">
+<td width="250"><b>Nombre del Acto:</b></td>
+<td>INCUBADORA CERRADA PARA INFANTES F.T. # 47657 REQUISICIÓN # 77 COVID-19</td>
+</tr><!-- --><tr ng-repeat="item in vpcp.list.header.values">
+<td width="250"><b>Objeto de la Contratación:</b></td>
+<td>Bien</td>
+</tr><!-- -->
+</tbody></table>
+</div><!-- -->
+<!-- --><div ng-include="'configVP.html'">
+<!--Información de la Entidad-->
+<!-- --><div class="panel panel-default export-pdf" ng-if="vpcp.list.entityInformation">
+<div class="panel-heading" style="padding:5px 15px;"><b>Información de la Entidad</b></div>
+<div class="panel-body table-responsive" style="padding:15px;">
+<table class="table table-condensed table-bordered last-line-table" style="margin:0;" width="100%">
+<tbody><!-- --><tr ng-repeat="item in vpcp.list.entityInformation.values">
+<td width="250"><b>Entidad:</b></td>
+<td>MINISTERIO DE SALUD</td>
+</tr><!-- --><tr ng-repeat="item in vpcp.list.entityInformation.values">
+<td width="250"><b>Dependencia:</b></td>
+<td>HOSPITAL JOSE DOMINGO DE OBALDÍA</td>
+</tr><!-- --><tr ng-repeat="item in vpcp.list.entityInformation.values">
+<td width="250"><b>Unidad De Compra:</b></td>
+<td>DEPARTAMENTO DE COMPRAS(H. JOSÉ DOMINGO DE OBALDIA)</td>
+</tr><!-- --><tr ng-repeat="item in vpcp.list.entityInformation.values">
+<td width="250"><b>Dirección:</b></td>
+<td>DAVID, CHIRIQUI</td>
+</tr><!-- -->
+</tbody></table>
+</div>
+</div><!-- -->
+<!--Contacto de la Unidad de Compra-->
+<!-- --><div class="panel panel-default export-pdf" ng-if="vpcp.list.contactUser">
+<div class="panel-heading" style="padding:5px 15px;"><b>Contacto de la Unidad de Compra</b></div>
+<div class="panel-body table-responsive" style="padding:15px;">
+<table class="table table-condensed table-bordered last-line-table" style="margin:0;" width="100%">
+<tbody><!-- --><tr ng-repeat="item in vpcp.list.contactUser.values">
+<td width="250"><b>nombre</b></td>
+<td>Napoleón Batista González</td>
+</tr><!-- --><tr ng-repeat="item in vpcp.list.contactUser.values">
+<td width="250"><b>cargo</b></td>
+<td>Cotizador I</td>
+</tr><!-- -->
+</tbody></table>
+</div>
+</div><!-- -->
+<!--Aviso de Convocatoria-->
+<!-- --><div class="panel panel-default export-pdf" ng-if="vpcp.list.aviso">
+<div class="panel-heading" style="padding:5px 15px;"><b>Aviso de Convocatoria</b></div>
+<div class="panel-body table-responsive" style="padding:15px;">
+<table class="table table-condensed table-bordered last-line-table" style="margin:0;" width="100%">
+<tbody><!-- --><tr ng-init="isjson = vpcp.isJson(item)" ng-repeat="item in vpcp.list.aviso.values">
+<td width="250"><b>Número de Acto:</b></td>
+<!-- --><td ng-if="!isjson">2020-0-12-119-04-EM-022837</td><!-- -->
+<!-- -->
+</tr><!-- --><tr ng-init="isjson = vpcp.isJson(item)" ng-repeat="item in vpcp.list.aviso.values">
+<td width="250"><b>Tipo de Procedimiento:</b></td>
+<!-- --><td ng-if="!isjson">Compras Mesa COVID-19</td><!-- -->
+<!-- -->
+</tr><!-- --><tr ng-init="isjson = vpcp.isJson(item)" ng-repeat="item in vpcp.list.aviso.values">
+<td width="250"><b>Fundamento de la Excepción</b></td>
+<!-- --><td ng-if="!isjson">C) Resolución No. 11 del 13 de Marzo de 2020</td><!-- -->
+<!-- -->
+</tr><!-- --><tr ng-init="isjson = vpcp.isJson(item)" ng-repeat="item in vpcp.list.aviso.values">
+<td width="250"><b>Objeto Contractual:</b></td>
+<!-- --><td ng-if="!isjson">Bien</td><!-- -->
+<!-- -->
+</tr><!-- --><tr ng-init="isjson = vpcp.isJson(item)" ng-repeat="item in vpcp.list.aviso.values">
+<td width="250"><b>Descripción:</b></td>
+<!-- --><td ng-if="!isjson">INCUBADORA CERRADA PARA INFANTES F.T. # 47657 REQUISICIÓN # 77 COVID-19</td><!-- -->
+<!-- -->
+</tr><!-- --><tr ng-init="isjson = vpcp.isJson(item)" ng-repeat="item in vpcp.list.aviso.values">
+<td width="250"><b>Fecha de Publicación:</b></td>
+<!-- --><td ng-if="!isjson">02-09-2020 04:10 PM</td><!-- -->
+<!-- -->
+</tr><!-- --><tr ng-init="isjson = vpcp.isJson(item)" ng-repeat="item in vpcp.list.aviso.values">
+<td width="250"><b>Monto de la Contratación:</b></td>
+<!-- --><td ng-if="!isjson">B/.  28,890.00</td><!-- -->
+<!-- -->
+</tr><!-- --><tr ng-init="isjson = vpcp.isJson(item)" ng-repeat="item in vpcp.list.aviso.values">
+<td width="250"><b>Partidas presupuestales:</b></td>
+<!-- -->
+<!-- --><td ng-if="isjson">
+<table border="1" id="table_inter_np" type="table_inter">
+<tbody><tr style="background-color:#f5f5f5;">
+<th style="padding:2px 5px;">N°</th>
+<th style="padding:2px 5px;">Número Partida</th>
+</tr>
+<!-- --><tr ng-repeat="item1 in item.value">
+<td style="padding:2px 5px;">1</td>
+<td style="padding:2px 5px;">F.T.0.12.0.3.001.02.19.911</td>
+</tr><!-- -->
+</tbody></table>
+</td><!-- -->
+</tr><!-- --><tr ng-init="isjson = vpcp.isJson(item)" ng-repeat="item in vpcp.list.aviso.values">
+<td width="250"><b>Programa:</b></td>
+<!-- --><td ng-if="!isjson">---</td><!-- -->
+<!-- -->
+</tr><!-- --><tr ng-init="isjson = vpcp.isJson(item)" ng-repeat="item in vpcp.list.aviso.values">
+<td width="250"><b>Datos de Contacto</b></td>
+<!-- --><td ng-if="!isjson"></td><!-- -->
+<!-- -->
+</tr><!-- --><tr ng-init="isjson = vpcp.isJson(item)" ng-repeat="item in vpcp.list.aviso.values">
+<td width="250"><b>Nombre:</b></td>
+<!-- --><td ng-if="!isjson">Napoleón Batista González</td><!-- -->
+<!-- -->
+</tr><!-- --><tr ng-init="isjson = vpcp.isJson(item)" ng-repeat="item in vpcp.list.aviso.values">
+<td width="250"><b>Cargo:</b></td>
+<!-- --><td ng-if="!isjson">Cotizador I</td><!-- -->
+<!-- -->
+</tr><!-- --><tr ng-init="isjson = vpcp.isJson(item)" ng-repeat="item in vpcp.list.aviso.values">
+<td width="250"><b>Teléfono:</b></td>
+<!-- --><td ng-if="!isjson">507-7754228</td><!-- -->
+<!-- -->
+</tr><!-- --><tr ng-init="isjson = vpcp.isJson(item)" ng-repeat="item in vpcp.list.aviso.values">
+<td width="250"><b>Correo Electrónico:</b></td>
+<!-- --><td ng-if="!isjson">napoleon.batista@obaldia.sld.pa</td><!-- -->
+<!-- -->
+</tr><!-- -->
+</tbody></table>
+</div>
+</div><!-- -->
+<!--Condiciones Generales-->
+<!-- -->
+<!--Condiciones Especiales-->
+<!-- -->
+<!--Especificaciones Técnicas-->
+<!-- --><div class="panel panel-default export-pdf" ng-if="vpcp.list.especificacionesTecnicas">
+<div class="panel-heading" style="padding:5px 15px;"><b>Especificaciones Técnicas</b></div>
+<div class="panel-body table-responsive" style="padding:15px;">
+<!-- --><span ng-repeat-start="item in vpcp.list.especificacionesTecnicas.values" style="font-size:13px;font-weight:bold;">Bien/Servicio/Obra Seleccionados</span>
+<div class="table-responsive" ng-repeat-end="">
+<!-- -->
+<!-- --><table class="table table-condensed table-bordered table-striped last-line-table" ng-if="item.type=='bs'" style="margin:0;" width="100%">
+<thead>
+<tr>
+<th>R</th>
+<th>Código</th>
+<th>Clasificación</th>
+<th>Cantidad</th>
+<th>U. Medida</th>
+<th>Descripción</th>
+<!-- -->
+<!-- -->
+<th>SES</th>
+<!-- -->
+</tr>
+</thead>
+<tbody><!-- -->
+<!-- --><tr ng-repeat="item1 in item.values">
+<td>1</td>
+<td>95101011</td>
+<td>Equipo-Accesorios-Suministros Médicos</td>
+<td>3</td>
+<td>Unidad</td>
+<td>INCUBADORA CERRADA PARA INFANTES FICHA TÉCNICA # 47657</td>
+<!-- -->
+<!-- -->
+<td>---</td>
+<!-- -->
+</tr><!-- -->
+</tbody></table><!-- -->
+</div><!-- -->
+</div>
+</div><!-- -->
+<!--Documentos Adjuntos-->
+<!-- --><div class="panel panel-default export-pdf" ng-if="vpcp.list.documentosAdjuntos">
+<div class="panel-heading" style="padding:5px 15px;"><b>Documentos Adjuntos</b></div>
+<div class="panel-body table-responsive" style="padding:15px;">
+<table class="table table-condensed table-bordered table-striped last-line-table" style="margin:0;" width="100%">
+<thead>
+<tr>
+<th>Descripción</th>
+<th>Tipo</th>
+<th>Fecha</th>
+<th>Acciones</th>
+</tr>
+</thead>
+<tbody><!-- -->
+<!-- --><tr ng-init="item.nombreLink='Ver Documento'" ng-repeat="item in vpcp.list.documentosAdjuntos.values">
+<td>AVISO DE CONVOCATORIA </td>
+<td>Anexos</td>
+<td>17-07-2020 01:17 PM</td>
+<td><a href="/includes/veranexo.aspx?idattach=JCQnJiAhJSY=" ng-href="/includes/veranexo.aspx?idattach=JCQnJiAhJSY=" target="_blank" title="Ver Documento"><img src="/imagenes/iconos/ic_ver_generico.gif"/></a></td>
+</tr><!-- --><tr ng-init="item.nombreLink='Ver Documento'" ng-repeat="item in vpcp.list.documentosAdjuntos.values">
+<td>ASIGNACIÓN DE FISCALIZADOR </td>
+<td>Anexos</td>
+<td>17-07-2020 01:18 PM</td>
+<td><a href="/includes/veranexo.aspx?idattach=JCQnJiAhJSM=" ng-href="/includes/veranexo.aspx?idattach=JCQnJiAhJSM=" target="_blank" title="Ver Documento"><img src="/imagenes/iconos/ic_ver_generico.gif"/></a></td>
+</tr><!-- --><tr ng-init="item.nombreLink='Ver Documento'" ng-repeat="item in vpcp.list.documentosAdjuntos.values">
+<td>RESOLUCIÓN COMISIÓN VERIFICADORA </td>
+<td>Anexos</td>
+<td>17-07-2020 01:19 PM</td>
+<td><a href="/includes/veranexo.aspx?idattach=JCQnJiAhJCQ=" ng-href="/includes/veranexo.aspx?idattach=JCQnJiAhJCQ=" target="_blank" title="Ver Documento"><img src="/imagenes/iconos/ic_ver_generico.gif"/></a></td>
+</tr><!-- --><tr ng-init="item.nombreLink='Ver Documento'" ng-repeat="item in vpcp.list.documentosAdjuntos.values">
+<td>ACTA DE APERTURA No. 29</td>
+<td>Actas</td>
+<td>17-07-2020 01:20 PM</td>
+<td><a href="/includes/veranexo.aspx?idattach=JCQnJiAhJCA=" ng-href="/includes/veranexo.aspx?idattach=JCQnJiAhJCA=" target="_blank" title="Ver Documento"><img src="/imagenes/iconos/ic_ver_generico.gif"/></a></td>
+</tr><!-- --><tr ng-init="item.nombreLink='Ver Documento'" ng-repeat="item in vpcp.list.documentosAdjuntos.values">
+<td>SOBRE DE SOLIS IMPORT, S.A. </td>
+<td>Anexos</td>
+<td>17-07-2020 01:21 PM</td>
+<td><a href="/includes/veranexo.aspx?idattach=JCQnJiAhJyI=" ng-href="/includes/veranexo.aspx?idattach=JCQnJiAhJyI=" target="_blank" title="Ver Documento"><img src="/imagenes/iconos/ic_ver_generico.gif"/></a></td>
+</tr><!-- --><tr ng-init="item.nombreLink='Ver Documento'" ng-repeat="item in vpcp.list.documentosAdjuntos.values">
+<td>CERTIFICADO DE REG. DE PROPONENTE </td>
+<td>Certificado de Registro de Proponentes</td>
+<td>17-07-2020 01:23 PM</td>
+<td><a href="/includes/veranexo.aspx?idattach=JCQnJiAhJiE=" ng-href="/includes/veranexo.aspx?idattach=JCQnJiAhJiE=" target="_blank" title="Ver Documento"><img src="/imagenes/iconos/ic_ver_generico.gif"/></a></td>
+</tr><!-- --><tr ng-init="item.nombreLink='Ver Documento'" ng-repeat="item in vpcp.list.documentosAdjuntos.values">
+<td>PAZ Y SALVO DE LA DGI DE SOLIS IMPORT, S.A.</td>
+<td>Otros</td>
+<td>17-07-2020 01:25 PM</td>
+<td><a href="/includes/veranexo.aspx?idattach=JCQnJiAhISQ=" ng-href="/includes/veranexo.aspx?idattach=JCQnJiAhISQ=" target="_blank" title="Ver Documento"><img src="/imagenes/iconos/ic_ver_generico.gif"/></a></td>
+</tr><!-- --><tr ng-init="item.nombreLink='Ver Documento'" ng-repeat="item in vpcp.list.documentosAdjuntos.values">
+<td>PAZ Y SALVO DE LA CSS DE SOLIS IMPORT, S.A. </td>
+<td>Otros</td>
+<td>17-07-2020 01:25 PM</td>
+<td><a href="/includes/veranexo.aspx?idattach=JCQnJiAhISI=" ng-href="/includes/veranexo.aspx?idattach=JCQnJiAhISI=" target="_blank" title="Ver Documento"><img src="/imagenes/iconos/ic_ver_generico.gif"/></a></td>
+</tr><!-- --><tr ng-init="item.nombreLink='Ver Documento'" ng-repeat="item in vpcp.list.documentosAdjuntos.values">
+<td>CEDULAS DE SOLIS IMPORT, S.A.</td>
+<td>Anexos</td>
+<td>17-07-2020 01:30 PM</td>
+<td><a href="/includes/veranexo.aspx?idattach=JCQnJiAhIyY=" ng-href="/includes/veranexo.aspx?idattach=JCQnJiAhIyY=" target="_blank" title="Ver Documento"><img src="/imagenes/iconos/ic_ver_generico.gif"/></a></td>
+</tr><!-- --><tr ng-init="item.nombreLink='Ver Documento'" ng-repeat="item in vpcp.list.documentosAdjuntos.values">
+<td>REGISTRO PÚBLICO DE SOLIS IMPORT, S. A. </td>
+<td>Otros</td>
+<td>17-07-2020 01:31 PM</td>
+<td><a href="/includes/veranexo.aspx?idattach=JCQnJiAhIiU=" ng-href="/includes/veranexo.aspx?idattach=JCQnJiAhIiU=" target="_blank" title="Ver Documento"><img src="/imagenes/iconos/ic_ver_generico.gif"/></a></td>
+</tr><!-- --><tr ng-init="item.nombreLink='Ver Documento'" ng-repeat="item in vpcp.list.documentosAdjuntos.values">
+<td>AVISO DE OPERACIÓN </td>
+<td>Anexos</td>
+<td>17-07-2020 01:34 PM</td>
+<td><a href="/includes/veranexo.aspx?idattach=JCQnJiAhLSI=" ng-href="/includes/veranexo.aspx?idattach=JCQnJiAhLSI=" target="_blank" title="Ver Documento"><img src="/imagenes/iconos/ic_ver_generico.gif"/></a></td>
+</tr><!-- --><tr ng-init="item.nombreLink='Ver Documento'" ng-repeat="item in vpcp.list.documentosAdjuntos.values">
+<td>MODELO DE DECLARACIÓN JURADA SOLIS IMPORT, S.A. </td>
+<td>Anexos</td>
+<td>17-07-2020 01:35 PM</td>
+<td><a href="/includes/veranexo.aspx?idattach=JCQnJiAhLCM=" ng-href="/includes/veranexo.aspx?idattach=JCQnJiAhLCM=" target="_blank" title="Ver Documento"><img src="/imagenes/iconos/ic_ver_generico.gif"/></a></td>
+</tr><!-- --><tr ng-init="item.nombreLink='Ver Documento'" ng-repeat="item in vpcp.list.documentosAdjuntos.values">
+<td>DECLARACIÓN JURADA DE RETORSIÓN SOLIS IMPORT, S.A. </td>
+<td>Anexos</td>
+<td>17-07-2020 01:39 PM</td>
+<td><a href="/includes/veranexo.aspx?idattach=JCQnJiAgJS0=" ng-href="/includes/veranexo.aspx?idattach=JCQnJiAgJS0=" target="_blank" title="Ver Documento"><img src="/imagenes/iconos/ic_ver_generico.gif"/></a></td>
+</tr><!-- --><tr ng-init="item.nombreLink='Ver Documento'" ng-repeat="item in vpcp.list.documentosAdjuntos.values">
+<td>CATALOGO DE SOLIS IMPORT, S.A. </td>
+<td>Anexos</td>
+<td>17-07-2020 01:41 PM</td>
+<td><a href="/includes/veranexo.aspx?idattach=JCQnJiAgJyY=" ng-href="/includes/veranexo.aspx?idattach=JCQnJiAgJyY=" target="_blank" title="Ver Documento"><img src="/imagenes/iconos/ic_ver_generico.gif"/></a></td>
+</tr><!-- --><tr ng-init="item.nombreLink='Ver Documento'" ng-repeat="item in vpcp.list.documentosAdjuntos.values">
+<td>CERTIFICADO DE OFERENTE DE SOLIS IMPORT, S.A. </td>
+<td>Anexos</td>
+<td>17-07-2020 01:42 PM</td>
+<td><a href="/includes/veranexo.aspx?idattach=JCQnJiAgJiY=" ng-href="/includes/veranexo.aspx?idattach=JCQnJiAgJiY=" target="_blank" title="Ver Documento"><img src="/imagenes/iconos/ic_ver_generico.gif"/></a></td>
+</tr><!-- --><tr ng-init="item.nombreLink='Ver Documento'" ng-repeat="item in vpcp.list.documentosAdjuntos.values">
+<td>LICENCIA DE DISP MÉDICOS DE SOLIS IMPORT, S.A. </td>
+<td>Anexos</td>
+<td>17-07-2020 01:43 PM</td>
+<td><a href="/includes/veranexo.aspx?idattach=JCQnJiAgISQ=" ng-href="/includes/veranexo.aspx?idattach=JCQnJiAgISQ=" target="_blank" title="Ver Documento"><img src="/imagenes/iconos/ic_ver_generico.gif"/></a></td>
+</tr><!-- --><tr ng-init="item.nombreLink='Ver Documento'" ng-repeat="item in vpcp.list.documentosAdjuntos.values">
+<td>IMPRESIÓN DE CATALOGO SOLIS IMPORT, S.A. </td>
+<td>Anexos</td>
+<td>17-07-2020 01:46 PM</td>
+<td><a href="/includes/veranexo.aspx?idattach=JCQnJiAgIS0=" ng-href="/includes/veranexo.aspx?idattach=JCQnJiAgIS0=" target="_blank" title="Ver Documento"><img src="/imagenes/iconos/ic_ver_generico.gif"/></a></td>
+</tr><!-- --><tr ng-init="item.nombreLink='Ver Documento'" ng-repeat="item in vpcp.list.documentosAdjuntos.values">
+<td>CARTA DE COMPROMISO DE FAB. SOLIS IMPORT, S.A.</td>
+<td>Anexos</td>
+<td>17-07-2020 01:47 PM</td>
+<td><a href="/includes/veranexo.aspx?idattach=JCQnJiAgICY=" ng-href="/includes/veranexo.aspx?idattach=JCQnJiAgICY=" target="_blank" title="Ver Documento"><img src="/imagenes/iconos/ic_ver_generico.gif"/></a></td>
+</tr><!-- --><tr ng-init="item.nombreLink='Ver Documento'" ng-repeat="item in vpcp.list.documentosAdjuntos.values">
+<td>CARTA DE COMPROMISO DE FAB. SOLIS IMPORT, S.A.</td>
+<td>Anexos</td>
+<td>17-07-2020 01:47 PM</td>
+<td><a href="/includes/veranexo.aspx?idattach=JCQnJiAgICE=" ng-href="/includes/veranexo.aspx?idattach=JCQnJiAgICE=" target="_blank" title="Ver Documento"><img src="/imagenes/iconos/ic_ver_generico.gif"/></a></td>
+</tr><!-- --><tr ng-init="item.nombreLink='Ver Documento'" ng-repeat="item in vpcp.list.documentosAdjuntos.values">
+<td>CERTIFICADO DE GARANTÍA Y MANT SOLIS IMPORT, S.A.</td>
+<td>Anexos</td>
+<td>17-07-2020 01:48 PM</td>
+<td><a href="/includes/veranexo.aspx?idattach=JCQnJiAgICM=" ng-href="/includes/veranexo.aspx?idattach=JCQnJiAgICM=" target="_blank" title="Ver Documento"><img src="/imagenes/iconos/ic_ver_generico.gif"/></a></td>
+</tr><!-- --><tr ng-init="item.nombreLink='Ver Documento'" ng-repeat="item in vpcp.list.documentosAdjuntos.values">
+<td>CERTIFICACIÓN DE ACCESORIOS SOLIS IMPORT, S.A.</td>
+<td>Anexos</td>
+<td>17-07-2020 01:57 PM</td>
+<td><a href="/includes/veranexo.aspx?idattach=JCQnJiAjJSQ=" ng-href="/includes/veranexo.aspx?idattach=JCQnJiAjJSQ=" target="_blank" title="Ver Documento"><img src="/imagenes/iconos/ic_ver_generico.gif"/></a></td>
+</tr><!-- --><tr ng-init="item.nombreLink='Ver Documento'" ng-repeat="item in vpcp.list.documentosAdjuntos.values">
+<td>FIANZA DE PROPUESTA SOLIS IMPORT, S.A. </td>
+<td>Otros</td>
+<td>17-07-2020 01:58 PM</td>
+<td><a href="/includes/veranexo.aspx?idattach=JCQnJiAjJCQ=" ng-href="/includes/veranexo.aspx?idattach=JCQnJiAjJCQ=" target="_blank" title="Ver Documento"><img src="/imagenes/iconos/ic_ver_generico.gif"/></a></td>
+</tr><!-- --><tr ng-init="item.nombreLink='Ver Documento'" ng-repeat="item in vpcp.list.documentosAdjuntos.values">
+<td>PROPUESTA DE SOLIS IMPORT, S.A. </td>
+<td>Propuestas</td>
+<td>17-07-2020 01:59 PM</td>
+<td><a href="/includes/veranexo.aspx?idattach=JCQnJiAjJCM=" ng-href="/includes/veranexo.aspx?idattach=JCQnJiAjJCM=" target="_blank" title="Ver Documento"><img src="/imagenes/iconos/ic_ver_generico.gif"/></a></td>
+</tr><!-- --><tr ng-init="item.nombreLink='Ver Documento'" ng-repeat="item in vpcp.list.documentosAdjuntos.values">
+<td>COMPROBANTE DE INGRESO OFERTA SOLIS IMPORT, S.A. </td>
+<td>Propuestas</td>
+<td>17-07-2020 02:01 PM</td>
+<td><a href="/includes/veranexo.aspx?idattach=JCQnJiAjJyM=" ng-href="/includes/veranexo.aspx?idattach=JCQnJiAjJyM=" target="_blank" title="Ver Documento"><img src="/imagenes/iconos/ic_ver_generico.gif"/></a></td>
+</tr><!-- --><tr ng-init="item.nombreLink='Ver Documento'" ng-repeat="item in vpcp.list.documentosAdjuntos.values">
+<td>SOBRE DE DRAGER PANAMÁ S DE RL</td>
+<td>Anexos</td>
+<td>17-07-2020 02:03 PM</td>
+<td><a href="/includes/veranexo.aspx?idattach=JCQnJiAjJiM=" ng-href="/includes/veranexo.aspx?idattach=JCQnJiAjJiM=" target="_blank" title="Ver Documento"><img src="/imagenes/iconos/ic_ver_generico.gif"/></a></td>
+</tr><!-- --><tr ng-init="item.nombreLink='Ver Documento'" ng-repeat="item in vpcp.list.documentosAdjuntos.values">
+<td>CERTIFICADO DE REG. DE PROPONENTE DRAGER PANAMÁ</td>
+<td>Anexos</td>
+<td>17-07-2020 02:04 PM</td>
+<td><a href="/includes/veranexo.aspx?idattach=JCQnJiAjISE=" ng-href="/includes/veranexo.aspx?idattach=JCQnJiAjISE=" target="_blank" title="Ver Documento"><img src="/imagenes/iconos/ic_ver_generico.gif"/></a></td>
+</tr><!-- --><tr ng-init="item.nombreLink='Ver Documento'" ng-repeat="item in vpcp.list.documentosAdjuntos.values">
+<td>PAZ Y SALVO DE LA DGI DE DRAGER PANAMA </td>
+<td>Anexos</td>
+<td>17-07-2020 02:05 PM</td>
+<td><a href="/includes/veranexo.aspx?idattach=JCQnJiAjIS0=" ng-href="/includes/veranexo.aspx?idattach=JCQnJiAjIS0=" target="_blank" title="Ver Documento"><img src="/imagenes/iconos/ic_ver_generico.gif"/></a></td>
+</tr><!-- --><tr ng-init="item.nombreLink='Ver Documento'" ng-repeat="item in vpcp.list.documentosAdjuntos.values">
+<td>PAZ Y SALVO DE LA CSS DE DRAGER PANAMÁ </td>
+<td>Anexos</td>
+<td>17-07-2020 02:15 PM</td>
+<td><a href="/includes/veranexo.aspx?idattach=JCQnJiAiJSU=" ng-href="/includes/veranexo.aspx?idattach=JCQnJiAiJSU=" target="_blank" title="Ver Documento"><img src="/imagenes/iconos/ic_ver_generico.gif"/></a></td>
+</tr><!-- --><tr ng-init="item.nombreLink='Ver Documento'" ng-repeat="item in vpcp.list.documentosAdjuntos.values">
+<td>CEDULAS DE DRAGER PANAMA </td>
+<td>Anexos</td>
+<td>17-07-2020 02:21 PM</td>
+<td><a href="/includes/veranexo.aspx?idattach=JCQnJiAiJyw=" ng-href="/includes/veranexo.aspx?idattach=JCQnJiAiJyw=" target="_blank" title="Ver Documento"><img src="/imagenes/iconos/ic_ver_generico.gif"/></a></td>
+</tr><!-- --><tr ng-init="item.nombreLink='Ver Documento'" ng-repeat="item in vpcp.list.documentosAdjuntos.values">
+<td>PODER ESPECIAL DE DRAGER PANAMA</td>
+<td>Anexos</td>
+<td>17-07-2020 02:24 PM</td>
+<td><a href="/includes/veranexo.aspx?idattach=JCQnJiAiISM=" ng-href="/includes/veranexo.aspx?idattach=JCQnJiAiISM=" target="_blank" title="Ver Documento"><img src="/imagenes/iconos/ic_ver_generico.gif"/></a></td>
+</tr><!-- --><tr ng-init="item.nombreLink='Ver Documento'" ng-repeat="item in vpcp.list.documentosAdjuntos.values">
+<td>REGISTRO PÚBLICO DE DRAGER PANAMA</td>
+<td>Anexos</td>
+<td>17-07-2020 02:25 PM</td>
+<td><a href="/includes/veranexo.aspx?idattach=JCQnJiAiICQ=" ng-href="/includes/veranexo.aspx?idattach=JCQnJiAiICQ=" target="_blank" title="Ver Documento"><img src="/imagenes/iconos/ic_ver_generico.gif"/></a></td>
+</tr><!-- --><tr ng-init="item.nombreLink='Ver Documento'" ng-repeat="item in vpcp.list.documentosAdjuntos.values">
+<td>AVISO DE OPERACIÓN DRAGER PANAMÁ</td>
+<td>Anexos</td>
+<td>17-07-2020 02:27 PM</td>
+<td><a href="/includes/veranexo.aspx?idattach=JCQnJiAiICI=" ng-href="/includes/veranexo.aspx?idattach=JCQnJiAiICI=" target="_blank" title="Ver Documento"><img src="/imagenes/iconos/ic_ver_generico.gif"/></a></td>
+</tr><!-- --><tr ng-init="item.nombreLink='Ver Documento'" ng-repeat="item in vpcp.list.documentosAdjuntos.values">
+<td>DECLARACIÓN JURADA DE RETORSIÓN DRAGER PANAMA</td>
+<td>Anexos</td>
+<td>17-07-2020 02:28 PM</td>
+<td><a href="/includes/veranexo.aspx?idattach=JCQnJiAiIiQ=" ng-href="/includes/veranexo.aspx?idattach=JCQnJiAiIiQ=" target="_blank" title="Ver Documento"><img src="/imagenes/iconos/ic_ver_generico.gif"/></a></td>
+</tr><!-- --><tr ng-init="item.nombreLink='Ver Documento'" ng-repeat="item in vpcp.list.documentosAdjuntos.values">
+<td>DECLARACIÓN JURADA PARA CONTRATAR DRAGER PANAMA</td>
+<td>Anexos</td>
+<td>17-07-2020 02:29 PM</td>
+<td><a href="/includes/veranexo.aspx?idattach=JCQnJiAiLSQ=" ng-href="/includes/veranexo.aspx?idattach=JCQnJiAiLSQ=" target="_blank" title="Ver Documento"><img src="/imagenes/iconos/ic_ver_generico.gif"/></a></td>
+</tr><!-- --><tr ng-init="item.nombreLink='Ver Documento'" ng-repeat="item in vpcp.list.documentosAdjuntos.values">
+<td>CERTIFICADO DEL FAB DRAGER PANAMA</td>
+<td>Anexos</td>
+<td>17-07-2020 02:33 PM</td>
+<td><a href="/includes/veranexo.aspx?idattach=JCQnJiAiLCQ=" ng-href="/includes/veranexo.aspx?idattach=JCQnJiAiLCQ=" target="_blank" title="Ver Documento"><img src="/imagenes/iconos/ic_ver_generico.gif"/></a></td>
+</tr><!-- --><tr ng-init="item.nombreLink='Ver Documento'" ng-repeat="item in vpcp.list.documentosAdjuntos.values">
+<td>CATALOGO DEL PRODUCTO DRAGER PANAMA</td>
+<td>Anexos</td>
+<td>17-07-2020 02:34 PM</td>
+<td><a href="/includes/veranexo.aspx?idattach=JCQnJiAiLCM=" ng-href="/includes/veranexo.aspx?idattach=JCQnJiAiLCM=" target="_blank" title="Ver Documento"><img src="/imagenes/iconos/ic_ver_generico.gif"/></a></td>
+</tr><!-- --><tr ng-init="item.nombreLink='Ver Documento'" ng-repeat="item in vpcp.list.documentosAdjuntos.values">
+<td>PLAN DE MANT DE DRAGER PANAMA</td>
+<td>Anexos</td>
+<td>17-07-2020 02:40 PM</td>
+<td><a href="/includes/veranexo.aspx?idattach=JCQnJiAtJCA=" ng-href="/includes/veranexo.aspx?idattach=JCQnJiAtJCA=" target="_blank" title="Ver Documento"><img src="/imagenes/iconos/ic_ver_generico.gif"/></a></td>
+</tr><!-- --><tr ng-init="item.nombreLink='Ver Documento'" ng-repeat="item in vpcp.list.documentosAdjuntos.values">
+<td>CATALOGO DE DRAGER PANAMÁ</td>
+<td>Anexos</td>
+<td>17-07-2020 02:41 PM</td>
+<td><a href="/includes/veranexo.aspx?idattach=JCQnJiAtJCw=" ng-href="/includes/veranexo.aspx?idattach=JCQnJiAtJCw=" target="_blank" title="Ver Documento"><img src="/imagenes/iconos/ic_ver_generico.gif"/></a></td>
+</tr><!-- --><tr ng-init="item.nombreLink='Ver Documento'" ng-repeat="item in vpcp.list.documentosAdjuntos.values">
+<td>RESOLUCIÓN 457 DEL 01-06-2020</td>
+<td>Otros</td>
+<td>17-07-2020 02:46 PM</td>
+<td><a href="/includes/veranexo.aspx?idattach=JCQnJiAtJiI=" ng-href="/includes/veranexo.aspx?idattach=JCQnJiAtJiI=" target="_blank" title="Ver Documento"><img src="/imagenes/iconos/ic_ver_generico.gif"/></a></td>
+</tr><!-- --><tr ng-init="item.nombreLink='Ver Documento'" ng-repeat="item in vpcp.list.documentosAdjuntos.values">
+<td>CERTIFICADO DE OFERENTE DE DRAGER PANAMÁ </td>
+<td>Otros</td>
+<td>17-07-2020 02:47 PM</td>
+<td><a href="/includes/veranexo.aspx?idattach=JCQnJiAtISM=" ng-href="/includes/veranexo.aspx?idattach=JCQnJiAtISM=" target="_blank" title="Ver Documento"><img src="/imagenes/iconos/ic_ver_generico.gif"/></a></td>
+</tr><!-- --><tr ng-init="item.nombreLink='Ver Documento'" ng-repeat="item in vpcp.list.documentosAdjuntos.values">
+<td>LICENCIA DE DISP MÉDICOS DE DRAGER PANAMA</td>
+<td>Otros</td>
+<td>17-07-2020 02:48 PM</td>
+<td><a href="/includes/veranexo.aspx?idattach=JCQnJiAtICQ=" ng-href="/includes/veranexo.aspx?idattach=JCQnJiAtICQ=" target="_blank" title="Ver Documento"><img src="/imagenes/iconos/ic_ver_generico.gif"/></a></td>
+</tr><!-- --><tr ng-init="item.nombreLink='Ver Documento'" ng-repeat="item in vpcp.list.documentosAdjuntos.values">
+<td>CERTIFICACIÓN DE FICHA TÉCNICA DRAGER PANAMA</td>
+<td>Otros</td>
+<td>17-07-2020 02:49 PM</td>
+<td><a href="/includes/veranexo.aspx?idattach=JCQnJiAtIyY=" ng-href="/includes/veranexo.aspx?idattach=JCQnJiAtIyY=" target="_blank" title="Ver Documento"><img src="/imagenes/iconos/ic_ver_generico.gif"/></a></td>
+</tr><!-- --><tr ng-init="item.nombreLink='Ver Documento'" ng-repeat="item in vpcp.list.documentosAdjuntos.values">
+<td>COMPROBANTE DE REGISTRO DE OFERENTE DRAGER PANAMA</td>
+<td>Otros</td>
+<td>17-07-2020 02:50 PM</td>
+<td><a href="/includes/veranexo.aspx?idattach=JCQnJiAtIiI=" ng-href="/includes/veranexo.aspx?idattach=JCQnJiAtIiI=" target="_blank" title="Ver Documento"><img src="/imagenes/iconos/ic_ver_generico.gif"/></a></td>
+</tr><!-- --><tr ng-init="item.nombreLink='Ver Documento'" ng-repeat="item in vpcp.list.documentosAdjuntos.values">
+<td>CERTIFICADO DE FICHA TÉCNICA DRAGER PANAMÁ</td>
+<td>Otros</td>
+<td>17-07-2020 02:51 PM</td>
+<td><a href="/includes/veranexo.aspx?idattach=JCQnJiAtLSw=" ng-href="/includes/veranexo.aspx?idattach=JCQnJiAtLSw=" target="_blank" title="Ver Documento"><img src="/imagenes/iconos/ic_ver_generico.gif"/></a></td>
+</tr><!-- --><tr ng-init="item.nombreLink='Ver Documento'" ng-repeat="item in vpcp.list.documentosAdjuntos.values">
+<td>CERTIFICACIÓN DE GARANTÍAS DRAGER PANAMÁ</td>
+<td>Otros</td>
+<td>17-07-2020 02:52 PM</td>
+<td><a href="/includes/veranexo.aspx?idattach=JCQnJiAtLCE=" ng-href="/includes/veranexo.aspx?idattach=JCQnJiAtLCE=" target="_blank" title="Ver Documento"><img src="/imagenes/iconos/ic_ver_generico.gif"/></a></td>
+</tr><!-- --><tr ng-init="item.nombreLink='Ver Documento'" ng-repeat="item in vpcp.list.documentosAdjuntos.values">
+<td>FIANZA DE PROPUESTA DRAGER PANAMÁ </td>
+<td>Otros</td>
+<td>17-07-2020 02:53 PM</td>
+<td><a href="/includes/veranexo.aspx?idattach=JCQnJiAsJSc=" ng-href="/includes/veranexo.aspx?idattach=JCQnJiAsJSc=" target="_blank" title="Ver Documento"><img src="/imagenes/iconos/ic_ver_generico.gif"/></a></td>
+</tr><!-- --><tr ng-init="item.nombreLink='Ver Documento'" ng-repeat="item in vpcp.list.documentosAdjuntos.values">
+<td>PROPUESTA DE DRAGER PANAMÁ</td>
+<td>Otros</td>
+<td>17-07-2020 02:54 PM</td>
+<td><a href="/includes/veranexo.aspx?idattach=JCQnJiAsJSY=" ng-href="/includes/veranexo.aspx?idattach=JCQnJiAsJSY=" target="_blank" title="Ver Documento"><img src="/imagenes/iconos/ic_ver_generico.gif"/></a></td>
+</tr><!-- --><tr ng-init="item.nombreLink='Ver Documento'" ng-repeat="item in vpcp.list.documentosAdjuntos.values">
+<td>COMPROBANTE DE INGRESO OFERTA DRAGER PANAMÁ</td>
+<td>Otros</td>
+<td>17-07-2020 02:57 PM</td>
+<td><a href="/includes/veranexo.aspx?idattach=JCQnJiAsJyQ=" ng-href="/includes/veranexo.aspx?idattach=JCQnJiAsJyQ=" target="_blank" title="Ver Documento"><img src="/imagenes/iconos/ic_ver_generico.gif"/></a></td>
+</tr><!-- --><tr ng-init="item.nombreLink='Ver Documento'" ng-repeat="item in vpcp.list.documentosAdjuntos.values">
+<td>COMPROBANTES DE INGRESOS DE PARTICIPANTES </td>
+<td>Otros</td>
+<td>17-07-2020 02:58 PM</td>
+<td><a href="/includes/veranexo.aspx?idattach=JCQnJiAsJyI=" ng-href="/includes/veranexo.aspx?idattach=JCQnJiAsJyI=" target="_blank" title="Ver Documento"><img src="/imagenes/iconos/ic_ver_generico.gif"/></a></td>
+</tr><!-- --><tr ng-init="item.nombreLink='Ver Documento'" ng-repeat="item in vpcp.list.documentosAdjuntos.values">
+<td>COMPROBANTE DE DOCUMENTOS RECIBIDOS </td>
+<td>Otros</td>
+<td>17-07-2020 02:58 PM</td>
+<td><a href="/includes/veranexo.aspx?idattach=JCQnJiAsJiY=" ng-href="/includes/veranexo.aspx?idattach=JCQnJiAsJiY=" target="_blank" title="Ver Documento"><img src="/imagenes/iconos/ic_ver_generico.gif"/></a></td>
+</tr><!-- --><tr ng-init="item.nombreLink='Ver Documento'" ng-repeat="item in vpcp.list.documentosAdjuntos.values">
+<td>HOJA DE ENVÍO A CRITERIO DE LA COMISIÓN VERIFICADORA </td>
+<td>Otros</td>
+<td>17-07-2020 03:00 PM</td>
+<td><a href="/includes/veranexo.aspx?idattach=JCQnJiAsJiw=" ng-href="/includes/veranexo.aspx?idattach=JCQnJiAsJiw=" target="_blank" title="Ver Documento"><img src="/imagenes/iconos/ic_ver_generico.gif"/></a></td>
+</tr><!-- --><tr ng-init="item.nombreLink='Ver Documento'" ng-repeat="item in vpcp.list.documentosAdjuntos.values">
+<td>NOTA DE SOLICITUD DE DRAGER PANAMÁ</td>
+<td>Nota de Solicitud</td>
+<td>17-07-2020 03:01 PM</td>
+<td><a href="/includes/veranexo.aspx?idattach=JCQnJiAsISY=" ng-href="/includes/veranexo.aspx?idattach=JCQnJiAsISY=" target="_blank" title="Ver Documento"><img src="/imagenes/iconos/ic_ver_generico.gif"/></a></td>
+</tr><!-- --><tr ng-init="item.nombreLink='Ver Documento'" ng-repeat="item in vpcp.list.documentosAdjuntos.values">
+<td>INFORME DE COMISIÓN VERIFICADORA</td>
+<td>Informes</td>
+<td>17-07-2020 03:02 PM</td>
+<td><a href="/includes/veranexo.aspx?idattach=JCQnJiAsICQ=" ng-href="/includes/veranexo.aspx?idattach=JCQnJiAsICQ=" target="_blank" title="Ver Documento"><img src="/imagenes/iconos/ic_ver_generico.gif"/></a></td>
+</tr><!-- --><tr ng-init="item.nombreLink='Ver Documento'" ng-repeat="item in vpcp.list.documentosAdjuntos.values">
+<td>PODER ESPECIAL DE SOLIS IMPORT, S.A. (ABOGADO)</td>
+<td>Otros</td>
+<td>17-07-2020 03:05 PM</td>
+<td><a href="/includes/veranexo.aspx?idattach=JCQnJiAsIiU=" ng-href="/includes/veranexo.aspx?idattach=JCQnJiAsIiU=" target="_blank" title="Ver Documento"><img src="/imagenes/iconos/ic_ver_generico.gif"/></a></td>
+</tr><!-- --><tr ng-init="item.nombreLink='Ver Documento'" ng-repeat="item in vpcp.list.documentosAdjuntos.values">
+<td>CUADRO DE PROPONENTES </td>
+<td>Anexos</td>
+<td>17-07-2020 03:06 PM</td>
+<td><a href="/includes/veranexo.aspx?idattach=JCQnJiAsLSM=" ng-href="/includes/veranexo.aspx?idattach=JCQnJiAsLSM=" target="_blank" title="Ver Documento"><img src="/imagenes/iconos/ic_ver_generico.gif"/></a></td>
+</tr><!-- --><tr ng-init="item.nombreLink='Ver Documento'" ng-repeat="item in vpcp.list.documentosAdjuntos.values">
+<td>RESOLUCIÓN 023 DEL 03-07-2020</td>
+<td>Resoluciones</td>
+<td>17-07-2020 03:07 PM</td>
+<td><a href="/includes/veranexo.aspx?idattach=JCQnJiAsLCM=" ng-href="/includes/veranexo.aspx?idattach=JCQnJiAsLCM=" target="_blank" title="Ver Documento"><img src="/imagenes/iconos/ic_ver_generico.gif"/></a></td>
+</tr><!-- --><tr ng-init="item.nombreLink='Ver Documento'" ng-repeat="item in vpcp.list.documentosAdjuntos.values">
+<td>RESOLUCIÓN DE ADJUDICACIÓN </td>
+<td>Resoluciones</td>
+<td>17-07-2020 03:08 PM</td>
+<td><a href="/includes/veranexo.aspx?idattach=JCQnJiMlJSQ=" ng-href="/includes/veranexo.aspx?idattach=JCQnJiMlJSQ=" target="_blank" title="Ver Documento"><img src="/imagenes/iconos/ic_ver_generico.gif"/></a></td>
+</tr><!-- --><tr ng-init="item.nombreLink='Ver Documento'" ng-repeat="item in vpcp.list.documentosAdjuntos.values">
+<td>SOLICITUD DE FIANZA DE CUMPLIMIENTO</td>
+<td>Nota de Solicitud</td>
+<td>17-07-2020 03:09 PM</td>
+<td><a href="/includes/veranexo.aspx?idattach=JCQnJiMlJS0=" ng-href="/includes/veranexo.aspx?idattach=JCQnJiMlJS0=" target="_blank" title="Ver Documento"><img src="/imagenes/iconos/ic_ver_generico.gif"/></a></td>
+</tr><!-- --><tr ng-init="item.nombreLink='Ver Documento'" ng-repeat="item in vpcp.list.documentosAdjuntos.values">
+<td>SOLICITUD DE BLOQUEO DE PARTIDA A PRESUPUESTO</td>
+<td>Nota de Solicitud</td>
+<td>17-07-2020 03:10 PM</td>
+<td><a href="/includes/veranexo.aspx?idattach=JCQnJiMlJC0=" ng-href="/includes/veranexo.aspx?idattach=JCQnJiMlJC0=" target="_blank" title="Ver Documento"><img src="/imagenes/iconos/ic_ver_generico.gif"/></a></td>
+</tr><!-- --><tr ng-init="item.nombreLink='Ver Documento'" ng-repeat="item in vpcp.list.documentosAdjuntos.values">
+<td>BLOQUEO O RESERVA DE PARTIDA</td>
+<td>Anexos</td>
+<td>17-07-2020 03:11 PM</td>
+<td><a href="/includes/veranexo.aspx?idattach=JCQnJiMlJyM=" ng-href="/includes/veranexo.aspx?idattach=JCQnJiMlJyM=" target="_blank" title="Ver Documento"><img src="/imagenes/iconos/ic_ver_generico.gif"/></a></td>
+</tr><!-- --><tr ng-init="item.nombreLink='Ver Documento'" ng-repeat="item in vpcp.list.documentosAdjuntos.values">
+<td>SOBRE DE RECIBIMIENTO DE FIANZA DE CUMPLIMIENTO </td>
+<td>Anexos</td>
+<td>17-07-2020 03:12 PM</td>
+<td><a href="/includes/veranexo.aspx?idattach=JCQnJiMlJiY=" ng-href="/includes/veranexo.aspx?idattach=JCQnJiMlJiY=" target="_blank" title="Ver Documento"><img src="/imagenes/iconos/ic_ver_generico.gif"/></a></td>
+</tr><!-- --><tr ng-init="item.nombreLink='Ver Documento'" ng-repeat="item in vpcp.list.documentosAdjuntos.values">
+<td>FIANZA DE CUMPLIMIENTO DE DRAGER PANAMÁ</td>
+<td>Anexos</td>
+<td>17-07-2020 03:14 PM</td>
+<td><a href="/includes/veranexo.aspx?idattach=JCQnJiMlJi0=" ng-href="/includes/veranexo.aspx?idattach=JCQnJiMlJi0=" target="_blank" title="Ver Documento"><img src="/imagenes/iconos/ic_ver_generico.gif"/></a></td>
+</tr><!-- --><tr ng-init="item.nombreLink='Ver Documento'" ng-repeat="item in vpcp.list.documentosAdjuntos.values">
+<td>DECLARACIÓN PRECONTRACTUAL </td>
+<td>Anexos</td>
+<td>17-07-2020 03:15 PM</td>
+<td><a href="/includes/veranexo.aspx?idattach=JCQnJiMlISA=" ng-href="/includes/veranexo.aspx?idattach=JCQnJiMlISA=" target="_blank" title="Ver Documento"><img src="/imagenes/iconos/ic_ver_generico.gif"/></a></td>
+</tr><!-- --><tr ng-init="item.nombreLink='Ver Documento'" ng-repeat="item in vpcp.list.documentosAdjuntos.values">
+<td>COMPROMETIDO REFERENTE AL BLOQUEO </td>
+<td>Anexos</td>
+<td>17-07-2020 03:16 PM</td>
+<td><a href="/includes/veranexo.aspx?idattach=JCQnJiMlIS0=" ng-href="/includes/veranexo.aspx?idattach=JCQnJiMlIS0=" target="_blank" title="Ver Documento"><img src="/imagenes/iconos/ic_ver_generico.gif"/></a></td>
+</tr><!-- --><tr ng-init="item.nombreLink='Ver Documento'" ng-repeat="item in vpcp.list.documentosAdjuntos.values">
+<td>Medidas de prevención</td>
+<td>Anexos</td>
+<td>31-08-2020 02:45 PM</td>
+<td><a href="/includes/veranexo.aspx?idattach=JCQmLSwjLCI=" ng-href="/includes/veranexo.aspx?idattach=JCQmLSwjLCI=" target="_blank" title="Ver Documento"><img src="/imagenes/iconos/ic_ver_generico.gif"/></a></td>
+</tr><!-- --><tr ng-init="item.nombreLink='Ver Documento'" ng-repeat="item in vpcp.list.documentosAdjuntos.values">
+<td>Resolución No 11 del 13 de marzo</td>
+<td>Resolución Fundamento Legal Mesa Covid-19</td>
+<td>31-08-2020 03:02 PM</td>
+<td><a href="/includes/veranexo.aspx?idattach=JCQmLSwtIyw=" ng-href="/includes/veranexo.aspx?idattach=JCQmLSwtIyw=" target="_blank" title="Ver Documento"><img src="/imagenes/iconos/ic_ver_generico.gif"/></a></td>
+</tr><!-- --><tr ng-init="item.nombreLink='Ver Documento'" ng-repeat="item in vpcp.list.documentosAdjuntos.values">
+<td>Resolución No 18 del 31 demarzo</td>
+<td>Resolución Fundamento Legal Mesa Covid-19</td>
+<td>31-08-2020 03:02 PM</td>
+<td><a href="/includes/veranexo.aspx?idattach=JCQmLSwtIiY=" ng-href="/includes/veranexo.aspx?idattach=JCQmLSwtIiY=" target="_blank" title="Ver Documento"><img src="/imagenes/iconos/ic_ver_generico.gif"/></a></td>
+</tr><!-- --><tr ng-init="item.nombreLink='Ver Documento'" ng-repeat="item in vpcp.list.documentosAdjuntos.values">
+<td>Pliego</td>
+<td>Terminos de referencia</td>
+<td>31-08-2020 03:03 PM</td>
+<td><a href="/includes/veranexo.aspx?idattach=JCQmLSwtIiw=" ng-href="/includes/veranexo.aspx?idattach=JCQmLSwtIiw=" target="_blank" title="Ver Documento"><img src="/imagenes/iconos/ic_ver_generico.gif"/></a></td>
+</tr><!-- --><tr ng-init="item.nombreLink='Ver Documento'" ng-repeat="item in vpcp.list.documentosAdjuntos.values">
+<td>Aviso de Convocatoria</td>
+<td>Terminos de referencia</td>
+<td>31-08-2020 03:03 PM</td>
+<td><a href="/includes/veranexo.aspx?idattach=JCQmLSwtLSc=" ng-href="/includes/veranexo.aspx?idattach=JCQmLSwtLSc=" target="_blank" title="Ver Documento"><img src="/imagenes/iconos/ic_ver_generico.gif"/></a></td>
+</tr><!-- --><tr ng-init="item.nombreLink='Ver Documento'" ng-repeat="item in vpcp.list.documentosAdjuntos.values">
+<td>Propuesta de Solis Import, S.A.</td>
+<td>Propuestas</td>
+<td>31-08-2020 03:04 PM</td>
+<td><a href="/includes/veranexo.aspx?idattach=JCQmLSwtLCI=" ng-href="/includes/veranexo.aspx?idattach=JCQmLSwtLCI=" target="_blank" title="Ver Documento"><img src="/imagenes/iconos/ic_ver_generico.gif"/></a></td>
+</tr><!-- --><tr ng-init="item.nombreLink='Ver Documento'" ng-repeat="item in vpcp.list.documentosAdjuntos.values">
+<td>Propuesta de Draeger</td>
+<td>Propuestas</td>
+<td>31-08-2020 03:05 PM</td>
+<td><a href="/includes/veranexo.aspx?idattach=JCQmLSwsJSA=" ng-href="/includes/veranexo.aspx?idattach=JCQmLSwsJSA=" target="_blank" title="Ver Documento"><img src="/imagenes/iconos/ic_ver_generico.gif"/></a></td>
+</tr><!-- --><tr ng-init="item.nombreLink='Ver Documento'" ng-repeat="item in vpcp.list.documentosAdjuntos.values">
+<td>DECLARACIÓN PRECONTRACTUAL EM-022837</td>
+<td>Anexos</td>
+<td>02-09-2020 04:27 PM</td>
+<td><a href="/includes/veranexo.aspx?idattach=JCQhJSciJSM=" ng-href="/includes/veranexo.aspx?idattach=JCQhJSciJSM=" target="_blank" title="Ver Documento"><img src="/imagenes/iconos/ic_ver_generico.gif"/></a></td>
+</tr><!-- --><tr ng-init="item.nombreLink='Ver Documento'" ng-repeat="item in vpcp.list.documentosAdjuntos.values">
+<td>ORDEN DE COMPRA # 4200295805 DRAGER PANAMÁ</td>
+<td>Orden de Compra</td>
+<td>02-09-2020 04:34 PM</td>
+<td><a href="/includes/veranexo.aspx?idattach=JCQhJSciJyQ=" ng-href="/includes/veranexo.aspx?idattach=JCQhJSciJyQ=" target="_blank" title="Ver Documento"><img src="/imagenes/iconos/ic_ver_generico.gif"/></a></td>
+</tr><!-- -->
+</tbody></table>
+</div>
+</div><!-- -->
+<!--Documentos del Acto Público-->
+<!-- --><div class="panel panel-default export-pdf" ng-if="vpcp.list.documetosPliego">
+<div class="panel-heading" style="padding:5px 15px;"><b>Documentos del Acto Público</b></div>
+<div class="panel-body table-responsive" style="padding:15px;">
+<table class="table table-condensed table-bordered table-striped last-line-table" style="margin:0;" width="100%">
+<thead>
+<tr>
+<th>Nombre Documento</th>
+<th>Fecha Creación</th>
+<th>Acciones</th>
+</tr>
+</thead>
+<tbody><!-- --><tr ng-if="vpcp.list.documetosPliego.values.length==0">
+<td colspan="4"><center>No hay documentos del acto público</center></td>
+</tr><!-- -->
+<!-- -->
+</tbody></table>
+</div>
+</div><!-- -->
+<!--Publicaciones Anteriores-->
+<!-- -->
+<!--Convocatorias Anteriores-->
+<!-- -->
+<!--opciones-->
+<!-- --><div class="panel panel-default export-pdf" ng-if="vpcp.list.opciones">
+<div class="panel-heading" style="padding:5px 15px;"><b>Opciones</b></div>
+<div class="panel-body table-responsive" style="padding:15px;">
+<!-- --><a class="btn btn-default" id="vap" ng-click="vpcp.clickpdf(0)" ng-if="!vpcp.isIE9" title="Ver Acto Público en Formato PDF para imprimir">
+<img src="/Inicio/images/ic_descargar_pdf.gif"/>
+</a><!-- -->
+<!-- --><a class="btn btn-default" ng-click="vpcp.clickpdf(1)" ng-if="!vpcp.isIE" style="margin-left:5px;" title="Imprimir Acto Publico">
+<img src="/Inicio/images/ic_imprimir.gif"/>
+</a><!-- -->
+<!-- -->
+<!-- -->
+</div>
+</div><!-- -->
+<!-- --><button class="btn btn-default btn-sm" ng-click="vpcp.backbutton()" ng-if="!vpcp.param.hiddenBB">« Volver</button><!-- -->
+</div>
+</div>

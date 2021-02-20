@@ -1,0 +1,400 @@
+<div class="col-sm-12 col-md-12" id="elementToPDF" ng-if="vpcp.list!=undefined &amp;&amp; vpcp.list!=false" style="font-size: 12px; background-color: rgb(255, 255, 255);">
+<!--Encabezado del pliego-->
+<!-- --><div class="well export-pdf table-responsive" ng-if="vpcp.list.header" style="margin-top:10px;">
+<table class="table table-condensed table-bordered last-line-table" style="margin:0;" width="100%">
+<tbody><!-- --><tr ng-repeat="item in vpcp.list.header.values">
+<td width="250"><b>Número:</b></td>
+<td>2020-1-11-0-08-EM-009951</td>
+</tr><!-- --><tr ng-repeat="item in vpcp.list.header.values">
+<td width="250"><b>Nombre del Acto:</b></td>
+<td>Reactivos de Laboratorio</td>
+</tr><!-- --><tr ng-repeat="item in vpcp.list.header.values">
+<td width="250"><b>Objeto de la Contratación:</b></td>
+<td>Bien</td>
+</tr><!-- -->
+</tbody></table>
+</div><!-- -->
+<!-- --><div ng-include="'configVP.html'">
+<!--Información de la Entidad-->
+<!-- --><div class="panel panel-default export-pdf" ng-if="vpcp.list.entityInformation">
+<div class="panel-heading" style="padding:5px 15px;"><b>Información de la Entidad</b></div>
+<div class="panel-body table-responsive" style="padding:15px;">
+<table class="table table-condensed table-bordered last-line-table" style="margin:0;" width="100%">
+<tbody><!-- --><tr ng-repeat="item in vpcp.list.entityInformation.values">
+<td width="250"><b>Entidad:</b></td>
+<td>INSTITUTO CONMEMORATIVO GORGAS DE ESTUDIOS DE LA SALUD</td>
+</tr><!-- --><tr ng-repeat="item in vpcp.list.entityInformation.values">
+<td width="250"><b>Dependencia:</b></td>
+<td>SEDE</td>
+</tr><!-- --><tr ng-repeat="item in vpcp.list.entityInformation.values">
+<td width="250"><b>Unidad De Compra:</b></td>
+<td>Compras</td>
+</tr><!-- --><tr ng-repeat="item in vpcp.list.entityInformation.values">
+<td width="250"><b>Dirección:</b></td>
+<td>AVE JUSTO AROSEMENA FRENT A LA ALCALDIA </td>
+</tr><!-- -->
+</tbody></table>
+</div>
+</div><!-- -->
+<!--Contacto de la Unidad de Compra-->
+<!-- --><div class="panel panel-default export-pdf" ng-if="vpcp.list.contactUser">
+<div class="panel-heading" style="padding:5px 15px;"><b>Contacto de la Unidad de Compra</b></div>
+<div class="panel-body table-responsive" style="padding:15px;">
+<table class="table table-condensed table-bordered last-line-table" style="margin:0;" width="100%">
+<tbody><!-- --><tr ng-repeat="item in vpcp.list.contactUser.values">
+<td width="250"><b>nombre</b></td>
+<td>Melissa Chavarria</td>
+</tr><!-- --><tr ng-repeat="item in vpcp.list.contactUser.values">
+<td width="250"><b>cargo</b></td>
+<td>Cotizadora</td>
+</tr><!-- -->
+</tbody></table>
+</div>
+</div><!-- -->
+<!--Aviso de Convocatoria-->
+<!-- --><div class="panel panel-default export-pdf" ng-if="vpcp.list.aviso">
+<div class="panel-heading" style="padding:5px 15px;"><b>Aviso de Convocatoria</b></div>
+<div class="panel-body table-responsive" style="padding:15px;">
+<table class="table table-condensed table-bordered last-line-table" style="margin:0;" width="100%">
+<tbody><!-- --><tr ng-init="isjson = vpcp.isJson(item)" ng-repeat="item in vpcp.list.aviso.values">
+<td width="250"><b>Número de Acto:</b></td>
+<!-- --><td ng-if="!isjson">2020-1-11-0-08-EM-009951</td><!-- -->
+<!-- -->
+</tr><!-- --><tr ng-init="isjson = vpcp.isJson(item)" ng-repeat="item in vpcp.list.aviso.values">
+<td width="250"><b>Tipo de Procedimiento:</b></td>
+<!-- --><td ng-if="!isjson">Compras Mesa COVID-19</td><!-- -->
+<!-- -->
+</tr><!-- --><tr ng-init="isjson = vpcp.isJson(item)" ng-repeat="item in vpcp.list.aviso.values">
+<td width="250"><b>Fundamento de la Excepción</b></td>
+<!-- --><td ng-if="!isjson"></td><!-- -->
+<!-- -->
+</tr><!-- --><tr ng-init="isjson = vpcp.isJson(item)" ng-repeat="item in vpcp.list.aviso.values">
+<td width="250"><b>Objeto Contractual:</b></td>
+<!-- --><td ng-if="!isjson">Bien</td><!-- -->
+<!-- -->
+</tr><!-- --><tr ng-init="isjson = vpcp.isJson(item)" ng-repeat="item in vpcp.list.aviso.values">
+<td width="250"><b>Descripción:</b></td>
+<!-- --><td ng-if="!isjson">Reactivos de Laboratorio</td><!-- -->
+<!-- -->
+</tr><!-- --><tr ng-init="isjson = vpcp.isJson(item)" ng-repeat="item in vpcp.list.aviso.values">
+<td width="250"><b>Fecha de Publicación:</b></td>
+<!-- --><td ng-if="!isjson">29-07-2020 04:56 PM</td><!-- -->
+<!-- -->
+</tr><!-- --><tr ng-init="isjson = vpcp.isJson(item)" ng-repeat="item in vpcp.list.aviso.values">
+<td width="250"><b>Monto de la Contratación:</b></td>
+<!-- --><td ng-if="!isjson">B/.  52,522.00</td><!-- -->
+<!-- -->
+</tr><!-- --><tr ng-init="isjson = vpcp.isJson(item)" ng-repeat="item in vpcp.list.aviso.values">
+<td width="250"><b>Partidas presupuestales:</b></td>
+<!-- -->
+<!-- --><td ng-if="isjson">
+<table border="1" id="table_inter_np" type="table_inter">
+<tbody><tr style="background-color:#f5f5f5;">
+<th style="padding:2px 5px;">N°</th>
+<th style="padding:2px 5px;">Número Partida</th>
+</tr>
+<!-- --><tr ng-repeat="item1 in item.value">
+<td style="padding:2px 5px;">1</td>
+<td style="padding:2px 5px;">111130173.501.911</td>
+</tr><!-- -->
+</tbody></table>
+</td><!-- -->
+</tr><!-- --><tr ng-init="isjson = vpcp.isJson(item)" ng-repeat="item in vpcp.list.aviso.values">
+<td width="250"><b>Programa:</b></td>
+<!-- --><td ng-if="!isjson">---</td><!-- -->
+<!-- -->
+</tr><!-- --><tr ng-init="isjson = vpcp.isJson(item)" ng-repeat="item in vpcp.list.aviso.values">
+<td width="250"><b>Datos de Contacto</b></td>
+<!-- --><td ng-if="!isjson"></td><!-- -->
+<!-- -->
+</tr><!-- --><tr ng-init="isjson = vpcp.isJson(item)" ng-repeat="item in vpcp.list.aviso.values">
+<td width="250"><b>Nombre:</b></td>
+<!-- --><td ng-if="!isjson">Melissa Chavarria</td><!-- -->
+<!-- -->
+</tr><!-- --><tr ng-init="isjson = vpcp.isJson(item)" ng-repeat="item in vpcp.list.aviso.values">
+<td width="250"><b>Cargo:</b></td>
+<!-- --><td ng-if="!isjson">Cotizadora</td><!-- -->
+<!-- -->
+</tr><!-- --><tr ng-init="isjson = vpcp.isJson(item)" ng-repeat="item in vpcp.list.aviso.values">
+<td width="250"><b>Teléfono:</b></td>
+<!-- --><td ng-if="!isjson">507-5274836</td><!-- -->
+<!-- -->
+</tr><!-- --><tr ng-init="isjson = vpcp.isJson(item)" ng-repeat="item in vpcp.list.aviso.values">
+<td width="250"><b>Correo Electrónico:</b></td>
+<!-- --><td ng-if="!isjson">mchavarria@gorgas.gob.pa</td><!-- -->
+<!-- -->
+</tr><!-- -->
+</tbody></table>
+</div>
+</div><!-- -->
+<!--Condiciones Generales-->
+<!-- -->
+<!--Condiciones Especiales-->
+<!-- -->
+<!--Especificaciones Técnicas-->
+<!-- --><div class="panel panel-default export-pdf" ng-if="vpcp.list.especificacionesTecnicas">
+<div class="panel-heading" style="padding:5px 15px;"><b>Especificaciones Técnicas</b></div>
+<div class="panel-body table-responsive" style="padding:15px;">
+<!-- --><span ng-repeat-start="item in vpcp.list.especificacionesTecnicas.values" style="font-size:13px;font-weight:bold;">Bien/Servicio/Obra Seleccionados</span>
+<div class="table-responsive" ng-repeat-end="">
+<!-- -->
+<!-- --><table class="table table-condensed table-bordered table-striped last-line-table" ng-if="item.type=='bs'" style="margin:0;" width="100%">
+<thead>
+<tr>
+<th>R</th>
+<th>Código</th>
+<th>Clasificación</th>
+<th>Cantidad</th>
+<th>U. Medida</th>
+<th>Descripción</th>
+<!-- -->
+<!-- -->
+<th>SES</th>
+<!-- -->
+</tr>
+</thead>
+<tbody><!-- -->
+<!-- --><tr ng-repeat="item1 in item.values">
+<td>1</td>
+<td>41116105</td>
+<td>Reactivos o soluciones químicos</td>
+<td>170</td>
+<td>Unidad</td>
+<td>SOLUCIÓN TAMPÓN, HBSS, CALCIO,
+MAGNESIO, SIN ROJO FENOL. PRESENTACIÓN
+BOTELLA DE 1 LITRO</td>
+<!-- -->
+<!-- -->
+<td>---</td>
+<!-- -->
+</tr><!-- --><tr ng-repeat="item1 in item.values">
+<td>2</td>
+<td>41116105</td>
+<td>Reactivos o soluciones químicos</td>
+<td>8</td>
+<td>Unidad</td>
+<td>ALBÚMINA DE SUERO FETAL FRACCIÓN DE
+ETANOL FRÍO, pH 5.2, MAYOR O IGUAL A 96%.
+PRESENTACIÓN ENVASE DE 1 KG.</td>
+<!-- -->
+<!-- -->
+<td>---</td>
+<!-- -->
+</tr><!-- --><tr ng-repeat="item1 in item.values">
+<td>3</td>
+<td>41116105</td>
+<td>Reactivos o soluciones químicos</td>
+<td>36</td>
+<td>Botella</td>
+<td>ANFOTERICINA B. FORMULACIÓN 250 UG DE
+ANFOTERICINA B Y 205 UG DE DEOXICOLATO
+DE SODIO POR MILILITRO DE AGUA
+DESTILADA. PRESENTACIÓN: BOTELLA DE 20
+ML</td>
+<!-- -->
+<!-- -->
+<td>---</td>
+<!-- -->
+</tr><!-- --><tr ng-repeat="item1 in item.values">
+<td>4</td>
+<td>41116105</td>
+<td>Reactivos o soluciones químicos</td>
+<td>70</td>
+<td>Botella</td>
+<td>GENTAMICINA LÍQUIDA A UNA
+CONCENTRACIÓN DE 50MG/ML.
+PRESENTACIÓN: BOTELLA DE 10 ML</td>
+<!-- -->
+<!-- -->
+<td>---</td>
+<!-- -->
+</tr><!-- --><tr ng-repeat="item1 in item.values">
+<td>5</td>
+<td>41116105</td>
+<td>Reactivos o soluciones químicos</td>
+<td>20</td>
+<td>Botella</td>
+<td>PENICILINA-ESTREPTOMICINA A UNA
+CONCENTRACIÓN DE 10,000 U/ML.
+PRESENTACIÓN: BOTELLA DE 100 ML</td>
+<!-- -->
+<!-- -->
+<td>---</td>
+<!-- -->
+</tr><!-- --><tr ng-repeat="item1 in item.values">
+<td>6</td>
+<td>41116105</td>
+<td>Reactivos o soluciones químicos</td>
+<td>20</td>
+<td>Caja</td>
+<td>UNIDAD DE FILTRACIÓN CON MEMBRANA PES
+DE 0.45 MICRÓMETROS Y CAPACIDAD PARA 1
+LITRO. MEMBRANA POLIETERSULFONA (PES).
+PRESENTACIÓN: 12 UNIDADES POR CAJA</td>
+<!-- -->
+<!-- -->
+<td>---</td>
+<!-- -->
+</tr><!-- -->
+</tbody></table><!-- -->
+</div><!-- -->
+</div>
+</div><!-- -->
+<!--Documentos Adjuntos-->
+<!-- --><div class="panel panel-default export-pdf" ng-if="vpcp.list.documentosAdjuntos">
+<div class="panel-heading" style="padding:5px 15px;"><b>Documentos Adjuntos</b></div>
+<div class="panel-body table-responsive" style="padding:15px;">
+<table class="table table-condensed table-bordered table-striped last-line-table" style="margin:0;" width="100%">
+<thead>
+<tr>
+<th>Descripción</th>
+<th>Tipo</th>
+<th>Fecha</th>
+<th>Acciones</th>
+</tr>
+</thead>
+<tbody><!-- -->
+<!-- --><tr ng-init="item.nombreLink='Ver Documento'" ng-repeat="item in vpcp.list.documentosAdjuntos.values">
+<td>Paz y Salvo del MEF Vigente </td>
+<td>Otros</td>
+<td>09-06-2020 08:39 AM</td>
+<td><a href="/includes/veranexo.aspx?idattach=JCQkJyInJyY=" ng-href="/includes/veranexo.aspx?idattach=JCQkJyInJyY=" target="_blank" title="Ver Documento"><img src="/imagenes/iconos/ic_ver_generico.gif"/></a></td>
+</tr><!-- --><tr ng-init="item.nombreLink='Ver Documento'" ng-repeat="item in vpcp.list.documentosAdjuntos.values">
+<td>Paz y Salvo del CSS  Vigentes</td>
+<td>Otros</td>
+<td>09-06-2020 08:39 AM</td>
+<td><a href="/includes/veranexo.aspx?idattach=JCQkJyInJyI=" ng-href="/includes/veranexo.aspx?idattach=JCQkJyInJyI=" target="_blank" title="Ver Documento"><img src="/imagenes/iconos/ic_ver_generico.gif"/></a></td>
+</tr><!-- --><tr ng-init="item.nombreLink='Ver Documento'" ng-repeat="item in vpcp.list.documentosAdjuntos.values">
+<td>Declaración Jurada </td>
+<td>Otros</td>
+<td>09-06-2020 08:40 AM</td>
+<td><a href="/includes/veranexo.aspx?idattach=JCQkJyInJyw=" ng-href="/includes/veranexo.aspx?idattach=JCQkJyInJyw=" target="_blank" title="Ver Documento"><img src="/imagenes/iconos/ic_ver_generico.gif"/></a></td>
+</tr><!-- --><tr ng-init="item.nombreLink='Ver Documento'" ng-repeat="item in vpcp.list.documentosAdjuntos.values">
+<td>Oferente de la empresa </td>
+<td>Otros</td>
+<td>09-06-2020 08:40 AM</td>
+<td><a href="/includes/veranexo.aspx?idattach=JCQkJyInJiY=" ng-href="/includes/veranexo.aspx?idattach=JCQkJyInJiY=" target="_blank" title="Ver Documento"><img src="/imagenes/iconos/ic_ver_generico.gif"/></a></td>
+</tr><!-- --><tr ng-init="item.nombreLink='Ver Documento'" ng-repeat="item in vpcp.list.documentosAdjuntos.values">
+<td>Certificado de Panamá Compras </td>
+<td>Otros</td>
+<td>09-06-2020 08:41 AM</td>
+<td><a href="/includes/veranexo.aspx?idattach=JCQkJyInJiA=" ng-href="/includes/veranexo.aspx?idattach=JCQkJyInJiA=" target="_blank" title="Ver Documento"><img src="/imagenes/iconos/ic_ver_generico.gif"/></a></td>
+</tr><!-- --><tr ng-init="item.nombreLink='Ver Documento'" ng-repeat="item in vpcp.list.documentosAdjuntos.values">
+<td>Cédula del Representante Legal </td>
+<td>Otros</td>
+<td>09-06-2020 08:41 AM</td>
+<td><a href="/includes/veranexo.aspx?idattach=JCQkJyInJiI=" ng-href="/includes/veranexo.aspx?idattach=JCQkJyInJiI=" target="_blank" title="Ver Documento"><img src="/imagenes/iconos/ic_ver_generico.gif"/></a></td>
+</tr><!-- --><tr ng-init="item.nombreLink='Ver Documento'" ng-repeat="item in vpcp.list.documentosAdjuntos.values">
+<td>Registro Publico </td>
+<td>Otros</td>
+<td>09-06-2020 08:41 AM</td>
+<td><a href="/includes/veranexo.aspx?idattach=JCQkJyInJi0=" ng-href="/includes/veranexo.aspx?idattach=JCQkJyInJi0=" target="_blank" title="Ver Documento"><img src="/imagenes/iconos/ic_ver_generico.gif"/></a></td>
+</tr><!-- --><tr ng-init="item.nombreLink='Ver Documento'" ng-repeat="item in vpcp.list.documentosAdjuntos.values">
+<td>Licencia de Operación </td>
+<td>Otros</td>
+<td>09-06-2020 08:42 AM</td>
+<td><a href="/includes/veranexo.aspx?idattach=JCQkJyInISU=" ng-href="/includes/veranexo.aspx?idattach=JCQkJyInISU=" target="_blank" title="Ver Documento"><img src="/imagenes/iconos/ic_ver_generico.gif"/></a></td>
+</tr><!-- --><tr ng-init="item.nombreLink='Ver Documento'" ng-repeat="item in vpcp.list.documentosAdjuntos.values">
+<td>Aviso de Operaciones </td>
+<td>Otros</td>
+<td>09-06-2020 08:42 AM</td>
+<td><a href="/includes/veranexo.aspx?idattach=JCQkJyInISQ=" ng-href="/includes/veranexo.aspx?idattach=JCQkJyInISQ=" target="_blank" title="Ver Documento"><img src="/imagenes/iconos/ic_ver_generico.gif"/></a></td>
+</tr><!-- --><tr ng-init="item.nombreLink='Ver Documento'" ng-repeat="item in vpcp.list.documentosAdjuntos.values">
+<td>S.B.S 375-2020</td>
+<td>Otros</td>
+<td>09-06-2020 08:59 AM</td>
+<td><a href="/includes/veranexo.aspx?idattach=JCQkJyImICw=" ng-href="/includes/veranexo.aspx?idattach=JCQkJyImICw=" target="_blank" title="Ver Documento"><img src="/imagenes/iconos/ic_ver_generico.gif"/></a></td>
+</tr><!-- --><tr ng-init="item.nombreLink='Ver Documento'" ng-repeat="item in vpcp.list.documentosAdjuntos.values">
+<td>Carta de Aprobación de Traslado de Partida</td>
+<td>Otros</td>
+<td>09-06-2020 09:01 AM</td>
+<td><a href="/includes/veranexo.aspx?idattach=JCQkJyImIiY=" ng-href="/includes/veranexo.aspx?idattach=JCQkJyImIiY=" target="_blank" title="Ver Documento"><img src="/imagenes/iconos/ic_ver_generico.gif"/></a></td>
+</tr><!-- --><tr ng-init="item.nombreLink='Ver Documento'" ng-repeat="item in vpcp.list.documentosAdjuntos.values">
+<td>Cuadro de Justificación 375-2020</td>
+<td>Otros</td>
+<td>11-06-2020 12:47 PM</td>
+<td><a href="/includes/veranexo.aspx?idattach=JCQkJiAgJiA=" ng-href="/includes/veranexo.aspx?idattach=JCQkJiAgJiA=" target="_blank" title="Ver Documento"><img src="/imagenes/iconos/ic_ver_generico.gif"/></a></td>
+</tr><!-- --><tr ng-init="item.nombreLink='Ver Documento'" ng-repeat="item in vpcp.list.documentosAdjuntos.values">
+<td>Fianza de Cumplimiento </td>
+<td>Otros</td>
+<td>12-06-2020 12:53 PM</td>
+<td><a href="/includes/veranexo.aspx?idattach=JCQkJi0gJCU=" ng-href="/includes/veranexo.aspx?idattach=JCQkJi0gJCU=" target="_blank" title="Ver Documento"><img src="/imagenes/iconos/ic_ver_generico.gif"/></a></td>
+</tr><!-- --><tr ng-init="item.nombreLink='Ver Documento'" ng-repeat="item in vpcp.list.documentosAdjuntos.values">
+<td>Sap</td>
+<td>Otros</td>
+<td>12-06-2020 01:11 PM</td>
+<td><a href="/includes/veranexo.aspx?idattach=JCQkJi0jJSc=" ng-href="/includes/veranexo.aspx?idattach=JCQkJi0jJSc=" target="_blank" title="Ver Documento"><img src="/imagenes/iconos/ic_ver_generico.gif"/></a></td>
+</tr><!-- --><tr ng-init="item.nombreLink='Ver Documento'" ng-repeat="item in vpcp.list.documentosAdjuntos.values">
+<td>Resolución  del Consejo del Gabinete </td>
+<td>Resoluciones</td>
+<td>12-06-2020 01:47 PM</td>
+<td><a href="/includes/veranexo.aspx?idattach=JCQkJi0iLSE=" ng-href="/includes/veranexo.aspx?idattach=JCQkJi0iLSE=" target="_blank" title="Ver Documento"><img src="/imagenes/iconos/ic_ver_generico.gif"/></a></td>
+</tr><!-- --><tr ng-init="item.nombreLink='Ver Documento'" ng-repeat="item in vpcp.list.documentosAdjuntos.values">
+<td>Nota 067-2020</td>
+<td>Otros</td>
+<td>12-06-2020 01:54 PM</td>
+<td><a href="/includes/veranexo.aspx?idattach=JCQkJi0tJSw=" ng-href="/includes/veranexo.aspx?idattach=JCQkJi0tJSw=" target="_blank" title="Ver Documento"><img src="/imagenes/iconos/ic_ver_generico.gif"/></a></td>
+</tr><!-- --><tr ng-init="item.nombreLink='Ver Documento'" ng-repeat="item in vpcp.list.documentosAdjuntos.values">
+<td>cuadro de propuesta 375-2020</td>
+<td>Otros</td>
+<td>15-06-2020 12:57 PM</td>
+<td><a href="/includes/veranexo.aspx?idattach=JCQkISQiIi0=" ng-href="/includes/veranexo.aspx?idattach=JCQkISQiIi0=" target="_blank" title="Ver Documento"><img src="/imagenes/iconos/ic_ver_generico.gif"/></a></td>
+</tr><!-- --><tr ng-init="item.nombreLink='Ver Documento'" ng-repeat="item in vpcp.list.documentosAdjuntos.values">
+<td>PROPUESTA</td>
+<td>Propuestas</td>
+<td>15-06-2020 01:25 PM</td>
+<td><a href="/includes/veranexo.aspx?idattach=JCQkISQsIyw=" ng-href="/includes/veranexo.aspx?idattach=JCQkISQsIyw=" target="_blank" title="Ver Documento"><img src="/imagenes/iconos/ic_ver_generico.gif"/></a></td>
+</tr><!-- --><tr ng-init="item.nombreLink='Ver Documento'" ng-repeat="item in vpcp.list.documentosAdjuntos.values">
+<td>Resolución Administrativa </td>
+<td>Resoluciones</td>
+<td>19-06-2020 07:19 AM</td>
+<td><a href="/includes/veranexo.aspx?idattach=JCQkICYsIyc=" ng-href="/includes/veranexo.aspx?idattach=JCQkICYsIyc=" target="_blank" title="Ver Documento"><img src="/imagenes/iconos/ic_ver_generico.gif"/></a></td>
+</tr><!-- --><tr ng-init="item.nombreLink='Ver Documento'" ng-repeat="item in vpcp.list.documentosAdjuntos.values">
+<td>ORDEN DE COMPRA</td>
+<td>Orden de Compra</td>
+<td>29-06-2020 12:47 PM</td>
+<td><a href="/includes/veranexo.aspx?idattach=JCQkLSUtJyQ=" ng-href="/includes/veranexo.aspx?idattach=JCQkLSUtJyQ=" target="_blank" title="Ver Documento"><img src="/imagenes/iconos/ic_ver_generico.gif"/></a></td>
+</tr><!-- -->
+</tbody></table>
+</div>
+</div><!-- -->
+<!--Documentos del Acto Público-->
+<!-- --><div class="panel panel-default export-pdf" ng-if="vpcp.list.documetosPliego">
+<div class="panel-heading" style="padding:5px 15px;"><b>Documentos del Acto Público</b></div>
+<div class="panel-body table-responsive" style="padding:15px;">
+<table class="table table-condensed table-bordered table-striped last-line-table" style="margin:0;" width="100%">
+<thead>
+<tr>
+<th>Nombre Documento</th>
+<th>Fecha Creación</th>
+<th>Acciones</th>
+</tr>
+</thead>
+<tbody><!-- --><tr ng-if="vpcp.list.documetosPliego.values.length==0">
+<td colspan="4"><center>No hay documentos del acto público</center></td>
+</tr><!-- -->
+<!-- -->
+</tbody></table>
+</div>
+</div><!-- -->
+<!--Publicaciones Anteriores-->
+<!-- -->
+<!--Convocatorias Anteriores-->
+<!-- -->
+<!--opciones-->
+<!-- --><div class="panel panel-default export-pdf" ng-if="vpcp.list.opciones">
+<div class="panel-heading" style="padding:5px 15px;"><b>Opciones</b></div>
+<div class="panel-body table-responsive" style="padding:15px;">
+<!-- --><a class="btn btn-default" id="vap" ng-click="vpcp.clickpdf(0)" ng-if="!vpcp.isIE9" title="Ver Acto Público en Formato PDF para imprimir">
+<img src="/Inicio/images/ic_descargar_pdf.gif"/>
+</a><!-- -->
+<!-- --><a class="btn btn-default" ng-click="vpcp.clickpdf(1)" ng-if="!vpcp.isIE" style="margin-left:5px;" title="Imprimir Acto Publico">
+<img src="/Inicio/images/ic_imprimir.gif"/>
+</a><!-- -->
+<!-- -->
+<!-- -->
+</div>
+</div><!-- -->
+<!-- --><button class="btn btn-default btn-sm" ng-click="vpcp.backbutton()" ng-if="!vpcp.param.hiddenBB">« Volver</button><!-- -->
+</div>
+</div>

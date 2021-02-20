@@ -1,0 +1,491 @@
+<div class="col-sm-12 col-md-12" id="elementToPDF" ng-if="vpcp.list!=undefined &amp;&amp; vpcp.list!=false" style="font-size: 12px; background-color: rgb(255, 255, 255);">
+<!--Encabezado del pliego-->
+<!-- --><div class="well export-pdf table-responsive" ng-if="vpcp.list.header" style="margin-top:10px;">
+<table class="table table-condensed table-bordered last-line-table" style="margin:0;" width="100%">
+<tbody><!-- --><tr ng-repeat="item in vpcp.list.header.values">
+<td width="250"><b>Número:</b></td>
+<td>2020-0-04-0-08-EM-012015</td>
+</tr><!-- --><tr ng-repeat="item in vpcp.list.header.values">
+<td width="250"><b>Nombre del Acto:</b></td>
+<td>Adquisición de insumos aseo y bioseguridad para el Instituto de Estudios Interdisciplinarios, para atender el Estado de Emergencia por motivo de la COVID-19.</td>
+</tr><!-- --><tr ng-repeat="item in vpcp.list.header.values">
+<td width="250"><b>Objeto de la Contratación:</b></td>
+<td>Bien</td>
+</tr><!-- -->
+</tbody></table>
+</div><!-- -->
+<!-- --><div ng-include="'configVP.html'">
+<!--Información de la Entidad-->
+<!-- --><div class="panel panel-default export-pdf" ng-if="vpcp.list.entityInformation">
+<div class="panel-heading" style="padding:5px 15px;"><b>Información de la Entidad</b></div>
+<div class="panel-body table-responsive" style="padding:15px;">
+<table class="table table-condensed table-bordered last-line-table" style="margin:0;" width="100%">
+<tbody><!-- --><tr ng-repeat="item in vpcp.list.entityInformation.values">
+<td width="250"><b>Entidad:</b></td>
+<td>MINISTERIO DE GOBIERNO </td>
+</tr><!-- --><tr ng-repeat="item in vpcp.list.entityInformation.values">
+<td width="250"><b>Dependencia:</b></td>
+<td>SEDE</td>
+</tr><!-- --><tr ng-repeat="item in vpcp.list.entityInformation.values">
+<td width="250"><b>Unidad De Compra:</b></td>
+<td>DIRECCION DE PROVEDURIA Y COMPRAS</td>
+</tr><!-- --><tr ng-repeat="item in vpcp.list.entityInformation.values">
+<td width="250"><b>Dirección:</b></td>
+<td>San felipe, avenida central entre calle 2da y 3ra</td>
+</tr><!-- -->
+</tbody></table>
+</div>
+</div><!-- -->
+<!--Contacto de la Unidad de Compra-->
+<!-- --><div class="panel panel-default export-pdf" ng-if="vpcp.list.contactUser">
+<div class="panel-heading" style="padding:5px 15px;"><b>Contacto de la Unidad de Compra</b></div>
+<div class="panel-body table-responsive" style="padding:15px;">
+<table class="table table-condensed table-bordered last-line-table" style="margin:0;" width="100%">
+<tbody><!-- --><tr ng-repeat="item in vpcp.list.contactUser.values">
+<td width="250"><b>nombre</b></td>
+<td>Eyra Zelydeth Lasso Quiroz </td>
+</tr><!-- --><tr ng-repeat="item in vpcp.list.contactUser.values">
+<td width="250"><b>cargo</b></td>
+<td></td>
+</tr><!-- -->
+</tbody></table>
+</div>
+</div><!-- -->
+<!--Aviso de Convocatoria-->
+<!-- --><div class="panel panel-default export-pdf" ng-if="vpcp.list.aviso">
+<div class="panel-heading" style="padding:5px 15px;"><b>Aviso de Convocatoria</b></div>
+<div class="panel-body table-responsive" style="padding:15px;">
+<table class="table table-condensed table-bordered last-line-table" style="margin:0;" width="100%">
+<tbody><!-- --><tr ng-init="isjson = vpcp.isJson(item)" ng-repeat="item in vpcp.list.aviso.values">
+<td width="250"><b>Número de Acto:</b></td>
+<!-- --><td ng-if="!isjson">2020-0-04-0-08-EM-012015</td><!-- -->
+<!-- -->
+</tr><!-- --><tr ng-init="isjson = vpcp.isJson(item)" ng-repeat="item in vpcp.list.aviso.values">
+<td width="250"><b>Tipo de Procedimiento:</b></td>
+<!-- --><td ng-if="!isjson">Compras Mesa COVID-19</td><!-- -->
+<!-- -->
+</tr><!-- --><tr ng-init="isjson = vpcp.isJson(item)" ng-repeat="item in vpcp.list.aviso.values">
+<td width="250"><b>Fundamento de la Excepción</b></td>
+<!-- --><td ng-if="!isjson">C) Resolución No. 11 del 13 de Marzo de 2020</td><!-- -->
+<!-- -->
+</tr><!-- --><tr ng-init="isjson = vpcp.isJson(item)" ng-repeat="item in vpcp.list.aviso.values">
+<td width="250"><b>Objeto Contractual:</b></td>
+<!-- --><td ng-if="!isjson">Bien</td><!-- -->
+<!-- -->
+</tr><!-- --><tr ng-init="isjson = vpcp.isJson(item)" ng-repeat="item in vpcp.list.aviso.values">
+<td width="250"><b>Descripción:</b></td>
+<!-- --><td ng-if="!isjson">Adquisición de insumos aseo y bioseguridad para el Instituto de Estudios Interdisciplinarios, para atender el Estado de Emergencia por motivo de la COVID-19.</td><!-- -->
+<!-- -->
+</tr><!-- --><tr ng-init="isjson = vpcp.isJson(item)" ng-repeat="item in vpcp.list.aviso.values">
+<td width="250"><b>Fecha de Publicación:</b></td>
+<!-- --><td ng-if="!isjson">25-11-2020 02:01 PM</td><!-- -->
+<!-- -->
+</tr><!-- --><tr ng-init="isjson = vpcp.isJson(item)" ng-repeat="item in vpcp.list.aviso.values">
+<td width="250"><b>Monto de la Contratación:</b></td>
+<!-- --><td ng-if="!isjson">B/.  45,705.57</td><!-- -->
+<!-- -->
+</tr><!-- --><tr ng-init="isjson = vpcp.isJson(item)" ng-repeat="item in vpcp.list.aviso.values">
+<td width="250"><b>Partidas presupuestales:</b></td>
+<!-- -->
+<!-- --><td ng-if="isjson">
+<table border="1" id="table_inter_np" type="table_inter">
+<tbody><tr style="background-color:#f5f5f5;">
+<th style="padding:2px 5px;">N°</th>
+<th style="padding:2px 5px;">Número Partida</th>
+</tr>
+<!-- --><tr ng-repeat="item1 in item.value">
+<td style="padding:2px 5px;">1</td>
+<td style="padding:2px 5px;">G.101710252.001.911</td>
+</tr><!-- -->
+</tbody></table>
+</td><!-- -->
+</tr><!-- --><tr ng-init="isjson = vpcp.isJson(item)" ng-repeat="item in vpcp.list.aviso.values">
+<td width="250"><b>Programa:</b></td>
+<!-- --><td ng-if="!isjson">---</td><!-- -->
+<!-- -->
+</tr><!-- --><tr ng-init="isjson = vpcp.isJson(item)" ng-repeat="item in vpcp.list.aviso.values">
+<td width="250"><b>Datos de Contacto</b></td>
+<!-- --><td ng-if="!isjson"></td><!-- -->
+<!-- -->
+</tr><!-- --><tr ng-init="isjson = vpcp.isJson(item)" ng-repeat="item in vpcp.list.aviso.values">
+<td width="250"><b>Nombre:</b></td>
+<!-- --><td ng-if="!isjson">Eyra Zelydeth Lasso Quiroz </td><!-- -->
+<!-- -->
+</tr><!-- --><tr ng-init="isjson = vpcp.isJson(item)" ng-repeat="item in vpcp.list.aviso.values">
+<td width="250"><b>Cargo:</b></td>
+<!-- --><td ng-if="!isjson"></td><!-- -->
+<!-- -->
+</tr><!-- --><tr ng-init="isjson = vpcp.isJson(item)" ng-repeat="item in vpcp.list.aviso.values">
+<td width="250"><b>Teléfono:</b></td>
+<!-- --><td ng-if="!isjson">507-5122064</td><!-- -->
+<!-- -->
+</tr><!-- --><tr ng-init="isjson = vpcp.isJson(item)" ng-repeat="item in vpcp.list.aviso.values">
+<td width="250"><b>Correo Electrónico:</b></td>
+<!-- --><td ng-if="!isjson">elasso@mingob.gob.pa</td><!-- -->
+<!-- -->
+</tr><!-- -->
+</tbody></table>
+</div>
+</div><!-- -->
+<!--Condiciones Generales-->
+<!-- -->
+<!--Condiciones Especiales-->
+<!-- -->
+<!--Especificaciones Técnicas-->
+<!-- --><div class="panel panel-default export-pdf" ng-if="vpcp.list.especificacionesTecnicas">
+<div class="panel-heading" style="padding:5px 15px;"><b>Especificaciones Técnicas</b></div>
+<div class="panel-body table-responsive" style="padding:15px;">
+<!-- --><span ng-repeat-start="item in vpcp.list.especificacionesTecnicas.values" style="font-size:13px;font-weight:bold;">Proponente Seleccionado</span>
+<div class="table-responsive" ng-repeat-end="">
+<!-- --><table class="table table-condensed table-bordered last-line-table" ng-if="item.type=='ps'" style="margin:0;margin-bottom:10px;" width="100%">
+<tbody><!-- --><tr ng-repeat="item1 in item.values">
+<td width="250"><b>Nombre:</b></td>
+<td>Comercializadora Selecta, S.A.</td>
+</tr><!-- --><tr ng-repeat="item1 in item.values">
+<td width="250"><b>Número de Identificación:</b></td>
+<td>551864-1-443529-27</td>
+</tr><!-- --><tr ng-repeat="item1 in item.values">
+<td width="250"><b>Dirección:</b></td>
+<td>Urb. industrial orillac, calle primera, local No.</td>
+</tr><!-- --><tr ng-repeat="item1 in item.values">
+<td width="250"><b>Provincia:</b></td>
+<td>PANAMÁ</td>
+</tr><!-- --><tr ng-repeat="item1 in item.values">
+<td width="250"><b>Distrito:</b></td>
+<td>Panamá</td>
+</tr><!-- --><tr ng-repeat="item1 in item.values">
+<td width="250"><b>Correo Electrónico:</b></td>
+<td>comsesapma@gmail.com</td>
+</tr><!-- --><tr ng-repeat="item1 in item.values">
+<td width="250"><b>Teléfono:</b></td>
+<td>507-2290224</td>
+</tr><!-- -->
+</tbody></table><!-- -->
+<!-- -->
+</div><!-- --><span ng-repeat-start="item in vpcp.list.especificacionesTecnicas.values" style="font-size:13px;font-weight:bold;">Bien/Servicio/Obra Seleccionados</span>
+<div class="table-responsive" ng-repeat-end="">
+<!-- -->
+<!-- --><table class="table table-condensed table-bordered table-striped last-line-table" ng-if="item.type=='bs'" style="margin:0;" width="100%">
+<thead>
+<tr>
+<th>R</th>
+<th>Código</th>
+<th>Clasificación</th>
+<th>Cantidad</th>
+<th>U. Medida</th>
+<th>Descripción</th>
+<!-- -->
+<!-- -->
+<th>SES</th>
+<!-- -->
+</tr>
+</thead>
+<tbody><!-- -->
+<!-- --><tr ng-repeat="item1 in item.values">
+<td>1</td>
+<td>51102710</td>
+<td>Antisépticos basados en alcohol o acetona</td>
+<td>153</td>
+<td>Galón</td>
+<td>Gel Alcoholado antibacterial para manos</td>
+<!-- -->
+<!-- -->
+<td>---</td>
+<!-- -->
+</tr><!-- --><tr ng-repeat="item1 in item.values">
+<td>2</td>
+<td>47131803</td>
+<td>Desinfectantes domésticos</td>
+<td>336</td>
+<td>Unidad</td>
+<td>Desinfectante en aerosol 99.9% de 12.5 onzas</td>
+<!-- -->
+<!-- -->
+<td>---</td>
+<!-- -->
+</tr><!-- --><tr ng-repeat="item1 in item.values">
+<td>3</td>
+<td>47131803</td>
+<td>Desinfectantes domésticos</td>
+<td>750</td>
+<td>Paquete</td>
+<td>Toallitas húmedas 99.9% de antibacterial 75" alcohol (Paquetes de 40 hojas mínimo)</td>
+<!-- -->
+<!-- -->
+<td>---</td>
+<!-- -->
+</tr><!-- --><tr ng-repeat="item1 in item.values">
+<td>4</td>
+<td>47131803</td>
+<td>Desinfectantes domésticos</td>
+<td>654</td>
+<td>Galón</td>
+<td>Desinfectante fragancias varias</td>
+<!-- -->
+<!-- -->
+<td>---</td>
+<!-- -->
+</tr><!-- --><tr ng-repeat="item1 in item.values">
+<td>5</td>
+<td>14111703</td>
+<td>Toallas de papel</td>
+<td>237</td>
+<td>Caja</td>
+<td>Papel toalla para dispensador. Caja de 12 unidades</td>
+<!-- -->
+<!-- -->
+<td>---</td>
+<!-- -->
+</tr><!-- --><tr ng-repeat="item1 in item.values">
+<td>6</td>
+<td>53131608</td>
+<td>Jabones</td>
+<td>123</td>
+<td>Galón</td>
+<td>Jabón líquido antibacterial para mano</td>
+<!-- -->
+<!-- -->
+<td>---</td>
+<!-- -->
+</tr><!-- --><tr ng-repeat="item1 in item.values">
+<td>7</td>
+<td>51102710</td>
+<td>Antisépticos basados en alcohol o acetona</td>
+<td>810</td>
+<td>Botella</td>
+<td>Alcohol de 70 % de 16 onzas</td>
+<!-- -->
+<!-- -->
+<td>---</td>
+<!-- -->
+</tr><!-- --><tr ng-repeat="item1 in item.values">
+<td>8</td>
+<td>53131608</td>
+<td>Jabones</td>
+<td>4,488</td>
+<td>Bolsa</td>
+<td>Jabón en polvo de 250 gramos</td>
+<!-- -->
+<!-- -->
+<td>---</td>
+<!-- -->
+</tr><!-- --><tr ng-repeat="item1 in item.values">
+<td>9</td>
+<td>53131608</td>
+<td>Jabones</td>
+<td>4,488</td>
+<td>Unidad</td>
+<td>Jabón tocador 125 gramos</td>
+<!-- -->
+<!-- -->
+<td>---</td>
+<!-- -->
+</tr><!-- --><tr ng-repeat="item1 in item.values">
+<td>10</td>
+<td>53131608</td>
+<td>Jabones</td>
+<td>672</td>
+<td>Unidad</td>
+<td>Jabón de fregar pote de 425 gramos</td>
+<!-- -->
+<!-- -->
+<td>---</td>
+<!-- -->
+</tr><!-- --><tr ng-repeat="item1 in item.values">
+<td>11</td>
+<td>42151909</td>
+<td>Pastas o kits de odontología preventiva</td>
+<td>4,488</td>
+<td>Unidad</td>
+<td>Pasta dental de 75ML.</td>
+<!-- -->
+<!-- -->
+<td>---</td>
+<!-- -->
+</tr><!-- --><tr ng-repeat="item1 in item.values">
+<td>12</td>
+<td>53131606</td>
+<td>Desodorantes</td>
+<td>4,368</td>
+<td>Unidad</td>
+<td>Desodorante hombre en crema - pote de 60 gr. Obs. (4,368 p/varones).</td>
+<!-- -->
+<!-- -->
+<td>---</td>
+<!-- -->
+</tr><!-- --><tr ng-repeat="item1 in item.values">
+<td>13</td>
+<td>53131606</td>
+<td>Desodorantes</td>
+<td>120</td>
+<td>Unidad</td>
+<td>Desodorante dama en crema - pote de 60 gr. Obs</td>
+<!-- -->
+<!-- -->
+<td>---</td>
+<!-- -->
+</tr><!-- --><tr ng-repeat="item1 in item.values">
+<td>14</td>
+<td>14111704</td>
+<td>Papel higiénico</td>
+<td>4,488</td>
+<td>Unidad</td>
+<td>Papel higiénico rollo de 1,000 hojas</td>
+<!-- -->
+<!-- -->
+<td>---</td>
+<!-- -->
+</tr><!-- --><tr ng-repeat="item1 in item.values">
+<td>15</td>
+<td>47131604</td>
+<td>Escobas</td>
+<td>132</td>
+<td>Unidad</td>
+<td>Escobas completas con mango de metal de 9" pulgadas de largo por 2" pulgadas de ancho, con base de 3"pulgadas y palo de 48" pulgadas.</td>
+<!-- -->
+<!-- -->
+<td>---</td>
+<!-- -->
+</tr><!-- --><tr ng-repeat="item1 in item.values">
+<td>16</td>
+<td>47131609</td>
+<td>Magos para escobas o fregonas</td>
+<td>48</td>
+<td>Unidad</td>
+<td>Palo de trapeador grueso de madera con cabeza de plástico tipo tornillo de 54".</td>
+<!-- -->
+<!-- -->
+<td>---</td>
+<!-- -->
+</tr><!-- --><tr ng-repeat="item1 in item.values">
+<td>17</td>
+<td>47131618</td>
+<td>Mopas húmedas</td>
+<td>126</td>
+<td>Unidad</td>
+<td>Mota de trapeador (peso 400 gr.)</td>
+<!-- -->
+<!-- -->
+<td>---</td>
+<!-- -->
+</tr><!-- --><tr ng-repeat="item1 in item.values">
+<td>18</td>
+<td>47121701</td>
+<td>Bolsas de basura</td>
+<td>201</td>
+<td>Paquete</td>
+<td>Bolsa para basura 23x30, paquete de 12 unidades</td>
+<!-- -->
+<!-- -->
+<td>---</td>
+<!-- -->
+</tr><!-- --><tr ng-repeat="item1 in item.values">
+<td>19</td>
+<td>47121701</td>
+<td>Bolsas de basura</td>
+<td>201</td>
+<td>Paquete</td>
+<td>Bolsa para basura 32x40, paquete de 8 unidades</td>
+<!-- -->
+<!-- -->
+<td>---</td>
+<!-- -->
+</tr><!-- --><tr ng-repeat="item1 in item.values">
+<td>20</td>
+<td>41122808</td>
+<td>Bandejas de uso general</td>
+<td>10</td>
+<td>Kit</td>
+<td>Kit de alfombras desinfectantes (Pediluvio, alfombra, secado y galón germicida).</td>
+<!-- -->
+<!-- -->
+<td>---</td>
+<!-- -->
+</tr><!-- -->
+</tbody></table><!-- -->
+</div><!-- -->
+</div>
+</div><!-- -->
+<!--Documentos Adjuntos-->
+<!-- --><div class="panel panel-default export-pdf" ng-if="vpcp.list.documentosAdjuntos">
+<div class="panel-heading" style="padding:5px 15px;"><b>Documentos Adjuntos</b></div>
+<div class="panel-body table-responsive" style="padding:15px;">
+<table class="table table-condensed table-bordered table-striped last-line-table" style="margin:0;" width="100%">
+<thead>
+<tr>
+<th>Descripción</th>
+<th>Tipo</th>
+<th>Fecha</th>
+<th>Acciones</th>
+</tr>
+</thead>
+<tbody><!-- -->
+<!-- --><tr ng-init="item.nombreLink='Ver Documento'" ng-repeat="item in vpcp.list.documentosAdjuntos.values">
+<td>Dec- MINSA 472 del 13-03-2020</td>
+<td>Otros</td>
+<td>20-11-2020 01:52 PM</td>
+<td><a href="/includes/veranexo.aspx?idattach=JCQtLCMnLSQ=" ng-href="/includes/veranexo.aspx?idattach=JCQtLCMnLSQ=" target="_blank" title="Ver Documento"><img src="/imagenes/iconos/ic_ver_generico.gif"/></a></td>
+</tr><!-- --><tr ng-init="item.nombreLink='Ver Documento'" ng-repeat="item in vpcp.list.documentosAdjuntos.values">
+<td>Términos de Referencia</td>
+<td>Terminos de referencia</td>
+<td>20-11-2020 02:45 PM</td>
+<td><a href="/includes/veranexo.aspx?idattach=JCQtLCMtIyw=" ng-href="/includes/veranexo.aspx?idattach=JCQtLCMtIyw=" target="_blank" title="Ver Documento"><img src="/imagenes/iconos/ic_ver_generico.gif"/></a></td>
+</tr><!-- --><tr ng-init="item.nombreLink='Ver Documento'" ng-repeat="item in vpcp.list.documentosAdjuntos.values">
+<td>Resolución Estado de Emergencia</td>
+<td>Resolución Fundamento Legal Mesa Covid-19</td>
+<td>20-11-2020 02:55 PM</td>
+<td><a href="/includes/veranexo.aspx?idattach=JCQtLCIlJCQ=" ng-href="/includes/veranexo.aspx?idattach=JCQtLCIlJCQ=" target="_blank" title="Ver Documento"><img src="/imagenes/iconos/ic_ver_generico.gif"/></a></td>
+</tr><!-- --><tr ng-init="item.nombreLink='Ver Documento'" ng-repeat="item in vpcp.list.documentosAdjuntos.values">
+<td>Propuesta</td>
+<td>Propuestas</td>
+<td>20-11-2020 02:56 PM</td>
+<td><a href="/includes/veranexo.aspx?idattach=JCQtLCIlJiA=" ng-href="/includes/veranexo.aspx?idattach=JCQtLCIlJiA=" target="_blank" title="Ver Documento"><img src="/imagenes/iconos/ic_ver_generico.gif"/></a></td>
+</tr><!-- --><tr ng-init="item.nombreLink='Ver Documento'" ng-repeat="item in vpcp.list.documentosAdjuntos.values">
+<td>OC 4200319617</td>
+<td>Orden de Compra</td>
+<td>22-12-2020 04:00 PM</td>
+<td><a href="/includes/veranexo.aspx?idattach=JCclJCcnISU=" ng-href="/includes/veranexo.aspx?idattach=JCclJCcnISU=" target="_blank" title="Ver Documento"><img src="/imagenes/iconos/ic_ver_generico.gif"/></a></td>
+</tr><!-- -->
+</tbody></table>
+</div>
+</div><!-- -->
+<!--Documentos del Acto Público-->
+<!-- --><div class="panel panel-default export-pdf" ng-if="vpcp.list.documetosPliego">
+<div class="panel-heading" style="padding:5px 15px;"><b>Documentos del Acto Público</b></div>
+<div class="panel-body table-responsive" style="padding:15px;">
+<table class="table table-condensed table-bordered table-striped last-line-table" style="margin:0;" width="100%">
+<thead>
+<tr>
+<th>Nombre Documento</th>
+<th>Fecha Creación</th>
+<th>Acciones</th>
+</tr>
+</thead>
+<tbody><!-- --><tr ng-if="vpcp.list.documetosPliego.values.length==0">
+<td colspan="4"><center>No hay documentos del acto público</center></td>
+</tr><!-- -->
+<!-- -->
+</tbody></table>
+</div>
+</div><!-- -->
+<!--Publicaciones Anteriores-->
+<!-- -->
+<!--Convocatorias Anteriores-->
+<!-- -->
+<!--opciones-->
+<!-- --><div class="panel panel-default export-pdf" ng-if="vpcp.list.opciones">
+<div class="panel-heading" style="padding:5px 15px;"><b>Opciones</b></div>
+<div class="panel-body table-responsive" style="padding:15px;">
+<!-- --><a class="btn btn-default" id="vap" ng-click="vpcp.clickpdf(0)" ng-if="!vpcp.isIE9" title="Ver Acto Público en Formato PDF para imprimir">
+<img src="/Inicio/images/ic_descargar_pdf.gif"/>
+</a><!-- -->
+<!-- --><a class="btn btn-default" ng-click="vpcp.clickpdf(1)" ng-if="!vpcp.isIE" style="margin-left:5px;" title="Imprimir Acto Publico">
+<img src="/Inicio/images/ic_imprimir.gif"/>
+</a><!-- -->
+<!-- -->
+<!-- -->
+</div>
+</div><!-- -->
+<!-- --><button class="btn btn-default btn-sm" ng-click="vpcp.backbutton()" ng-if="!vpcp.param.hiddenBB">« Volver</button><!-- -->
+</div>
+</div>

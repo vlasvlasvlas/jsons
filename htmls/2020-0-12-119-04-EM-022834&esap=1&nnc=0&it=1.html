@@ -1,0 +1,447 @@
+<div class="col-sm-12 col-md-12" id="elementToPDF" ng-if="vpcp.list!=undefined &amp;&amp; vpcp.list!=false" style="font-size: 12px; background-color: rgb(255, 255, 255);">
+<!--Encabezado del pliego-->
+<!-- --><div class="well export-pdf table-responsive" ng-if="vpcp.list.header" style="margin-top:10px;">
+<table class="table table-condensed table-bordered last-line-table" style="margin:0;" width="100%">
+<tbody><!-- --><tr ng-repeat="item in vpcp.list.header.values">
+<td width="250"><b>Número:</b></td>
+<td>2020-0-12-119-04-EM-022834</td>
+</tr><!-- --><tr ng-repeat="item in vpcp.list.header.values">
+<td width="250"><b>Nombre del Acto:</b></td>
+<td>MONITOR DE SIGNOS VITALES INVASIVO Y NO INVASIVO PARA CUIDADOS INTENSIVOS 100% MODULAR MULTIPARAMETRO PARA ADULTO Y PEDIÁTRICO F.T. 45423 REQUISICIÓN # 84</td>
+</tr><!-- --><tr ng-repeat="item in vpcp.list.header.values">
+<td width="250"><b>Objeto de la Contratación:</b></td>
+<td>Bien</td>
+</tr><!-- -->
+</tbody></table>
+</div><!-- -->
+<!-- --><div ng-include="'configVP.html'">
+<!--Información de la Entidad-->
+<!-- --><div class="panel panel-default export-pdf" ng-if="vpcp.list.entityInformation">
+<div class="panel-heading" style="padding:5px 15px;"><b>Información de la Entidad</b></div>
+<div class="panel-body table-responsive" style="padding:15px;">
+<table class="table table-condensed table-bordered last-line-table" style="margin:0;" width="100%">
+<tbody><!-- --><tr ng-repeat="item in vpcp.list.entityInformation.values">
+<td width="250"><b>Entidad:</b></td>
+<td>MINISTERIO DE SALUD</td>
+</tr><!-- --><tr ng-repeat="item in vpcp.list.entityInformation.values">
+<td width="250"><b>Dependencia:</b></td>
+<td>HOSPITAL JOSE DOMINGO DE OBALDÍA</td>
+</tr><!-- --><tr ng-repeat="item in vpcp.list.entityInformation.values">
+<td width="250"><b>Unidad De Compra:</b></td>
+<td>DEPARTAMENTO DE COMPRAS(H. JOSÉ DOMINGO DE OBALDIA)</td>
+</tr><!-- --><tr ng-repeat="item in vpcp.list.entityInformation.values">
+<td width="250"><b>Dirección:</b></td>
+<td>DAVID, CHIRIQUI</td>
+</tr><!-- -->
+</tbody></table>
+</div>
+</div><!-- -->
+<!--Contacto de la Unidad de Compra-->
+<!-- --><div class="panel panel-default export-pdf" ng-if="vpcp.list.contactUser">
+<div class="panel-heading" style="padding:5px 15px;"><b>Contacto de la Unidad de Compra</b></div>
+<div class="panel-body table-responsive" style="padding:15px;">
+<table class="table table-condensed table-bordered last-line-table" style="margin:0;" width="100%">
+<tbody><!-- --><tr ng-repeat="item in vpcp.list.contactUser.values">
+<td width="250"><b>nombre</b></td>
+<td>Napoleón Batista González</td>
+</tr><!-- --><tr ng-repeat="item in vpcp.list.contactUser.values">
+<td width="250"><b>cargo</b></td>
+<td>Cotizador I</td>
+</tr><!-- -->
+</tbody></table>
+</div>
+</div><!-- -->
+<!--Aviso de Convocatoria-->
+<!-- --><div class="panel panel-default export-pdf" ng-if="vpcp.list.aviso">
+<div class="panel-heading" style="padding:5px 15px;"><b>Aviso de Convocatoria</b></div>
+<div class="panel-body table-responsive" style="padding:15px;">
+<table class="table table-condensed table-bordered last-line-table" style="margin:0;" width="100%">
+<tbody><!-- --><tr ng-init="isjson = vpcp.isJson(item)" ng-repeat="item in vpcp.list.aviso.values">
+<td width="250"><b>Número de Acto:</b></td>
+<!-- --><td ng-if="!isjson">2020-0-12-119-04-EM-022834</td><!-- -->
+<!-- -->
+</tr><!-- --><tr ng-init="isjson = vpcp.isJson(item)" ng-repeat="item in vpcp.list.aviso.values">
+<td width="250"><b>Tipo de Procedimiento:</b></td>
+<!-- --><td ng-if="!isjson">Compras Mesa COVID-19</td><!-- -->
+<!-- -->
+</tr><!-- --><tr ng-init="isjson = vpcp.isJson(item)" ng-repeat="item in vpcp.list.aviso.values">
+<td width="250"><b>Fundamento de la Excepción</b></td>
+<!-- --><td ng-if="!isjson">C) Resolución No. 11 del 13 de Marzo de 2020</td><!-- -->
+<!-- -->
+</tr><!-- --><tr ng-init="isjson = vpcp.isJson(item)" ng-repeat="item in vpcp.list.aviso.values">
+<td width="250"><b>Objeto Contractual:</b></td>
+<!-- --><td ng-if="!isjson">Bien</td><!-- -->
+<!-- -->
+</tr><!-- --><tr ng-init="isjson = vpcp.isJson(item)" ng-repeat="item in vpcp.list.aviso.values">
+<td width="250"><b>Descripción:</b></td>
+<!-- --><td ng-if="!isjson">MONITOR DE SIGNOS VITALES INVASIVO Y NO INVASIVO PARA CUIDADOS INTENSIVOS 100% MODULAR MULTIPARAMETRO PARA ADULTO Y PEDIÁTRICO F.T. 45423 REQUISICIÓN # 84</td><!-- -->
+<!-- -->
+</tr><!-- --><tr ng-init="isjson = vpcp.isJson(item)" ng-repeat="item in vpcp.list.aviso.values">
+<td width="250"><b>Fecha de Publicación:</b></td>
+<!-- --><td ng-if="!isjson">01-09-2020 12:23 PM</td><!-- -->
+<!-- -->
+</tr><!-- --><tr ng-init="isjson = vpcp.isJson(item)" ng-repeat="item in vpcp.list.aviso.values">
+<td width="250"><b>Monto de la Contratación:</b></td>
+<!-- --><td ng-if="!isjson">B/.  15,954.12</td><!-- -->
+<!-- -->
+</tr><!-- --><tr ng-init="isjson = vpcp.isJson(item)" ng-repeat="item in vpcp.list.aviso.values">
+<td width="250"><b>Partidas presupuestales:</b></td>
+<!-- -->
+<!-- --><td ng-if="isjson">
+<table border="1" id="table_inter_np" type="table_inter">
+<tbody><tr style="background-color:#f5f5f5;">
+<th style="padding:2px 5px;">N°</th>
+<th style="padding:2px 5px;">Número Partida</th>
+</tr>
+<!-- --><tr ng-repeat="item1 in item.value">
+<td style="padding:2px 5px;">1</td>
+<td style="padding:2px 5px;">F.T.0.12.0.3.001.02.19.911</td>
+</tr><!-- -->
+</tbody></table>
+</td><!-- -->
+</tr><!-- --><tr ng-init="isjson = vpcp.isJson(item)" ng-repeat="item in vpcp.list.aviso.values">
+<td width="250"><b>Programa:</b></td>
+<!-- --><td ng-if="!isjson">---</td><!-- -->
+<!-- -->
+</tr><!-- --><tr ng-init="isjson = vpcp.isJson(item)" ng-repeat="item in vpcp.list.aviso.values">
+<td width="250"><b>Datos de Contacto</b></td>
+<!-- --><td ng-if="!isjson"></td><!-- -->
+<!-- -->
+</tr><!-- --><tr ng-init="isjson = vpcp.isJson(item)" ng-repeat="item in vpcp.list.aviso.values">
+<td width="250"><b>Nombre:</b></td>
+<!-- --><td ng-if="!isjson">Napoleón Batista González</td><!-- -->
+<!-- -->
+</tr><!-- --><tr ng-init="isjson = vpcp.isJson(item)" ng-repeat="item in vpcp.list.aviso.values">
+<td width="250"><b>Cargo:</b></td>
+<!-- --><td ng-if="!isjson">Cotizador I</td><!-- -->
+<!-- -->
+</tr><!-- --><tr ng-init="isjson = vpcp.isJson(item)" ng-repeat="item in vpcp.list.aviso.values">
+<td width="250"><b>Teléfono:</b></td>
+<!-- --><td ng-if="!isjson">507-7754228</td><!-- -->
+<!-- -->
+</tr><!-- --><tr ng-init="isjson = vpcp.isJson(item)" ng-repeat="item in vpcp.list.aviso.values">
+<td width="250"><b>Correo Electrónico:</b></td>
+<!-- --><td ng-if="!isjson">napoleon.batista@obaldia.sld.pa</td><!-- -->
+<!-- -->
+</tr><!-- -->
+</tbody></table>
+</div>
+</div><!-- -->
+<!--Condiciones Generales-->
+<!-- -->
+<!--Condiciones Especiales-->
+<!-- -->
+<!--Especificaciones Técnicas-->
+<!-- --><div class="panel panel-default export-pdf" ng-if="vpcp.list.especificacionesTecnicas">
+<div class="panel-heading" style="padding:5px 15px;"><b>Especificaciones Técnicas</b></div>
+<div class="panel-body table-responsive" style="padding:15px;">
+<!-- --><span ng-repeat-start="item in vpcp.list.especificacionesTecnicas.values" style="font-size:13px;font-weight:bold;">Proponente Seleccionado</span>
+<div class="table-responsive" ng-repeat-end="">
+<!-- --><table class="table table-condensed table-bordered last-line-table" ng-if="item.type=='ps'" style="margin:0;margin-bottom:10px;" width="100%">
+<tbody><!-- --><tr ng-repeat="item1 in item.values">
+<td width="250"><b>Nombre:</b></td>
+<td>HORACIO ICAZA Y &amp; CIA, S.A</td>
+</tr><!-- --><tr ng-repeat="item1 in item.values">
+<td width="250"><b>Número de Identificación:</b></td>
+<td>477-46-104385-42</td>
+</tr><!-- --><tr ng-repeat="item1 in item.values">
+<td width="250"><b>Dirección:</b></td>
+<td>Avenida Justo Arosemena y calle 44 Bella Vista</td>
+</tr><!-- --><tr ng-repeat="item1 in item.values">
+<td width="250"><b>Provincia:</b></td>
+<td>PANAMÁ</td>
+</tr><!-- --><tr ng-repeat="item1 in item.values">
+<td width="250"><b>Distrito:</b></td>
+<td>Balboa</td>
+</tr><!-- --><tr ng-repeat="item1 in item.values">
+<td width="250"><b>Correo Electrónico:</b></td>
+<td>hicaza@casamedic.com.pa</td>
+</tr><!-- --><tr ng-repeat="item1 in item.values">
+<td width="250"><b>Teléfono:</b></td>
+<td>507-2076300</td>
+</tr><!-- -->
+</tbody></table><!-- -->
+<!-- -->
+</div><!-- --><span ng-repeat-start="item in vpcp.list.especificacionesTecnicas.values" style="font-size:13px;font-weight:bold;">Bien/Servicio/Obra Seleccionados</span>
+<div class="table-responsive" ng-repeat-end="">
+<!-- -->
+<!-- --><table class="table table-condensed table-bordered table-striped last-line-table" ng-if="item.type=='bs'" style="margin:0;" width="100%">
+<thead>
+<tr>
+<th>R</th>
+<th>Código</th>
+<th>Clasificación</th>
+<th>Cantidad</th>
+<th>U. Medida</th>
+<th>Descripción</th>
+<!-- -->
+<!-- -->
+<th>SES</th>
+<!-- -->
+</tr>
+</thead>
+<tbody><!-- -->
+<!-- --><tr ng-repeat="item1 in item.values">
+<td>1</td>
+<td>95101011</td>
+<td>Equipo-Accesorios-Suministros Médicos</td>
+<td>1</td>
+<td>Unidad</td>
+<td>MONITOR DE SIGNOS VITALES INVASIVO Y NO INVASIVO PARA CUIDADOS INTENSIVOS 100% MODULAR MULTIPARAMETRO PARA ADULTO Y PEDIÁTRICO FICHA TÉCNICA # 45423 </td>
+<!-- -->
+<!-- -->
+<td>---</td>
+<!-- -->
+</tr><!-- -->
+</tbody></table><!-- -->
+</div><!-- -->
+</div>
+</div><!-- -->
+<!--Documentos Adjuntos-->
+<!-- --><div class="panel panel-default export-pdf" ng-if="vpcp.list.documentosAdjuntos">
+<div class="panel-heading" style="padding:5px 15px;"><b>Documentos Adjuntos</b></div>
+<div class="panel-body table-responsive" style="padding:15px;">
+<table class="table table-condensed table-bordered table-striped last-line-table" style="margin:0;" width="100%">
+<thead>
+<tr>
+<th>Descripción</th>
+<th>Tipo</th>
+<th>Fecha</th>
+<th>Acciones</th>
+</tr>
+</thead>
+<tbody><!-- -->
+<!-- --><tr ng-init="item.nombreLink='Ver Documento'" ng-repeat="item in vpcp.list.documentosAdjuntos.values">
+<td>AVISO DE CONVOCATORIA </td>
+<td>Anexos</td>
+<td>17-07-2020 03:33 PM</td>
+<td><a href="/includes/veranexo.aspx?idattach=JCQnJiMlLCY=" ng-href="/includes/veranexo.aspx?idattach=JCQnJiMlLCY=" target="_blank" title="Ver Documento"><img src="/imagenes/iconos/ic_ver_generico.gif"/></a></td>
+</tr><!-- --><tr ng-init="item.nombreLink='Ver Documento'" ng-repeat="item in vpcp.list.documentosAdjuntos.values">
+<td>REGISTRO PUBLICO DE HORACIO &amp; CÍA </td>
+<td>Anexos</td>
+<td>17-07-2020 03:34 PM</td>
+<td><a href="/includes/veranexo.aspx?idattach=JCQnJiMkJSQ=" ng-href="/includes/veranexo.aspx?idattach=JCQnJiMkJSQ=" target="_blank" title="Ver Documento"><img src="/imagenes/iconos/ic_ver_generico.gif"/></a></td>
+</tr><!-- --><tr ng-init="item.nombreLink='Ver Documento'" ng-repeat="item in vpcp.list.documentosAdjuntos.values">
+<td>CÉDULA DE IDENTIDAD DE HORACIO &amp; CÍA </td>
+<td>Anexos</td>
+<td>17-07-2020 03:35 PM</td>
+<td><a href="/includes/veranexo.aspx?idattach=JCQnJiMkJSM=" ng-href="/includes/veranexo.aspx?idattach=JCQnJiMkJSM=" target="_blank" title="Ver Documento"><img src="/imagenes/iconos/ic_ver_generico.gif"/></a></td>
+</tr><!-- --><tr ng-init="item.nombreLink='Ver Documento'" ng-repeat="item in vpcp.list.documentosAdjuntos.values">
+<td>CERTIFICACIÓN DE FABRICACIÓN</td>
+<td>Anexos</td>
+<td>17-07-2020 03:37 PM</td>
+<td><a href="/includes/veranexo.aspx?idattach=JCQnJiMkJCQ=" ng-href="/includes/veranexo.aspx?idattach=JCQnJiMkJCQ=" target="_blank" title="Ver Documento"><img src="/imagenes/iconos/ic_ver_generico.gif"/></a></td>
+</tr><!-- --><tr ng-init="item.nombreLink='Ver Documento'" ng-repeat="item in vpcp.list.documentosAdjuntos.values">
+<td>CERTIFICACIÓN DE HORACIO ICAZA Y CÍA.</td>
+<td>Anexos</td>
+<td>17-07-2020 03:41 PM</td>
+<td><a href="/includes/veranexo.aspx?idattach=JCQnJiMkJCw=" ng-href="/includes/veranexo.aspx?idattach=JCQnJiMkJCw=" target="_blank" title="Ver Documento"><img src="/imagenes/iconos/ic_ver_generico.gif"/></a></td>
+</tr><!-- --><tr ng-init="item.nombreLink='Ver Documento'" ng-repeat="item in vpcp.list.documentosAdjuntos.values">
+<td>PAZ Y SALVO DE LA DGI DE HORACIO ICAZA Y CÍA.</td>
+<td>Anexos</td>
+<td>17-07-2020 03:42 PM</td>
+<td><a href="/includes/veranexo.aspx?idattach=JCQnJiMkJiU=" ng-href="/includes/veranexo.aspx?idattach=JCQnJiMkJiU=" target="_blank" title="Ver Documento"><img src="/imagenes/iconos/ic_ver_generico.gif"/></a></td>
+</tr><!-- --><tr ng-init="item.nombreLink='Ver Documento'" ng-repeat="item in vpcp.list.documentosAdjuntos.values">
+<td>PAZ Y SALVO DE LA CSS DE HORACIO ICAZA Y CÍA.</td>
+<td>Anexos</td>
+<td>17-07-2020 03:44 PM</td>
+<td><a href="/includes/veranexo.aspx?idattach=JCQnJiMkISQ=" ng-href="/includes/veranexo.aspx?idattach=JCQnJiMkISQ=" target="_blank" title="Ver Documento"><img src="/imagenes/iconos/ic_ver_generico.gif"/></a></td>
+</tr><!-- --><tr ng-init="item.nombreLink='Ver Documento'" ng-repeat="item in vpcp.list.documentosAdjuntos.values">
+<td>DECLARACIÓN JURADA DE RETORSIÓN HORACIO ICAZA Y CÍA</td>
+<td>Anexos</td>
+<td>17-07-2020 03:50 PM</td>
+<td><a href="/includes/veranexo.aspx?idattach=JCQnJiMkIyY=" ng-href="/includes/veranexo.aspx?idattach=JCQnJiMkIyY=" target="_blank" title="Ver Documento"><img src="/imagenes/iconos/ic_ver_generico.gif"/></a></td>
+</tr><!-- --><tr ng-init="item.nombreLink='Ver Documento'" ng-repeat="item in vpcp.list.documentosAdjuntos.values">
+<td>DECLARACIÓN JURADA PARA CONTRATAR HORACIO ICAZA Y CÍA.</td>
+<td>Anexos</td>
+<td>17-07-2020 03:51 PM</td>
+<td><a href="/includes/veranexo.aspx?idattach=JCQnJiMkIyM=" ng-href="/includes/veranexo.aspx?idattach=JCQnJiMkIyM=" target="_blank" title="Ver Documento"><img src="/imagenes/iconos/ic_ver_generico.gif"/></a></td>
+</tr><!-- --><tr ng-init="item.nombreLink='Ver Documento'" ng-repeat="item in vpcp.list.documentosAdjuntos.values">
+<td>AVISO DE OPERACIÓN DE HORACIO ICAZA Y CÍA </td>
+<td>Anexos</td>
+<td>17-07-2020 03:52 PM</td>
+<td><a href="/includes/veranexo.aspx?idattach=JCQnJiMkIyI=" ng-href="/includes/veranexo.aspx?idattach=JCQnJiMkIyI=" target="_blank" title="Ver Documento"><img src="/imagenes/iconos/ic_ver_generico.gif"/></a></td>
+</tr><!-- --><tr ng-init="item.nombreLink='Ver Documento'" ng-repeat="item in vpcp.list.documentosAdjuntos.values">
+<td>CERTIFICADO DE OFERENTE DE HORACIO ICAZA Y CÍA </td>
+<td>Anexos</td>
+<td>17-07-2020 03:53 PM</td>
+<td><a href="/includes/veranexo.aspx?idattach=JCQnJiMkIiU=" ng-href="/includes/veranexo.aspx?idattach=JCQnJiMkIiU=" target="_blank" title="Ver Documento"><img src="/imagenes/iconos/ic_ver_generico.gif"/></a></td>
+</tr><!-- --><tr ng-init="item.nombreLink='Ver Documento'" ng-repeat="item in vpcp.list.documentosAdjuntos.values">
+<td>CATALOGO DEL PRODUCTO HORACIO ICAZA Y CÍA </td>
+<td>Anexos</td>
+<td>17-07-2020 03:54 PM</td>
+<td><a href="/includes/veranexo.aspx?idattach=JCQnJiMkIi0=" ng-href="/includes/veranexo.aspx?idattach=JCQnJiMkIi0=" target="_blank" title="Ver Documento"><img src="/imagenes/iconos/ic_ver_generico.gif"/></a></td>
+</tr><!-- --><tr ng-init="item.nombreLink='Ver Documento'" ng-repeat="item in vpcp.list.documentosAdjuntos.values">
+<td>IMPRESIÓN DE CATALOGO HORACIO ICAZA Y CÍA</td>
+<td>Anexos</td>
+<td>17-07-2020 03:55 PM</td>
+<td><a href="/includes/veranexo.aspx?idattach=JCQnJiMkLSE=" ng-href="/includes/veranexo.aspx?idattach=JCQnJiMkLSE=" target="_blank" title="Ver Documento"><img src="/imagenes/iconos/ic_ver_generico.gif"/></a></td>
+</tr><!-- --><tr ng-init="item.nombreLink='Ver Documento'" ng-repeat="item in vpcp.list.documentosAdjuntos.values">
+<td>CERTIFICADO DE FICHA TÉCNICA HORACIO ICAZA Y CÍA </td>
+<td>Anexos</td>
+<td>17-07-2020 03:57 PM</td>
+<td><a href="/includes/veranexo.aspx?idattach=JCQnJiMkLSw=" ng-href="/includes/veranexo.aspx?idattach=JCQnJiMkLSw=" target="_blank" title="Ver Documento"><img src="/imagenes/iconos/ic_ver_generico.gif"/></a></td>
+</tr><!-- --><tr ng-init="item.nombreLink='Ver Documento'" ng-repeat="item in vpcp.list.documentosAdjuntos.values">
+<td>CERTIFICACIÓN DE FICHA TÉCNICA HORACIO ICAZA Y CÍA </td>
+<td>Anexos</td>
+<td>17-07-2020 03:59 PM</td>
+<td><a href="/includes/veranexo.aspx?idattach=JCQnJiMkLCQ=" ng-href="/includes/veranexo.aspx?idattach=JCQnJiMkLCQ=" target="_blank" title="Ver Documento"><img src="/imagenes/iconos/ic_ver_generico.gif"/></a></td>
+</tr><!-- --><tr ng-init="item.nombreLink='Ver Documento'" ng-repeat="item in vpcp.list.documentosAdjuntos.values">
+<td>CERTIFICACIÓN DE REGISTRO DE OFERENTE DE HORACIO ICAZA Y CIA.</td>
+<td>Anexos</td>
+<td>17-07-2020 04:02 PM</td>
+<td><a href="/includes/veranexo.aspx?idattach=JCQnJiMkLCE=" ng-href="/includes/veranexo.aspx?idattach=JCQnJiMkLCE=" target="_blank" title="Ver Documento"><img src="/imagenes/iconos/ic_ver_generico.gif"/></a></td>
+</tr><!-- --><tr ng-init="item.nombreLink='Ver Documento'" ng-repeat="item in vpcp.list.documentosAdjuntos.values">
+<td>PROPUESTA DE HORACIO ICAZA Y CÍA </td>
+<td>Anexos</td>
+<td>17-07-2020 04:02 PM</td>
+<td><a href="/includes/veranexo.aspx?idattach=JCQnJiMkLCA=" ng-href="/includes/veranexo.aspx?idattach=JCQnJiMkLCA=" target="_blank" title="Ver Documento"><img src="/imagenes/iconos/ic_ver_generico.gif"/></a></td>
+</tr><!-- --><tr ng-init="item.nombreLink='Ver Documento'" ng-repeat="item in vpcp.list.documentosAdjuntos.values">
+<td>COMPROBANTE DE INGRESO OFERTA HORACIO ICAZA Y CÍA </td>
+<td>Anexos</td>
+<td>17-07-2020 04:05 PM</td>
+<td><a href="/includes/veranexo.aspx?idattach=JCQnJiMkLCM=" ng-href="/includes/veranexo.aspx?idattach=JCQnJiMkLCM=" target="_blank" title="Ver Documento"><img src="/imagenes/iconos/ic_ver_generico.gif"/></a></td>
+</tr><!-- --><tr ng-init="item.nombreLink='Ver Documento'" ng-repeat="item in vpcp.list.documentosAdjuntos.values">
+<td>COMPROBANTE ACTO DE APERTURA CM-022690</td>
+<td>Anexos</td>
+<td>17-07-2020 04:06 PM</td>
+<td><a href="/includes/veranexo.aspx?idattach=JCQnJiMkLCw=" ng-href="/includes/veranexo.aspx?idattach=JCQnJiMkLCw=" target="_blank" title="Ver Documento"><img src="/imagenes/iconos/ic_ver_generico.gif"/></a></td>
+</tr><!-- --><tr ng-init="item.nombreLink='Ver Documento'" ng-repeat="item in vpcp.list.documentosAdjuntos.values">
+<td>COMPROBANTE DE DOCUMENTOS RECIBIDOS CM-022690</td>
+<td>Anexos</td>
+<td>17-07-2020 04:07 PM</td>
+<td><a href="/includes/veranexo.aspx?idattach=JCQnJiMnJSY=" ng-href="/includes/veranexo.aspx?idattach=JCQnJiMnJSY=" target="_blank" title="Ver Documento"><img src="/imagenes/iconos/ic_ver_generico.gif"/></a></td>
+</tr><!-- --><tr ng-init="item.nombreLink='Ver Documento'" ng-repeat="item in vpcp.list.documentosAdjuntos.values">
+<td>NOTA DE ENVÍO A CRITERIO TÉCNICO GINECOLOGÍA </td>
+<td>Anexos</td>
+<td>17-07-2020 04:08 PM</td>
+<td><a href="/includes/veranexo.aspx?idattach=JCQnJiMnJSA=" ng-href="/includes/veranexo.aspx?idattach=JCQnJiMnJSA=" target="_blank" title="Ver Documento"><img src="/imagenes/iconos/ic_ver_generico.gif"/></a></td>
+</tr><!-- --><tr ng-init="item.nombreLink='Ver Documento'" ng-repeat="item in vpcp.list.documentosAdjuntos.values">
+<td>CRITERIO TÉCNICO DE JEFE UCI GINECO OBSTÉTRICOS </td>
+<td>Anexos</td>
+<td>17-07-2020 04:09 PM</td>
+<td><a href="/includes/veranexo.aspx?idattach=JCQnJiMnJSM=" ng-href="/includes/veranexo.aspx?idattach=JCQnJiMnJSM=" target="_blank" title="Ver Documento"><img src="/imagenes/iconos/ic_ver_generico.gif"/></a></td>
+</tr><!-- --><tr ng-init="item.nombreLink='Ver Documento'" ng-repeat="item in vpcp.list.documentosAdjuntos.values">
+<td>CUADRO DE PROPONENTES </td>
+<td>Anexos</td>
+<td>17-07-2020 04:10 PM</td>
+<td><a href="/includes/veranexo.aspx?idattach=JCQnJiMnJSI=" ng-href="/includes/veranexo.aspx?idattach=JCQnJiMnJSI=" target="_blank" title="Ver Documento"><img src="/imagenes/iconos/ic_ver_generico.gif"/></a></td>
+</tr><!-- --><tr ng-init="item.nombreLink='Ver Documento'" ng-repeat="item in vpcp.list.documentosAdjuntos.values">
+<td>RESOLUCIÓN 022 DEL 25-06-2020</td>
+<td>Anexos</td>
+<td>17-07-2020 04:12 PM</td>
+<td><a href="/includes/veranexo.aspx?idattach=JCQnJiMnJCU=" ng-href="/includes/veranexo.aspx?idattach=JCQnJiMnJCU=" target="_blank" title="Ver Documento"><img src="/imagenes/iconos/ic_ver_generico.gif"/></a></td>
+</tr><!-- --><tr ng-init="item.nombreLink='Ver Documento'" ng-repeat="item in vpcp.list.documentosAdjuntos.values">
+<td>SOLICITUD DE BLOQUEO DE PARTIDA A PRESUPUESTO</td>
+<td>Anexos</td>
+<td>17-07-2020 04:13 PM</td>
+<td><a href="/includes/veranexo.aspx?idattach=JCQnJiMnJCc=" ng-href="/includes/veranexo.aspx?idattach=JCQnJiMnJCc=" target="_blank" title="Ver Documento"><img src="/imagenes/iconos/ic_ver_generico.gif"/></a></td>
+</tr><!-- --><tr ng-init="item.nombreLink='Ver Documento'" ng-repeat="item in vpcp.list.documentosAdjuntos.values">
+<td>BLOQUEO O RESERVA DE PARTIDA</td>
+<td>Anexos</td>
+<td>17-07-2020 04:14 PM</td>
+<td><a href="/includes/veranexo.aspx?idattach=JCQnJiMnJCE=" ng-href="/includes/veranexo.aspx?idattach=JCQnJiMnJCE=" target="_blank" title="Ver Documento"><img src="/imagenes/iconos/ic_ver_generico.gif"/></a></td>
+</tr><!-- --><tr ng-init="item.nombreLink='Ver Documento'" ng-repeat="item in vpcp.list.documentosAdjuntos.values">
+<td>RESOLUCIÓN DE ADJUDICACIÓN CM-022690</td>
+<td>Anexos</td>
+<td>17-07-2020 04:14 PM</td>
+<td><a href="/includes/veranexo.aspx?idattach=JCQnJiMnJC0=" ng-href="/includes/veranexo.aspx?idattach=JCQnJiMnJC0=" target="_blank" title="Ver Documento"><img src="/imagenes/iconos/ic_ver_generico.gif"/></a></td>
+</tr><!-- --><tr ng-init="item.nombreLink='Ver Documento'" ng-repeat="item in vpcp.list.documentosAdjuntos.values">
+<td>DECLARACIÓN PRECONTRACTUAL </td>
+<td>Anexos</td>
+<td>17-07-2020 04:15 PM</td>
+<td><a href="/includes/veranexo.aspx?idattach=JCQnJiMnJyQ=" ng-href="/includes/veranexo.aspx?idattach=JCQnJiMnJyQ=" target="_blank" title="Ver Documento"><img src="/imagenes/iconos/ic_ver_generico.gif"/></a></td>
+</tr><!-- --><tr ng-init="item.nombreLink='Ver Documento'" ng-repeat="item in vpcp.list.documentosAdjuntos.values">
+<td>COMPROMETIDO REFERENTE AL BLOQUEO </td>
+<td>Anexos</td>
+<td>17-07-2020 04:16 PM</td>
+<td><a href="/includes/veranexo.aspx?idattach=JCQnJiMnJyY=" ng-href="/includes/veranexo.aspx?idattach=JCQnJiMnJyY=" target="_blank" title="Ver Documento"><img src="/imagenes/iconos/ic_ver_generico.gif"/></a></td>
+</tr><!-- --><tr ng-init="item.nombreLink='Ver Documento'" ng-repeat="item in vpcp.list.documentosAdjuntos.values">
+<td>PLIEGO DE CARGO EM-022834</td>
+<td>Anexos</td>
+<td>17-07-2020 04:17 PM</td>
+<td><a href="/includes/veranexo.aspx?idattach=JCQnJiMnJyA=" ng-href="/includes/veranexo.aspx?idattach=JCQnJiMnJyA=" target="_blank" title="Ver Documento"><img src="/imagenes/iconos/ic_ver_generico.gif"/></a></td>
+</tr><!-- --><tr ng-init="item.nombreLink='Ver Documento'" ng-repeat="item in vpcp.list.documentosAdjuntos.values">
+<td>PROPUESTA DE HORACIO ICAZA &amp; CÍA, S.A.</td>
+<td>Propuestas</td>
+<td>01-09-2020 10:26 AM</td>
+<td><a href="/includes/veranexo.aspx?idattach=JCQmLCcmLSU=" ng-href="/includes/veranexo.aspx?idattach=JCQmLCcmLSU=" target="_blank" title="Ver Documento"><img src="/imagenes/iconos/ic_ver_generico.gif"/></a></td>
+</tr><!-- --><tr ng-init="item.nombreLink='Ver Documento'" ng-repeat="item in vpcp.list.documentosAdjuntos.values">
+<td>O/C 4200295764 HPRACIO ICAZA &amp; CIA, S.A.</td>
+<td>Orden de Compra</td>
+<td>01-09-2020 10:32 AM</td>
+<td><a href="/includes/veranexo.aspx?idattach=JCQmLCchIiA=" ng-href="/includes/veranexo.aspx?idattach=JCQmLCchIiA=" target="_blank" title="Ver Documento"><img src="/imagenes/iconos/ic_ver_generico.gif"/></a></td>
+</tr><!-- --><tr ng-init="item.nombreLink='Ver Documento'" ng-repeat="item in vpcp.list.documentosAdjuntos.values">
+<td>PLIEGO DE CARGOS EM-022834</td>
+<td>Terminos de referencia</td>
+<td>01-09-2020 10:42 AM</td>
+<td><a href="/includes/veranexo.aspx?idattach=JCQmLCcjISA=" ng-href="/includes/veranexo.aspx?idattach=JCQmLCcjISA=" target="_blank" title="Ver Documento"><img src="/imagenes/iconos/ic_ver_generico.gif"/></a></td>
+</tr><!-- --><tr ng-init="item.nombreLink='Ver Documento'" ng-repeat="item in vpcp.list.documentosAdjuntos.values">
+<td>RESOLUCION DE GABINETE N°11</td>
+<td>Resolución Fundamento Legal Mesa Covid-19</td>
+<td>01-09-2020 10:44 AM</td>
+<td><a href="/includes/veranexo.aspx?idattach=JCQmLCcjIiU=" ng-href="/includes/veranexo.aspx?idattach=JCQmLCcjIiU=" target="_blank" title="Ver Documento"><img src="/imagenes/iconos/ic_ver_generico.gif"/></a></td>
+</tr><!-- --><tr ng-init="item.nombreLink='Ver Documento'" ng-repeat="item in vpcp.list.documentosAdjuntos.values">
+<td>RESOLUCION DE GABINETE N°18</td>
+<td>Resolución Fundamento Legal Mesa Covid-19</td>
+<td>01-09-2020 10:45 AM</td>
+<td><a href="/includes/veranexo.aspx?idattach=JCQmLCcjIiI=" ng-href="/includes/veranexo.aspx?idattach=JCQmLCcjIiI=" target="_blank" title="Ver Documento"><img src="/imagenes/iconos/ic_ver_generico.gif"/></a></td>
+</tr><!-- --><tr ng-init="item.nombreLink='Ver Documento'" ng-repeat="item in vpcp.list.documentosAdjuntos.values">
+<td>PRORROGA </td>
+<td>Aclaraciones</td>
+<td>29-09-2020 10:58 AM</td>
+<td><a href="/includes/veranexo.aspx?idattach=JCQgIC0iJS0=" ng-href="/includes/veranexo.aspx?idattach=JCQgIC0iJS0=" target="_blank" title="Ver Documento"><img src="/imagenes/iconos/ic_ver_generico.gif"/></a></td>
+</tr><!-- --><tr ng-init="item.nombreLink='Ver Documento'" ng-repeat="item in vpcp.list.documentosAdjuntos.values">
+<td>RESOLUCION DE PRORROGA</td>
+<td>Aclaraciones</td>
+<td>29-09-2020 11:01 AM</td>
+<td><a href="/includes/veranexo.aspx?idattach=JCQgIC0tJyE=" ng-href="/includes/veranexo.aspx?idattach=JCQgIC0tJyE=" target="_blank" title="Ver Documento"><img src="/imagenes/iconos/ic_ver_generico.gif"/></a></td>
+</tr><!-- --><tr ng-init="item.nombreLink='Ver Documento'" ng-repeat="item in vpcp.list.documentosAdjuntos.values">
+<td>comprobante de orden </td>
+<td>Anexos</td>
+<td>05-10-2020 05:15 PM</td>
+<td><a href="/includes/veranexo.aspx?idattach=JCQjJSUtLCc=" ng-href="/includes/veranexo.aspx?idattach=JCQjJSUtLCc=" target="_blank" title="Ver Documento"><img src="/imagenes/iconos/ic_ver_generico.gif"/></a></td>
+</tr><!-- -->
+</tbody></table>
+</div>
+</div><!-- -->
+<!--Documentos del Acto Público-->
+<!-- --><div class="panel panel-default export-pdf" ng-if="vpcp.list.documetosPliego">
+<div class="panel-heading" style="padding:5px 15px;"><b>Documentos del Acto Público</b></div>
+<div class="panel-body table-responsive" style="padding:15px;">
+<table class="table table-condensed table-bordered table-striped last-line-table" style="margin:0;" width="100%">
+<thead>
+<tr>
+<th>Nombre Documento</th>
+<th>Fecha Creación</th>
+<th>Acciones</th>
+</tr>
+</thead>
+<tbody><!-- --><tr ng-if="vpcp.list.documetosPliego.values.length==0">
+<td colspan="4"><center>No hay documentos del acto público</center></td>
+</tr><!-- -->
+<!-- -->
+</tbody></table>
+</div>
+</div><!-- -->
+<!--Publicaciones Anteriores-->
+<!-- -->
+<!--Convocatorias Anteriores-->
+<!-- -->
+<!--opciones-->
+<!-- --><div class="panel panel-default export-pdf" ng-if="vpcp.list.opciones">
+<div class="panel-heading" style="padding:5px 15px;"><b>Opciones</b></div>
+<div class="panel-body table-responsive" style="padding:15px;">
+<!-- --><a class="btn btn-default" id="vap" ng-click="vpcp.clickpdf(0)" ng-if="!vpcp.isIE9" title="Ver Acto Público en Formato PDF para imprimir">
+<img src="/Inicio/images/ic_descargar_pdf.gif"/>
+</a><!-- -->
+<!-- --><a class="btn btn-default" ng-click="vpcp.clickpdf(1)" ng-if="!vpcp.isIE" style="margin-left:5px;" title="Imprimir Acto Publico">
+<img src="/Inicio/images/ic_imprimir.gif"/>
+</a><!-- -->
+<!-- -->
+<!-- -->
+</div>
+</div><!-- -->
+<!-- --><button class="btn btn-default btn-sm" ng-click="vpcp.backbutton()" ng-if="!vpcp.param.hiddenBB">« Volver</button><!-- -->
+</div>
+</div>

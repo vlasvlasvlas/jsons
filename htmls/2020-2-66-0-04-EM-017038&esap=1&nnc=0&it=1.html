@@ -1,0 +1,972 @@
+<div class="col-sm-12 col-md-12" id="elementToPDF" ng-if="vpcp.list!=undefined &amp;&amp; vpcp.list!=false" style="font-size: 12px; background-color: rgb(255, 255, 255);">
+<!--Encabezado del pliego-->
+<!-- --><div class="well export-pdf table-responsive" ng-if="vpcp.list.header" style="margin-top:10px;">
+<table class="table table-condensed table-bordered last-line-table" style="margin:0;" width="100%">
+<tbody><!-- --><tr ng-repeat="item in vpcp.list.header.values">
+<td width="250"><b>Número:</b></td>
+<td>2020-2-66-0-04-EM-017038</td>
+</tr><!-- --><tr ng-repeat="item in vpcp.list.header.values">
+<td width="250"><b>Nombre del Acto:</b></td>
+<td>CONJUNTOS DE HERRAMIENTAS EN GENERAL</td>
+</tr><!-- --><tr ng-repeat="item in vpcp.list.header.values">
+<td width="250"><b>Objeto de la Contratación:</b></td>
+<td>Bien</td>
+</tr><!-- -->
+</tbody></table>
+</div><!-- -->
+<!-- --><div ng-include="'configVP.html'">
+<!--Información de la Entidad-->
+<!-- --><div class="panel panel-default export-pdf" ng-if="vpcp.list.entityInformation">
+<div class="panel-heading" style="padding:5px 15px;"><b>Información de la Entidad</b></div>
+<div class="panel-body table-responsive" style="padding:15px;">
+<table class="table table-condensed table-bordered last-line-table" style="margin:0;" width="100%">
+<tbody><!-- --><tr ng-repeat="item in vpcp.list.entityInformation.values">
+<td width="250"><b>Entidad:</b></td>
+<td>INSTITUTO DE ACUEDUCTOS Y ALCANTARILLADOS NACIONALES</td>
+</tr><!-- --><tr ng-repeat="item in vpcp.list.entityInformation.values">
+<td width="250"><b>Dependencia:</b></td>
+<td>SEDE</td>
+</tr><!-- --><tr ng-repeat="item in vpcp.list.entityInformation.values">
+<td width="250"><b>Unidad De Compra:</b></td>
+<td>DEPARTAMENTO DE COMPRA</td>
+</tr><!-- --><tr ng-repeat="item in vpcp.list.entityInformation.values">
+<td width="250"><b>Dirección:</b></td>
+<td>Panamá</td>
+</tr><!-- -->
+</tbody></table>
+</div>
+</div><!-- -->
+<!--Contacto de la Unidad de Compra-->
+<!-- --><div class="panel panel-default export-pdf" ng-if="vpcp.list.contactUser">
+<div class="panel-heading" style="padding:5px 15px;"><b>Contacto de la Unidad de Compra</b></div>
+<div class="panel-body table-responsive" style="padding:15px;">
+<table class="table table-condensed table-bordered last-line-table" style="margin:0;" width="100%">
+<tbody><!-- --><tr ng-repeat="item in vpcp.list.contactUser.values">
+<td width="250"><b>nombre</b></td>
+<td>Ivan joel delgado </td>
+</tr><!-- --><tr ng-repeat="item in vpcp.list.contactUser.values">
+<td width="250"><b>cargo</b></td>
+<td>cotizador </td>
+</tr><!-- -->
+</tbody></table>
+</div>
+</div><!-- -->
+<!--Aviso de Convocatoria-->
+<!-- --><div class="panel panel-default export-pdf" ng-if="vpcp.list.aviso">
+<div class="panel-heading" style="padding:5px 15px;"><b>Aviso de Convocatoria</b></div>
+<div class="panel-body table-responsive" style="padding:15px;">
+<table class="table table-condensed table-bordered last-line-table" style="margin:0;" width="100%">
+<tbody><!-- --><tr ng-init="isjson = vpcp.isJson(item)" ng-repeat="item in vpcp.list.aviso.values">
+<td width="250"><b>Número de Acto:</b></td>
+<!-- --><td ng-if="!isjson">2020-2-66-0-04-EM-017038</td><!-- -->
+<!-- -->
+</tr><!-- --><tr ng-init="isjson = vpcp.isJson(item)" ng-repeat="item in vpcp.list.aviso.values">
+<td width="250"><b>Tipo de Procedimiento:</b></td>
+<!-- --><td ng-if="!isjson">Compras Mesa COVID-19</td><!-- -->
+<!-- -->
+</tr><!-- --><tr ng-init="isjson = vpcp.isJson(item)" ng-repeat="item in vpcp.list.aviso.values">
+<td width="250"><b>Fundamento de la Excepción</b></td>
+<!-- --><td ng-if="!isjson">D) Resolución No. 18 del 31 de Marzo de 2020</td><!-- -->
+<!-- -->
+</tr><!-- --><tr ng-init="isjson = vpcp.isJson(item)" ng-repeat="item in vpcp.list.aviso.values">
+<td width="250"><b>Objeto Contractual:</b></td>
+<!-- --><td ng-if="!isjson">Bien</td><!-- -->
+<!-- -->
+</tr><!-- --><tr ng-init="isjson = vpcp.isJson(item)" ng-repeat="item in vpcp.list.aviso.values">
+<td width="250"><b>Descripción:</b></td>
+<!-- --><td ng-if="!isjson">CONJUNTOS DE HERRAMIENTAS EN GENERAL</td><!-- -->
+<!-- -->
+</tr><!-- --><tr ng-init="isjson = vpcp.isJson(item)" ng-repeat="item in vpcp.list.aviso.values">
+<td width="250"><b>Fecha de Publicación:</b></td>
+<!-- --><td ng-if="!isjson">06-10-2020 09:01 AM</td><!-- -->
+<!-- -->
+</tr><!-- --><tr ng-init="isjson = vpcp.isJson(item)" ng-repeat="item in vpcp.list.aviso.values">
+<td width="250"><b>Monto de la Contratación:</b></td>
+<!-- --><td ng-if="!isjson">B/.  49,648.02</td><!-- -->
+<!-- -->
+</tr><!-- --><tr ng-init="isjson = vpcp.isJson(item)" ng-repeat="item in vpcp.list.aviso.values">
+<td width="250"><b>Partidas presupuestales:</b></td>
+<!-- -->
+<!-- --><td ng-if="isjson">
+<table border="1" id="table_inter_np" type="table_inter">
+<tbody><tr style="background-color:#f5f5f5;">
+<th style="padding:2px 5px;">N°</th>
+<th style="padding:2px 5px;">Número Partida</th>
+</tr>
+<!-- --><tr ng-repeat="item1 in item.value">
+<td style="padding:2px 5px;">1</td>
+<td style="padding:2px 5px;">266.1.4.501.02.05 911</td>
+</tr><!-- -->
+</tbody></table>
+</td><!-- -->
+</tr><!-- --><tr ng-init="isjson = vpcp.isJson(item)" ng-repeat="item in vpcp.list.aviso.values">
+<td width="250"><b>Programa:</b></td>
+<!-- --><td ng-if="!isjson">---</td><!-- -->
+<!-- -->
+</tr><!-- --><tr ng-init="isjson = vpcp.isJson(item)" ng-repeat="item in vpcp.list.aviso.values">
+<td width="250"><b>Datos de Contacto</b></td>
+<!-- --><td ng-if="!isjson"></td><!-- -->
+<!-- -->
+</tr><!-- --><tr ng-init="isjson = vpcp.isJson(item)" ng-repeat="item in vpcp.list.aviso.values">
+<td width="250"><b>Nombre:</b></td>
+<!-- --><td ng-if="!isjson">Ivan joel delgado </td><!-- -->
+<!-- -->
+</tr><!-- --><tr ng-init="isjson = vpcp.isJson(item)" ng-repeat="item in vpcp.list.aviso.values">
+<td width="250"><b>Cargo:</b></td>
+<!-- --><td ng-if="!isjson">cotizador </td><!-- -->
+<!-- -->
+</tr><!-- --><tr ng-init="isjson = vpcp.isJson(item)" ng-repeat="item in vpcp.list.aviso.values">
+<td width="250"><b>Teléfono:</b></td>
+<!-- --><td ng-if="!isjson">507-5040533</td><!-- -->
+<!-- -->
+</tr><!-- --><tr ng-init="isjson = vpcp.isJson(item)" ng-repeat="item in vpcp.list.aviso.values">
+<td width="250"><b>Correo Electrónico:</b></td>
+<!-- --><td ng-if="!isjson">idelgado1@idaan.gob.pa</td><!-- -->
+<!-- -->
+</tr><!-- -->
+</tbody></table>
+</div>
+</div><!-- -->
+<!--Condiciones Generales-->
+<!-- -->
+<!--Condiciones Especiales-->
+<!-- -->
+<!--Especificaciones Técnicas-->
+<!-- --><div class="panel panel-default export-pdf" ng-if="vpcp.list.especificacionesTecnicas">
+<div class="panel-heading" style="padding:5px 15px;"><b>Especificaciones Técnicas</b></div>
+<div class="panel-body table-responsive" style="padding:15px;">
+<!-- --><span ng-repeat-start="item in vpcp.list.especificacionesTecnicas.values" style="font-size:13px;font-weight:bold;">Proponente Seleccionado</span>
+<div class="table-responsive" ng-repeat-end="">
+<!-- --><table class="table table-condensed table-bordered last-line-table" ng-if="item.type=='ps'" style="margin:0;margin-bottom:10px;" width="100%">
+<tbody><!-- --><tr ng-repeat="item1 in item.values">
+<td width="250"><b>Nombre:</b></td>
+<td>MULTISUMINISTROS JUPITER</td>
+</tr><!-- --><tr ng-repeat="item1 in item.values">
+<td width="250"><b>Número de Identificación:</b></td>
+<td>2109107-1-758210-56</td>
+</tr><!-- --><tr ng-repeat="item1 in item.values">
+<td width="250"><b>Dirección:</b></td>
+<td>TORRE FINANCIAL PARK, PISO 17, OFICINA 1725, COSTA</td>
+</tr><!-- --><tr ng-repeat="item1 in item.values">
+<td width="250"><b>Provincia:</b></td>
+<td>PANAMÁ</td>
+</tr><!-- --><tr ng-repeat="item1 in item.values">
+<td width="250"><b>Distrito:</b></td>
+<td>Panamá</td>
+</tr><!-- --><tr ng-repeat="item1 in item.values">
+<td width="250"><b>Correo Electrónico:</b></td>
+<td>jupiterxpa@gmail.com</td>
+</tr><!-- --><tr ng-repeat="item1 in item.values">
+<td width="250"><b>Teléfono:</b></td>
+<td>507-3901995</td>
+</tr><!-- -->
+</tbody></table><!-- -->
+<!-- -->
+</div><!-- --><span ng-repeat-start="item in vpcp.list.especificacionesTecnicas.values" style="font-size:13px;font-weight:bold;">Bien/Servicio/Obra Seleccionados</span>
+<div class="table-responsive" ng-repeat-end="">
+<!-- -->
+<!-- --><table class="table table-condensed table-bordered table-striped last-line-table" ng-if="item.type=='bs'" style="margin:0;" width="100%">
+<thead>
+<tr>
+<th>R</th>
+<th>Código</th>
+<th>Clasificación</th>
+<th>Cantidad</th>
+<th>U. Medida</th>
+<th>Descripción</th>
+<!-- -->
+<!-- -->
+<th>SES</th>
+<!-- -->
+</tr>
+</thead>
+<tbody><!-- -->
+<!-- --><tr ng-repeat="item1 in item.values">
+<td>1</td>
+<td>27113201</td>
+<td>Conjuntos generales de herramientas</td>
+<td>89</td>
+<td>Unidad</td>
+<td>CAMPIGNGAS TANQUE</td>
+<!-- -->
+<!-- -->
+<td>---</td>
+<!-- -->
+</tr><!-- --><tr ng-repeat="item1 in item.values">
+<td>2</td>
+<td>27113201</td>
+<td>Conjuntos generales de herramientas</td>
+<td>10</td>
+<td>Galón</td>
+<td>PINTURA DE ALUMINIO ANTICORROSIVO GRIS</td>
+<!-- -->
+<!-- -->
+<td>---</td>
+<!-- -->
+</tr><!-- --><tr ng-repeat="item1 in item.values">
+<td>3</td>
+<td>27113201</td>
+<td>Conjuntos generales de herramientas</td>
+<td>35</td>
+<td>Unidad</td>
+<td>HOJA DE PLYWOOD MARINO 3/4 X4X8</td>
+<!-- -->
+<!-- -->
+<td>---</td>
+<!-- -->
+</tr><!-- --><tr ng-repeat="item1 in item.values">
+<td>4</td>
+<td>27113201</td>
+<td>Conjuntos generales de herramientas</td>
+<td>25</td>
+<td>Unidad</td>
+<td>MADERA RUSTICA DE 1X12X10</td>
+<!-- -->
+<!-- -->
+<td>---</td>
+<!-- -->
+</tr><!-- --><tr ng-repeat="item1 in item.values">
+<td>5</td>
+<td>27113201</td>
+<td>Conjuntos generales de herramientas</td>
+<td>25</td>
+<td>Unidad</td>
+<td>MADERA RUSTICA 1X12X2</td>
+<!-- -->
+<!-- -->
+<td>---</td>
+<!-- -->
+</tr><!-- --><tr ng-repeat="item1 in item.values">
+<td>6</td>
+<td>27113201</td>
+<td>Conjuntos generales de herramientas</td>
+<td>40</td>
+<td>Unidad</td>
+<td>MADERA RUSTICA DE 2X2X12</td>
+<!-- -->
+<!-- -->
+<td>---</td>
+<!-- -->
+</tr><!-- --><tr ng-repeat="item1 in item.values">
+<td>7</td>
+<td>27113201</td>
+<td>Conjuntos generales de herramientas</td>
+<td>50</td>
+<td>Unidad</td>
+<td>MADERA RUSTICA DE 2X4X12</td>
+<!-- -->
+<!-- -->
+<td>---</td>
+<!-- -->
+</tr><!-- --><tr ng-repeat="item1 in item.values">
+<td>8</td>
+<td>27113201</td>
+<td>Conjuntos generales de herramientas</td>
+<td>25</td>
+<td>Unidad</td>
+<td>MADERA RUSTICA DE 1X4X10</td>
+<!-- -->
+<!-- -->
+<td>---</td>
+<!-- -->
+</tr><!-- --><tr ng-repeat="item1 in item.values">
+<td>9</td>
+<td>27113201</td>
+<td>Conjuntos generales de herramientas</td>
+<td>80</td>
+<td>Unidad</td>
+<td>CARRIOLA 2X4X20 CALIBRE 16</td>
+<!-- -->
+<!-- -->
+<td>---</td>
+<!-- -->
+</tr><!-- --><tr ng-repeat="item1 in item.values">
+<td>10</td>
+<td>27113201</td>
+<td>Conjuntos generales de herramientas</td>
+<td>30</td>
+<td>Unidad</td>
+<td>ANGULO ACERO 1-1/2X1-1/2X3/16X20</td>
+<!-- -->
+<!-- -->
+<td>---</td>
+<!-- -->
+</tr><!-- --><tr ng-repeat="item1 in item.values">
+<td>11</td>
+<td>27113201</td>
+<td>Conjuntos generales de herramientas</td>
+<td>20</td>
+<td>Unidad</td>
+<td>CERRADURA DE PERILLA CON LLAVE AMERICANA</td>
+<!-- -->
+<!-- -->
+<td>---</td>
+<!-- -->
+</tr><!-- --><tr ng-repeat="item1 in item.values">
+<td>12</td>
+<td>27113201</td>
+<td>Conjuntos generales de herramientas</td>
+<td>130</td>
+<td>Rollo</td>
+<td>ALAMBRE CICLON 6X30MTS  CAL12.5</td>
+<!-- -->
+<!-- -->
+<td>---</td>
+<!-- -->
+</tr><!-- --><tr ng-repeat="item1 in item.values">
+<td>13</td>
+<td>27113201</td>
+<td>Conjuntos generales de herramientas</td>
+<td>55</td>
+<td>Unidad</td>
+<td>BARRAS DE ACERO CORRUGADO DE 3/08X30</td>
+<!-- -->
+<!-- -->
+<td>---</td>
+<!-- -->
+</tr><!-- --><tr ng-repeat="item1 in item.values">
+<td>14</td>
+<td>27113201</td>
+<td>Conjuntos generales de herramientas</td>
+<td>15</td>
+<td>Unidad</td>
+<td>BARAS ACER CORRUGADO DE 1/2X30</td>
+<!-- -->
+<!-- -->
+<td>---</td>
+<!-- -->
+</tr><!-- --><tr ng-repeat="item1 in item.values">
+<td>15</td>
+<td>27113201</td>
+<td>Conjuntos generales de herramientas</td>
+<td>60</td>
+<td>Unidad</td>
+<td>BARA DE ACERO CUADRADA 1/2X20</td>
+<!-- -->
+<!-- -->
+<td>---</td>
+<!-- -->
+</tr><!-- --><tr ng-repeat="item1 in item.values">
+<td>16</td>
+<td>27113201</td>
+<td>Conjuntos generales de herramientas</td>
+<td>50</td>
+<td>Unidad</td>
+<td>CANDADO CON LLAVE MAESTRA DE 60MM</td>
+<!-- -->
+<!-- -->
+<td>---</td>
+<!-- -->
+</tr><!-- --><tr ng-repeat="item1 in item.values">
+<td>17</td>
+<td>27113201</td>
+<td>Conjuntos generales de herramientas</td>
+<td>100</td>
+<td>Unidad</td>
+<td>CARRIOLA DE HG 6X30 CALIBRE 26</td>
+<!-- -->
+<!-- -->
+<td>---</td>
+<!-- -->
+</tr><!-- --><tr ng-repeat="item1 in item.values">
+<td>18</td>
+<td>27113201</td>
+<td>Conjuntos generales de herramientas</td>
+<td>20</td>
+<td>Unidad</td>
+<td>CERRADURA PARA SOLDAR AMERICANA</td>
+<!-- -->
+<!-- -->
+<td>---</td>
+<!-- -->
+</tr><!-- --><tr ng-repeat="item1 in item.values">
+<td>19</td>
+<td>27113201</td>
+<td>Conjuntos generales de herramientas</td>
+<td>150</td>
+<td>Libra</td>
+<td>CLAVOS DE ACERO DE 2-1/2</td>
+<!-- -->
+<!-- -->
+<td>---</td>
+<!-- -->
+</tr><!-- --><tr ng-repeat="item1 in item.values">
+<td>20</td>
+<td>27113201</td>
+<td>Conjuntos generales de herramientas</td>
+<td>150</td>
+<td>Libra</td>
+<td>CLAVES DE ALAMBRE CON CABEZA DE 2-1/2</td>
+<!-- -->
+<!-- -->
+<td>---</td>
+<!-- -->
+</tr><!-- --><tr ng-repeat="item1 in item.values">
+<td>21</td>
+<td>27113201</td>
+<td>Conjuntos generales de herramientas</td>
+<td>15</td>
+<td>Unidad</td>
+<td>PLANCHA DE ACERO LISA DE 1/16X4X8</td>
+<!-- -->
+<!-- -->
+<td>---</td>
+<!-- -->
+</tr><!-- --><tr ng-repeat="item1 in item.values">
+<td>22</td>
+<td>27113201</td>
+<td>Conjuntos generales de herramientas</td>
+<td>5,000</td>
+<td>Unidad</td>
+<td>TORNILLO DE TECHO 2 1/2 PUNTA DE BROCA</td>
+<!-- -->
+<!-- -->
+<td>---</td>
+<!-- -->
+</tr><!-- --><tr ng-repeat="item1 in item.values">
+<td>23</td>
+<td>27113201</td>
+<td>Conjuntos generales de herramientas</td>
+<td>30</td>
+<td>Unidad</td>
+<td>TUBO CUADRADO DE 1X1 X3/32 20</td>
+<!-- -->
+<!-- -->
+<td>---</td>
+<!-- -->
+</tr><!-- --><tr ng-repeat="item1 in item.values">
+<td>24</td>
+<td>27113201</td>
+<td>Conjuntos generales de herramientas</td>
+<td>90</td>
+<td>Unidad</td>
+<td>ZINC GALVANIZADO CORTE 42X24 No26 ONDULADO</td>
+<!-- -->
+<!-- -->
+<td>---</td>
+<!-- -->
+</tr><!-- --><tr ng-repeat="item1 in item.values">
+<td>25</td>
+<td>27113201</td>
+<td>Conjuntos generales de herramientas</td>
+<td>1,200</td>
+<td>Unidad</td>
+<td>BLOQUE DE HORMIGON DE 4</td>
+<!-- -->
+<!-- -->
+<td>---</td>
+<!-- -->
+</tr><!-- --><tr ng-repeat="item1 in item.values">
+<td>26</td>
+<td>27113201</td>
+<td>Conjuntos generales de herramientas</td>
+<td>550</td>
+<td>Unidad</td>
+<td>BLOQUE HORMIGON DE 6</td>
+<!-- -->
+<!-- -->
+<td>---</td>
+<!-- -->
+</tr><!-- --><tr ng-repeat="item1 in item.values">
+<td>27</td>
+<td>27113201</td>
+<td>Conjuntos generales de herramientas</td>
+<td>100</td>
+<td>Libra</td>
+<td>SOLDADURA 6011X1/8</td>
+<!-- -->
+<!-- -->
+<td>---</td>
+<!-- -->
+</tr><!-- --><tr ng-repeat="item1 in item.values">
+<td>28</td>
+<td>27113201</td>
+<td>Conjuntos generales de herramientas</td>
+<td>4</td>
+<td>Unidad</td>
+<td>LLAVE ABIERTA Y CERRADA 1-1/8</td>
+<!-- -->
+<!-- -->
+<td>---</td>
+<!-- -->
+</tr><!-- --><tr ng-repeat="item1 in item.values">
+<td>29</td>
+<td>27113201</td>
+<td>Conjuntos generales de herramientas</td>
+<td>4</td>
+<td>Unidad</td>
+<td>JUEGO BROCA CONCRETO SDS PLUS 3/16 A 1/2</td>
+<!-- -->
+<!-- -->
+<td>---</td>
+<!-- -->
+</tr><!-- --><tr ng-repeat="item1 in item.values">
+<td>30</td>
+<td>27113201</td>
+<td>Conjuntos generales de herramientas</td>
+<td>4</td>
+<td>Unidad</td>
+<td>LLAVE CERRADA RATCHED 5/8 X 3/4</td>
+<!-- -->
+<!-- -->
+<td>---</td>
+<!-- -->
+</tr><!-- --><tr ng-repeat="item1 in item.values">
+<td>31</td>
+<td>27113201</td>
+<td>Conjuntos generales de herramientas</td>
+<td>4</td>
+<td>Unidad</td>
+<td>LLAVE CERRADA RATCHED 3/4 X 7/8</td>
+<!-- -->
+<!-- -->
+<td>---</td>
+<!-- -->
+</tr><!-- --><tr ng-repeat="item1 in item.values">
+<td>32</td>
+<td>27113201</td>
+<td>Conjuntos generales de herramientas</td>
+<td>4</td>
+<td>Unidad</td>
+<td>LLAVE CERRADA RATCHED 1 1/8 X 1 1/4</td>
+<!-- -->
+<!-- -->
+<td>---</td>
+<!-- -->
+</tr><!-- --><tr ng-repeat="item1 in item.values">
+<td>33</td>
+<td>27113201</td>
+<td>Conjuntos generales de herramientas</td>
+<td>4</td>
+<td>Unidad</td>
+<td>LLAVE CERRADA RATCHED 1/2 X 9/16</td>
+<!-- -->
+<!-- -->
+<td>---</td>
+<!-- -->
+</tr><!-- --><tr ng-repeat="item1 in item.values">
+<td>34</td>
+<td>27113201</td>
+<td>Conjuntos generales de herramientas</td>
+<td>4</td>
+<td>Unidad</td>
+<td>ALICATE CON MANGO FORRADO DE 10</td>
+<!-- -->
+<!-- -->
+<td>---</td>
+<!-- -->
+</tr><!-- --><tr ng-repeat="item1 in item.values">
+<td>35</td>
+<td>27113201</td>
+<td>Conjuntos generales de herramientas</td>
+<td>2</td>
+<td>Unidad</td>
+<td>CARRETILLA C/LLANTA BALE DE 5</td>
+<!-- -->
+<!-- -->
+<td>---</td>
+<!-- -->
+</tr><!-- --><tr ng-repeat="item1 in item.values">
+<td>36</td>
+<td>27113201</td>
+<td>Conjuntos generales de herramientas</td>
+<td>2</td>
+<td>Unidad</td>
+<td>CAJA DE HERRAMIENTA DE 36"</td>
+<!-- -->
+<!-- -->
+<td>---</td>
+<!-- -->
+</tr><!-- --><tr ng-repeat="item1 in item.values">
+<td>37</td>
+<td>27113201</td>
+<td>Conjuntos generales de herramientas</td>
+<td>60</td>
+<td>Unidad</td>
+<td>DISCO DE CORTE DE METAL 4-1/2X1/8X7/8</td>
+<!-- -->
+<!-- -->
+<td>---</td>
+<!-- -->
+</tr><!-- --><tr ng-repeat="item1 in item.values">
+<td>38</td>
+<td>27113201</td>
+<td>Conjuntos generales de herramientas</td>
+<td>40</td>
+<td>Unidad</td>
+<td>DISCO DE CORTEB DE DESBASTE 4.5X1/4X7/8</td>
+<!-- -->
+<!-- -->
+<td>---</td>
+<!-- -->
+</tr><!-- --><tr ng-repeat="item1 in item.values">
+<td>39</td>
+<td>27113201</td>
+<td>Conjuntos generales de herramientas</td>
+<td>4</td>
+<td>Unidad</td>
+<td>ESCAKERA FIBRA VIDRIO 24, 7.32 MTS</td>
+<!-- -->
+<!-- -->
+<td>---</td>
+<!-- -->
+</tr><!-- --><tr ng-repeat="item1 in item.values">
+<td>40</td>
+<td>27113201</td>
+<td>Conjuntos generales de herramientas</td>
+<td>24</td>
+<td>Unidad</td>
+<td>ESCORFINA DE 12 AMERICANA</td>
+<!-- -->
+<!-- -->
+<td>---</td>
+<!-- -->
+</tr><!-- --><tr ng-repeat="item1 in item.values">
+<td>41</td>
+<td>27113201</td>
+<td>Conjuntos generales de herramientas</td>
+<td>1</td>
+<td>Unidad</td>
+<td>ESMERILADORA ANGULAR DE 41/2 AMERICANA</td>
+<!-- -->
+<!-- -->
+<td>---</td>
+<!-- -->
+</tr><!-- --><tr ng-repeat="item1 in item.values">
+<td>42</td>
+<td>27113201</td>
+<td>Conjuntos generales de herramientas</td>
+<td>240</td>
+<td>Unidad</td>
+<td>HOJA DE SEGUTA DE 12</td>
+<!-- -->
+<!-- -->
+<td>---</td>
+<!-- -->
+</tr><!-- --><tr ng-repeat="item1 in item.values">
+<td>43</td>
+<td>27113201</td>
+<td>Conjuntos generales de herramientas</td>
+<td>4</td>
+<td>Unidad</td>
+<td>JUEGO DE BROCAS P/METAL</td>
+<!-- -->
+<!-- -->
+<td>---</td>
+<!-- -->
+</tr><!-- --><tr ng-repeat="item1 in item.values">
+<td>44</td>
+<td>27113201</td>
+<td>Conjuntos generales de herramientas</td>
+<td>3</td>
+<td>Unidad</td>
+<td>LLAVE DE AJUSTE 10</td>
+<!-- -->
+<!-- -->
+<td>---</td>
+<!-- -->
+</tr><!-- --><tr ng-repeat="item1 in item.values">
+<td>45</td>
+<td>27113201</td>
+<td>Conjuntos generales de herramientas</td>
+<td>3</td>
+<td>Unidad</td>
+<td>LLAVE AJUSTE DE 12</td>
+<!-- -->
+<!-- -->
+<td>---</td>
+<!-- -->
+</tr><!-- --><tr ng-repeat="item1 in item.values">
+<td>46</td>
+<td>27113201</td>
+<td>Conjuntos generales de herramientas</td>
+<td>2</td>
+<td>Unidad</td>
+<td>LLAVE DE TUBO DE 12 ALUMINIO</td>
+<!-- -->
+<!-- -->
+<td>---</td>
+<!-- -->
+</tr><!-- --><tr ng-repeat="item1 in item.values">
+<td>47</td>
+<td>27113201</td>
+<td>Conjuntos generales de herramientas</td>
+<td>4</td>
+<td>Unidad</td>
+<td>LLAVE DE TUBO DE 16 DE ALUMINIO </td>
+<!-- -->
+<!-- -->
+<td>---</td>
+<!-- -->
+</tr><!-- --><tr ng-repeat="item1 in item.values">
+<td>48</td>
+<td>27113201</td>
+<td>Conjuntos generales de herramientas</td>
+<td>4</td>
+<td>Unidad</td>
+<td>LLAVE DE TUBO DE 18</td>
+<!-- -->
+<!-- -->
+<td>---</td>
+<!-- -->
+</tr><!-- --><tr ng-repeat="item1 in item.values">
+<td>49</td>
+<td>27113201</td>
+<td>Conjuntos generales de herramientas</td>
+<td>4</td>
+<td>Unidad</td>
+<td>LLAVE DE TUBO DE ALUMINIO DE 24</td>
+<!-- -->
+<!-- -->
+<td>---</td>
+<!-- -->
+</tr><!-- --><tr ng-repeat="item1 in item.values">
+<td>50</td>
+<td>27113201</td>
+<td>Conjuntos generales de herramientas</td>
+<td>4</td>
+<td>Unidad</td>
+<td>LLAVE DE TUBO DE 36 ALUMINIO</td>
+<!-- -->
+<!-- -->
+<td>---</td>
+<!-- -->
+</tr><!-- --><tr ng-repeat="item1 in item.values">
+<td>51</td>
+<td>27113201</td>
+<td>Conjuntos generales de herramientas</td>
+<td>20</td>
+<td>Unidad</td>
+<td>MALLA EXPANDIDA 3/4 X8 CAL 13</td>
+<!-- -->
+<!-- -->
+<td>---</td>
+<!-- -->
+</tr><!-- --><tr ng-repeat="item1 in item.values">
+<td>52</td>
+<td>27113201</td>
+<td>Conjuntos generales de herramientas</td>
+<td>4</td>
+<td>Unidad</td>
+<td>MARTILLO DE  CARPINTERIA CON UÑA CON CABEZA OCTAGONAL DE 160Z</td>
+<!-- -->
+<!-- -->
+<td>---</td>
+<!-- -->
+</tr><!-- --><tr ng-repeat="item1 in item.values">
+<td>53</td>
+<td>27113201</td>
+<td>Conjuntos generales de herramientas</td>
+<td>3</td>
+<td>Unidad</td>
+<td>MOTOSIERRA 20 GAS 50 AMERICANA</td>
+<!-- -->
+<!-- -->
+<td>---</td>
+<!-- -->
+</tr><!-- --><tr ng-repeat="item1 in item.values">
+<td>54</td>
+<td>27113201</td>
+<td>Conjuntos generales de herramientas</td>
+<td>4</td>
+<td>Unidad</td>
+<td>PALA DE `PUNTA C/MANGO LARGO</td>
+<!-- -->
+<!-- -->
+<td>---</td>
+<!-- -->
+</tr><!-- --><tr ng-repeat="item1 in item.values">
+<td>55</td>
+<td>27113201</td>
+<td>Conjuntos generales de herramientas</td>
+<td>4</td>
+<td>Unidad</td>
+<td>PALA CO DE 4</td>
+<!-- -->
+<!-- -->
+<td>---</td>
+<!-- -->
+</tr><!-- --><tr ng-repeat="item1 in item.values">
+<td>56</td>
+<td>27113201</td>
+<td>Conjuntos generales de herramientas</td>
+<td>4</td>
+<td>Unidad</td>
+<td>PALAS CUADRADAS C/MANGO LARGO</td>
+<!-- -->
+<!-- -->
+<td>---</td>
+<!-- -->
+</tr><!-- --><tr ng-repeat="item1 in item.values">
+<td>57</td>
+<td>27113201</td>
+<td>Conjuntos generales de herramientas</td>
+<td>3</td>
+<td>Unidad</td>
+<td>PALAUSTRE 8</td>
+<!-- -->
+<!-- -->
+<td>---</td>
+<!-- -->
+</tr><!-- --><tr ng-repeat="item1 in item.values">
+<td>58</td>
+<td>27113201</td>
+<td>Conjuntos generales de herramientas</td>
+<td>2</td>
+<td>Unidad</td>
+<td>PATA DE CABRA DE 24 DE LARGO</td>
+<!-- -->
+<!-- -->
+<td>---</td>
+<!-- -->
+</tr><!-- --><tr ng-repeat="item1 in item.values">
+<td>59</td>
+<td>27113201</td>
+<td>Conjuntos generales de herramientas</td>
+<td>3</td>
+<td>Unidad</td>
+<td>ROTOMARTILLO SDS MAX 1-9/16</td>
+<!-- -->
+<!-- -->
+<td>---</td>
+<!-- -->
+</tr><!-- --><tr ng-repeat="item1 in item.values">
+<td>60</td>
+<td>27113201</td>
+<td>Conjuntos generales de herramientas</td>
+<td>4</td>
+<td>Unidad</td>
+<td>GENERADOR PORTATIL DE 7000AMP</td>
+<!-- -->
+<!-- -->
+<td>---</td>
+<!-- -->
+</tr><!-- --><tr ng-repeat="item1 in item.values">
+<td>61</td>
+<td>27113201</td>
+<td>Conjuntos generales de herramientas</td>
+<td>5</td>
+<td>Unidad</td>
+<td>MOTOBOMB 8 HP 970GPM DIAMETRO 3 DESCARGA</td>
+<!-- -->
+<!-- -->
+<td>---</td>
+<!-- -->
+</tr><!-- -->
+</tbody></table><!-- -->
+</div><!-- -->
+</div>
+</div><!-- -->
+<!--Documentos Adjuntos-->
+<!-- --><div class="panel panel-default export-pdf" ng-if="vpcp.list.documentosAdjuntos">
+<div class="panel-heading" style="padding:5px 15px;"><b>Documentos Adjuntos</b></div>
+<div class="panel-body table-responsive" style="padding:15px;">
+<table class="table table-condensed table-bordered table-striped last-line-table" style="margin:0;" width="100%">
+<thead>
+<tr>
+<th>Descripción</th>
+<th>Tipo</th>
+<th>Fecha</th>
+<th>Acciones</th>
+</tr>
+</thead>
+<tbody><!-- -->
+<!-- --><tr ng-init="item.nombreLink='Ver Documento'" ng-repeat="item in vpcp.list.documentosAdjuntos.values">
+<td>AVISO DE OPERACION</td>
+<td>Otros</td>
+<td>05-10-2020 03:22 PM</td>
+<td><a href="/includes/veranexo.aspx?idattach=JCQjJSUkLSw=" ng-href="/includes/veranexo.aspx?idattach=JCQjJSUkLSw=" target="_blank" title="Ver Documento"><img src="/imagenes/iconos/ic_ver_generico.gif"/></a></td>
+</tr><!-- --><tr ng-init="item.nombreLink='Ver Documento'" ng-repeat="item in vpcp.list.documentosAdjuntos.values">
+<td>CEDULA DE REPRESENTANTE LEGAL</td>
+<td>Otros</td>
+<td>05-10-2020 03:22 PM</td>
+<td><a href="/includes/veranexo.aspx?idattach=JCQjJSUkLCU=" ng-href="/includes/veranexo.aspx?idattach=JCQjJSUkLCU=" target="_blank" title="Ver Documento"><img src="/imagenes/iconos/ic_ver_generico.gif"/></a></td>
+</tr><!-- --><tr ng-init="item.nombreLink='Ver Documento'" ng-repeat="item in vpcp.list.documentosAdjuntos.values">
+<td>CERTIFICADO DE REGISTRO PUBLICO</td>
+<td>Otros</td>
+<td>05-10-2020 03:22 PM</td>
+<td><a href="/includes/veranexo.aspx?idattach=JCQjJSUkLCE=" ng-href="/includes/veranexo.aspx?idattach=JCQjJSUkLCE=" target="_blank" title="Ver Documento"><img src="/imagenes/iconos/ic_ver_generico.gif"/></a></td>
+</tr><!-- --><tr ng-init="item.nombreLink='Ver Documento'" ng-repeat="item in vpcp.list.documentosAdjuntos.values">
+<td>CUADRO DE COTIZACIONES </td>
+<td>Actas</td>
+<td>05-10-2020 03:23 PM</td>
+<td><a href="/includes/veranexo.aspx?idattach=JCQjJSUkLCI=" ng-href="/includes/veranexo.aspx?idattach=JCQjJSUkLCI=" target="_blank" title="Ver Documento"><img src="/imagenes/iconos/ic_ver_generico.gif"/></a></td>
+</tr><!-- --><tr ng-init="item.nombreLink='Ver Documento'" ng-repeat="item in vpcp.list.documentosAdjuntos.values">
+<td>EVALUACIÓN TÉCNICA </td>
+<td>Informe Técnico</td>
+<td>05-10-2020 03:23 PM</td>
+<td><a href="/includes/veranexo.aspx?idattach=JCQjJSUkLCw=" ng-href="/includes/veranexo.aspx?idattach=JCQjJSUkLCw=" target="_blank" title="Ver Documento"><img src="/imagenes/iconos/ic_ver_generico.gif"/></a></td>
+</tr><!-- --><tr ng-init="item.nombreLink='Ver Documento'" ng-repeat="item in vpcp.list.documentosAdjuntos.values">
+<td>PAZ Y SALVO CSS</td>
+<td>Otros</td>
+<td>05-10-2020 03:23 PM</td>
+<td><a href="/includes/veranexo.aspx?idattach=JCQjJSUnJSc=" ng-href="/includes/veranexo.aspx?idattach=JCQjJSUnJSc=" target="_blank" title="Ver Documento"><img src="/imagenes/iconos/ic_ver_generico.gif"/></a></td>
+</tr><!-- --><tr ng-init="item.nombreLink='Ver Documento'" ng-repeat="item in vpcp.list.documentosAdjuntos.values">
+<td>PAZ Y SALVO DGI</td>
+<td>Otros</td>
+<td>05-10-2020 03:23 PM</td>
+<td><a href="/includes/veranexo.aspx?idattach=JCQjJSUnJSE=" ng-href="/includes/veranexo.aspx?idattach=JCQjJSUnJSE=" target="_blank" title="Ver Documento"><img src="/imagenes/iconos/ic_ver_generico.gif"/></a></td>
+</tr><!-- --><tr ng-init="item.nombreLink='Ver Documento'" ng-repeat="item in vpcp.list.documentosAdjuntos.values">
+<td>COTIZACION</td>
+<td>Propuestas</td>
+<td>05-10-2020 03:24 PM</td>
+<td><a href="/includes/veranexo.aspx?idattach=JCQjJSUnJS0=" ng-href="/includes/veranexo.aspx?idattach=JCQjJSUnJS0=" target="_blank" title="Ver Documento"><img src="/imagenes/iconos/ic_ver_generico.gif"/></a></td>
+</tr><!-- --><tr ng-init="item.nombreLink='Ver Documento'" ng-repeat="item in vpcp.list.documentosAdjuntos.values">
+<td>RESOLUCIÓN </td>
+<td>Resolución Fundamento Legal Mesa Covid-19</td>
+<td>05-10-2020 03:24 PM</td>
+<td><a href="/includes/veranexo.aspx?idattach=JCQjJSUnJCc=" ng-href="/includes/veranexo.aspx?idattach=JCQjJSUnJCc=" target="_blank" title="Ver Documento"><img src="/imagenes/iconos/ic_ver_generico.gif"/></a></td>
+</tr><!-- --><tr ng-init="item.nombreLink='Ver Documento'" ng-repeat="item in vpcp.list.documentosAdjuntos.values">
+<td>TERMINOS DE REFERENCIA</td>
+<td>Terminos de referencia</td>
+<td>05-10-2020 03:24 PM</td>
+<td><a href="/includes/veranexo.aspx?idattach=JCQjJSUnJCw=" ng-href="/includes/veranexo.aspx?idattach=JCQjJSUnJCw=" target="_blank" title="Ver Documento"><img src="/imagenes/iconos/ic_ver_generico.gif"/></a></td>
+</tr><!-- --><tr ng-init="item.nombreLink='Ver Documento'" ng-repeat="item in vpcp.list.documentosAdjuntos.values">
+<td>REFRENDADA</td>
+<td>Orden de Compra</td>
+<td>30-10-2020 01:31 PM</td>
+<td><a href="/includes/veranexo.aspx?idattach=JCQiLCAnISA=" ng-href="/includes/veranexo.aspx?idattach=JCQiLCAnISA=" target="_blank" title="Ver Documento"><img src="/imagenes/iconos/ic_ver_generico.gif"/></a></td>
+</tr><!-- -->
+</tbody></table>
+</div>
+</div><!-- -->
+<!--Documentos del Acto Público-->
+<!-- --><div class="panel panel-default export-pdf" ng-if="vpcp.list.documetosPliego">
+<div class="panel-heading" style="padding:5px 15px;"><b>Documentos del Acto Público</b></div>
+<div class="panel-body table-responsive" style="padding:15px;">
+<table class="table table-condensed table-bordered table-striped last-line-table" style="margin:0;" width="100%">
+<thead>
+<tr>
+<th>Nombre Documento</th>
+<th>Fecha Creación</th>
+<th>Acciones</th>
+</tr>
+</thead>
+<tbody><!-- --><tr ng-if="vpcp.list.documetosPliego.values.length==0">
+<td colspan="4"><center>No hay documentos del acto público</center></td>
+</tr><!-- -->
+<!-- -->
+</tbody></table>
+</div>
+</div><!-- -->
+<!--Publicaciones Anteriores-->
+<!-- -->
+<!--Convocatorias Anteriores-->
+<!-- -->
+<!--opciones-->
+<!-- --><div class="panel panel-default export-pdf" ng-if="vpcp.list.opciones">
+<div class="panel-heading" style="padding:5px 15px;"><b>Opciones</b></div>
+<div class="panel-body table-responsive" style="padding:15px;">
+<!-- --><a class="btn btn-default" id="vap" ng-click="vpcp.clickpdf(0)" ng-if="!vpcp.isIE9" title="Ver Acto Público en Formato PDF para imprimir">
+<img src="/Inicio/images/ic_descargar_pdf.gif"/>
+</a><!-- -->
+<!-- --><a class="btn btn-default" ng-click="vpcp.clickpdf(1)" ng-if="!vpcp.isIE" style="margin-left:5px;" title="Imprimir Acto Publico">
+<img src="/Inicio/images/ic_imprimir.gif"/>
+</a><!-- -->
+<!-- -->
+<!-- -->
+</div>
+</div><!-- -->
+<!-- --><button class="btn btn-default btn-sm" ng-click="vpcp.backbutton()" ng-if="!vpcp.param.hiddenBB">« Volver</button><!-- -->
+</div>
+</div>

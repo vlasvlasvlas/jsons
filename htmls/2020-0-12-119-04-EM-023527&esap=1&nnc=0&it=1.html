@@ -1,0 +1,432 @@
+<div class="col-sm-12 col-md-12" id="elementToPDF" ng-if="vpcp.list!=undefined &amp;&amp; vpcp.list!=false" style="font-size: 12px; background-color: rgb(255, 255, 255);">
+<!--Encabezado del pliego-->
+<!-- --><div class="well export-pdf table-responsive" ng-if="vpcp.list.header" style="margin-top:10px;">
+<table class="table table-condensed table-bordered last-line-table" style="margin:0;" width="100%">
+<tbody><!-- --><tr ng-repeat="item in vpcp.list.header.values">
+<td width="250"><b>Número:</b></td>
+<td>2020-0-12-119-04-EM-023527</td>
+</tr><!-- --><tr ng-repeat="item in vpcp.list.header.values">
+<td width="250"><b>Nombre del Acto:</b></td>
+<td>RESPIRADOR FACIAL CONTRA PARTICULA DE ALTA FILTRACIÓN SIN VALVULA F.T.104747  REQ. 319</td>
+</tr><!-- --><tr ng-repeat="item in vpcp.list.header.values">
+<td width="250"><b>Objeto de la Contratación:</b></td>
+<td>Bien</td>
+</tr><!-- -->
+</tbody></table>
+</div><!-- -->
+<!-- --><div ng-include="'configVP.html'">
+<!--Información de la Entidad-->
+<!-- --><div class="panel panel-default export-pdf" ng-if="vpcp.list.entityInformation">
+<div class="panel-heading" style="padding:5px 15px;"><b>Información de la Entidad</b></div>
+<div class="panel-body table-responsive" style="padding:15px;">
+<table class="table table-condensed table-bordered last-line-table" style="margin:0;" width="100%">
+<tbody><!-- --><tr ng-repeat="item in vpcp.list.entityInformation.values">
+<td width="250"><b>Entidad:</b></td>
+<td>MINISTERIO DE SALUD</td>
+</tr><!-- --><tr ng-repeat="item in vpcp.list.entityInformation.values">
+<td width="250"><b>Dependencia:</b></td>
+<td>HOSPITAL JOSE DOMINGO DE OBALDÍA</td>
+</tr><!-- --><tr ng-repeat="item in vpcp.list.entityInformation.values">
+<td width="250"><b>Unidad De Compra:</b></td>
+<td>DEPARTAMENTO DE COMPRAS(H. JOSÉ DOMINGO DE OBALDIA)</td>
+</tr><!-- --><tr ng-repeat="item in vpcp.list.entityInformation.values">
+<td width="250"><b>Dirección:</b></td>
+<td>SAN PABLO DAVID CHIRIQUI</td>
+</tr><!-- -->
+</tbody></table>
+</div>
+</div><!-- -->
+<!--Contacto de la Unidad de Compra-->
+<!-- --><div class="panel panel-default export-pdf" ng-if="vpcp.list.contactUser">
+<div class="panel-heading" style="padding:5px 15px;"><b>Contacto de la Unidad de Compra</b></div>
+<div class="panel-body table-responsive" style="padding:15px;">
+<table class="table table-condensed table-bordered last-line-table" style="margin:0;" width="100%">
+<tbody><!-- --><tr ng-repeat="item in vpcp.list.contactUser.values">
+<td width="250"><b>nombre</b></td>
+<td>Sthephanie Bonilla</td>
+</tr><!-- --><tr ng-repeat="item in vpcp.list.contactUser.values">
+<td width="250"><b>cargo</b></td>
+<td></td>
+</tr><!-- -->
+</tbody></table>
+</div>
+</div><!-- -->
+<!--Aviso de Convocatoria-->
+<!-- --><div class="panel panel-default export-pdf" ng-if="vpcp.list.aviso">
+<div class="panel-heading" style="padding:5px 15px;"><b>Aviso de Convocatoria</b></div>
+<div class="panel-body table-responsive" style="padding:15px;">
+<table class="table table-condensed table-bordered last-line-table" style="margin:0;" width="100%">
+<tbody><!-- --><tr ng-init="isjson = vpcp.isJson(item)" ng-repeat="item in vpcp.list.aviso.values">
+<td width="250"><b>Número de Acto:</b></td>
+<!-- --><td ng-if="!isjson">2020-0-12-119-04-EM-023527</td><!-- -->
+<!-- -->
+</tr><!-- --><tr ng-init="isjson = vpcp.isJson(item)" ng-repeat="item in vpcp.list.aviso.values">
+<td width="250"><b>Tipo de Procedimiento:</b></td>
+<!-- --><td ng-if="!isjson">Compras Mesa COVID-19</td><!-- -->
+<!-- -->
+</tr><!-- --><tr ng-init="isjson = vpcp.isJson(item)" ng-repeat="item in vpcp.list.aviso.values">
+<td width="250"><b>Fundamento de la Excepción</b></td>
+<!-- --><td ng-if="!isjson">D) Resolución No. 18 del 31 de Marzo de 2020</td><!-- -->
+<!-- -->
+</tr><!-- --><tr ng-init="isjson = vpcp.isJson(item)" ng-repeat="item in vpcp.list.aviso.values">
+<td width="250"><b>Objeto Contractual:</b></td>
+<!-- --><td ng-if="!isjson">Bien</td><!-- -->
+<!-- -->
+</tr><!-- --><tr ng-init="isjson = vpcp.isJson(item)" ng-repeat="item in vpcp.list.aviso.values">
+<td width="250"><b>Descripción:</b></td>
+<!-- --><td ng-if="!isjson">RESPIRADOR FACIAL CONTRA PARTICULA DE ALTA FILTRACIÓN SIN VALVULA F.T.104747  REQ. 319</td><!-- -->
+<!-- -->
+</tr><!-- --><tr ng-init="isjson = vpcp.isJson(item)" ng-repeat="item in vpcp.list.aviso.values">
+<td width="250"><b>Fecha de Publicación:</b></td>
+<!-- --><td ng-if="!isjson">02-12-2020 03:13 PM</td><!-- -->
+<!-- -->
+</tr><!-- --><tr ng-init="isjson = vpcp.isJson(item)" ng-repeat="item in vpcp.list.aviso.values">
+<td width="250"><b>Monto de la Contratación:</b></td>
+<!-- --><td ng-if="!isjson">B/.  19,260.00</td><!-- -->
+<!-- -->
+</tr><!-- --><tr ng-init="isjson = vpcp.isJson(item)" ng-repeat="item in vpcp.list.aviso.values">
+<td width="250"><b>Partidas presupuestales:</b></td>
+<!-- -->
+<!-- --><td ng-if="isjson">
+<table border="1" id="table_inter_np" type="table_inter">
+<tbody><tr style="background-color:#f5f5f5;">
+<th style="padding:2px 5px;">N°</th>
+<th style="padding:2px 5px;">Número Partida</th>
+</tr>
+<!-- --><tr ng-repeat="item1 in item.value">
+<td style="padding:2px 5px;">1</td>
+<td style="padding:2px 5px;">F.T.0.12.0.03.001.02.19-911</td>
+</tr><!-- -->
+</tbody></table>
+</td><!-- -->
+</tr><!-- --><tr ng-init="isjson = vpcp.isJson(item)" ng-repeat="item in vpcp.list.aviso.values">
+<td width="250"><b>Programa:</b></td>
+<!-- --><td ng-if="!isjson">---</td><!-- -->
+<!-- -->
+</tr><!-- --><tr ng-init="isjson = vpcp.isJson(item)" ng-repeat="item in vpcp.list.aviso.values">
+<td width="250"><b>Datos de Contacto</b></td>
+<!-- --><td ng-if="!isjson"></td><!-- -->
+<!-- -->
+</tr><!-- --><tr ng-init="isjson = vpcp.isJson(item)" ng-repeat="item in vpcp.list.aviso.values">
+<td width="250"><b>Nombre:</b></td>
+<!-- --><td ng-if="!isjson">Sthephanie Bonilla</td><!-- -->
+<!-- -->
+</tr><!-- --><tr ng-init="isjson = vpcp.isJson(item)" ng-repeat="item in vpcp.list.aviso.values">
+<td width="250"><b>Cargo:</b></td>
+<!-- --><td ng-if="!isjson"></td><!-- -->
+<!-- -->
+</tr><!-- --><tr ng-init="isjson = vpcp.isJson(item)" ng-repeat="item in vpcp.list.aviso.values">
+<td width="250"><b>Teléfono:</b></td>
+<!-- --><td ng-if="!isjson">775-4228</td><!-- -->
+<!-- -->
+</tr><!-- --><tr ng-init="isjson = vpcp.isJson(item)" ng-repeat="item in vpcp.list.aviso.values">
+<td width="250"><b>Correo Electrónico:</b></td>
+<!-- --><td ng-if="!isjson">sthephanie.bonilla@obaldia.sld.pa</td><!-- -->
+<!-- -->
+</tr><!-- -->
+</tbody></table>
+</div>
+</div><!-- -->
+<!--Condiciones Generales-->
+<!-- -->
+<!--Condiciones Especiales-->
+<!-- -->
+<!--Especificaciones Técnicas-->
+<!-- --><div class="panel panel-default export-pdf" ng-if="vpcp.list.especificacionesTecnicas">
+<div class="panel-heading" style="padding:5px 15px;"><b>Especificaciones Técnicas</b></div>
+<div class="panel-body table-responsive" style="padding:15px;">
+<!-- --><span ng-repeat-start="item in vpcp.list.especificacionesTecnicas.values" style="font-size:13px;font-weight:bold;">Proponente Seleccionado</span>
+<div class="table-responsive" ng-repeat-end="">
+<!-- --><table class="table table-condensed table-bordered last-line-table" ng-if="item.type=='ps'" style="margin:0;margin-bottom:10px;" width="100%">
+<tbody><!-- --><tr ng-repeat="item1 in item.values">
+<td width="250"><b>Nombre:</b></td>
+<td>ROCAYOL SAFETY &amp; INDUSTRIAL CENTER, S.A.</td>
+</tr><!-- --><tr ng-repeat="item1 in item.values">
+<td width="250"><b>Número de Identificación:</b></td>
+<td>696272-1-467757-62</td>
+</tr><!-- --><tr ng-repeat="item1 in item.values">
+<td width="250"><b>Dirección:</b></td>
+<td>VILLA DE LAS FUENTES NO. 2, T. MUERTO. CALLE PRINC</td>
+</tr><!-- --><tr ng-repeat="item1 in item.values">
+<td width="250"><b>Provincia:</b></td>
+<td>PANAMÁ</td>
+</tr><!-- --><tr ng-repeat="item1 in item.values">
+<td width="250"><b>Distrito:</b></td>
+<td>Panamá</td>
+</tr><!-- --><tr ng-repeat="item1 in item.values">
+<td width="250"><b>Correo Electrónico:</b></td>
+<td>francisca@rocayol.com</td>
+</tr><!-- --><tr ng-repeat="item1 in item.values">
+<td width="250"><b>Teléfono:</b></td>
+<td>301-0085</td>
+</tr><!-- -->
+</tbody></table><!-- -->
+<!-- -->
+</div><!-- --><span ng-repeat-start="item in vpcp.list.especificacionesTecnicas.values" style="font-size:13px;font-weight:bold;">Bien/Servicio/Obra Seleccionados</span>
+<div class="table-responsive" ng-repeat-end="">
+<!-- -->
+<!-- --><table class="table table-condensed table-bordered table-striped last-line-table" ng-if="item.type=='bs'" style="margin:0;" width="100%">
+<thead>
+<tr>
+<th>R</th>
+<th>Código</th>
+<th>Clasificación</th>
+<th>Cantidad</th>
+<th>U. Medida</th>
+<th>Descripción</th>
+<!-- -->
+<!-- -->
+<th>SES</th>
+<!-- -->
+</tr>
+</thead>
+<tbody><!-- -->
+<!-- --><tr ng-repeat="item1 in item.values">
+<td>1</td>
+<td>95101011</td>
+<td>Equipo-Accesorios-Suministros Médicos</td>
+<td>4,000</td>
+<td>Unidad</td>
+<td>RESPIRADOR FACIAL CONTRA PARTICULA DE ALTA FILTRACIÓN SIN VALVULA F.T. 104747</td>
+<!-- -->
+<!-- -->
+<td>---</td>
+<!-- -->
+</tr><!-- -->
+</tbody></table><!-- -->
+</div><!-- -->
+</div>
+</div><!-- -->
+<!--Documentos Adjuntos-->
+<!-- --><div class="panel panel-default export-pdf" ng-if="vpcp.list.documentosAdjuntos">
+<div class="panel-heading" style="padding:5px 15px;"><b>Documentos Adjuntos</b></div>
+<div class="panel-body table-responsive" style="padding:15px;">
+<table class="table table-condensed table-bordered table-striped last-line-table" style="margin:0;" width="100%">
+<thead>
+<tr>
+<th>Descripción</th>
+<th>Tipo</th>
+<th>Fecha</th>
+<th>Acciones</th>
+</tr>
+</thead>
+<tbody><!-- -->
+<!-- --><tr ng-init="item.nombreLink='Ver Documento'" ng-repeat="item in vpcp.list.documentosAdjuntos.values">
+<td>RESOLUCION DE GABINETE N° 11 DEL 13 DE MARZO  DE 2020 </td>
+<td>Resolución Fundamento Legal Mesa Covid-19</td>
+<td>02-12-2020 02:36 PM</td>
+<td><a href="/includes/veranexo.aspx?idattach=JCQsICwhJy0=" ng-href="/includes/veranexo.aspx?idattach=JCQsICwhJy0=" target="_blank" title="Ver Documento"><img src="/imagenes/iconos/ic_ver_generico.gif"/></a></td>
+</tr><!-- --><tr ng-init="item.nombreLink='Ver Documento'" ng-repeat="item in vpcp.list.documentosAdjuntos.values">
+<td>RESOLUCION DE GABINETE N° 18 DEL 31 DE MARZO  DE 2020 </td>
+<td>Resolución Fundamento Legal Mesa Covid-19</td>
+<td>02-12-2020 02:36 PM</td>
+<td><a href="/includes/veranexo.aspx?idattach=JCQsICwhJiA=" ng-href="/includes/veranexo.aspx?idattach=JCQsICwhJiA=" target="_blank" title="Ver Documento"><img src="/imagenes/iconos/ic_ver_generico.gif"/></a></td>
+</tr><!-- --><tr ng-init="item.nombreLink='Ver Documento'" ng-repeat="item in vpcp.list.documentosAdjuntos.values">
+<td>Documentos que se solicitaran con posterioridad, cuya cotización sea seleccionada</td>
+<td>Anexos</td>
+<td>02-12-2020 02:38 PM</td>
+<td><a href="/includes/veranexo.aspx?idattach=JCQsICwhICQ=" ng-href="/includes/veranexo.aspx?idattach=JCQsICwhICQ=" target="_blank" title="Ver Documento"><img src="/imagenes/iconos/ic_ver_generico.gif"/></a></td>
+</tr><!-- --><tr ng-init="item.nombreLink='Ver Documento'" ng-repeat="item in vpcp.list.documentosAdjuntos.values">
+<td>ESPECIFICACIONES TECNICAS</td>
+<td>Anexos</td>
+<td>02-12-2020 02:38 PM</td>
+<td><a href="/includes/veranexo.aspx?idattach=JCQsICwhICM=" ng-href="/includes/veranexo.aspx?idattach=JCQsICwhICM=" target="_blank" title="Ver Documento"><img src="/imagenes/iconos/ic_ver_generico.gif"/></a></td>
+</tr><!-- --><tr ng-init="item.nombreLink='Ver Documento'" ng-repeat="item in vpcp.list.documentosAdjuntos.values">
+<td>COTIZACION EN LINEA CL-023530</td>
+<td>Anexos</td>
+<td>02-12-2020 02:39 PM</td>
+<td><a href="/includes/veranexo.aspx?idattach=JCQsICwhIyQ=" ng-href="/includes/veranexo.aspx?idattach=JCQsICwhIyQ=" target="_blank" title="Ver Documento"><img src="/imagenes/iconos/ic_ver_generico.gif"/></a></td>
+</tr><!-- --><tr ng-init="item.nombreLink='Ver Documento'" ng-repeat="item in vpcp.list.documentosAdjuntos.values">
+<td>INFORME SECRETARIAL </td>
+<td>Anexos</td>
+<td>02-12-2020 02:43 PM</td>
+<td><a href="/includes/veranexo.aspx?idattach=JCQsICwgJCI=" ng-href="/includes/veranexo.aspx?idattach=JCQsICwgJCI=" target="_blank" title="Ver Documento"><img src="/imagenes/iconos/ic_ver_generico.gif"/></a></td>
+</tr><!-- --><tr ng-init="item.nombreLink='Ver Documento'" ng-repeat="item in vpcp.list.documentosAdjuntos.values">
+<td>REGISTRO PUBLICO DE LA EMPRESA ROCAYOL SAFETY &amp; INDUSTRIAL CENTER, S.A. </td>
+<td>Anexos</td>
+<td>02-12-2020 02:44 PM</td>
+<td><a href="/includes/veranexo.aspx?idattach=JCQsICwgJyc=" ng-href="/includes/veranexo.aspx?idattach=JCQsICwgJyc=" target="_blank" title="Ver Documento"><img src="/imagenes/iconos/ic_ver_generico.gif"/></a></td>
+</tr><!-- --><tr ng-init="item.nombreLink='Ver Documento'" ng-repeat="item in vpcp.list.documentosAdjuntos.values">
+<td>CEDULA DE LA REPRESENTANTE LEGAL </td>
+<td>Anexos</td>
+<td>02-12-2020 02:44 PM</td>
+<td><a href="/includes/veranexo.aspx?idattach=JCQsICwgJyI=" ng-href="/includes/veranexo.aspx?idattach=JCQsICwgJyI=" target="_blank" title="Ver Documento"><img src="/imagenes/iconos/ic_ver_generico.gif"/></a></td>
+</tr><!-- --><tr ng-init="item.nombreLink='Ver Documento'" ng-repeat="item in vpcp.list.documentosAdjuntos.values">
+<td>CERTIFICADO DE REGISTRO DE PROPONENTE</td>
+<td>Anexos</td>
+<td>02-12-2020 02:45 PM</td>
+<td><a href="/includes/veranexo.aspx?idattach=JCQsICwgJiY=" ng-href="/includes/veranexo.aspx?idattach=JCQsICwgJiY=" target="_blank" title="Ver Documento"><img src="/imagenes/iconos/ic_ver_generico.gif"/></a></td>
+</tr><!-- --><tr ng-init="item.nombreLink='Ver Documento'" ng-repeat="item in vpcp.list.documentosAdjuntos.values">
+<td>LICENCIA  DE OPERACIONES </td>
+<td>Anexos</td>
+<td>02-12-2020 02:45 PM</td>
+<td><a href="/includes/veranexo.aspx?idattach=JCQsICwgISQ=" ng-href="/includes/veranexo.aspx?idattach=JCQsICwgISQ=" target="_blank" title="Ver Documento"><img src="/imagenes/iconos/ic_ver_generico.gif"/></a></td>
+</tr><!-- --><tr ng-init="item.nombreLink='Ver Documento'" ng-repeat="item in vpcp.list.documentosAdjuntos.values">
+<td>PAZ Y SALVO DGI ROCAYOL SAFETY </td>
+<td>Anexos</td>
+<td>02-12-2020 02:46 PM</td>
+<td><a href="/includes/veranexo.aspx?idattach=JCQsICwgIS0=" ng-href="/includes/veranexo.aspx?idattach=JCQsICwgIS0=" target="_blank" title="Ver Documento"><img src="/imagenes/iconos/ic_ver_generico.gif"/></a></td>
+</tr><!-- --><tr ng-init="item.nombreLink='Ver Documento'" ng-repeat="item in vpcp.list.documentosAdjuntos.values">
+<td>PAZ Y SALVO C.S.S. ROCAYOL SAFETY </td>
+<td>Anexos</td>
+<td>02-12-2020 02:47 PM</td>
+<td><a href="/includes/veranexo.aspx?idattach=JCQsICwgIC0=" ng-href="/includes/veranexo.aspx?idattach=JCQsICwgIC0=" target="_blank" title="Ver Documento"><img src="/imagenes/iconos/ic_ver_generico.gif"/></a></td>
+</tr><!-- --><tr ng-init="item.nombreLink='Ver Documento'" ng-repeat="item in vpcp.list.documentosAdjuntos.values">
+<td>AVISO DE OPERACIONES </td>
+<td>Anexos</td>
+<td>02-12-2020 02:47 PM</td>
+<td><a href="/includes/veranexo.aspx?idattach=JCQsICwgIyc=" ng-href="/includes/veranexo.aspx?idattach=JCQsICwgIyc=" target="_blank" title="Ver Documento"><img src="/imagenes/iconos/ic_ver_generico.gif"/></a></td>
+</tr><!-- --><tr ng-init="item.nombreLink='Ver Documento'" ng-repeat="item in vpcp.list.documentosAdjuntos.values">
+<td>OFERENTE ROCAYOL SAFETY </td>
+<td>Anexos</td>
+<td>02-12-2020 02:48 PM</td>
+<td><a href="/includes/veranexo.aspx?idattach=JCQsICwgIyw=" ng-href="/includes/veranexo.aspx?idattach=JCQsICwgIyw=" target="_blank" title="Ver Documento"><img src="/imagenes/iconos/ic_ver_generico.gif"/></a></td>
+</tr><!-- --><tr ng-init="item.nombreLink='Ver Documento'" ng-repeat="item in vpcp.list.documentosAdjuntos.values">
+<td>CATALOGO MASCARA DE PROTECCION </td>
+<td>Anexos</td>
+<td>02-12-2020 02:48 PM</td>
+<td><a href="/includes/veranexo.aspx?idattach=JCQsICwgIic=" ng-href="/includes/veranexo.aspx?idattach=JCQsICwgIic=" target="_blank" title="Ver Documento"><img src="/imagenes/iconos/ic_ver_generico.gif"/></a></td>
+</tr><!-- --><tr ng-init="item.nombreLink='Ver Documento'" ng-repeat="item in vpcp.list.documentosAdjuntos.values">
+<td>FICHA TECNICA ADJUNTA ROCAYOL SAFETY</td>
+<td>Anexos</td>
+<td>02-12-2020 02:49 PM</td>
+<td><a href="/includes/veranexo.aspx?idattach=JCQsICwgIiI=" ng-href="/includes/veranexo.aspx?idattach=JCQsICwgIiI=" target="_blank" title="Ver Documento"><img src="/imagenes/iconos/ic_ver_generico.gif"/></a></td>
+</tr><!-- --><tr ng-init="item.nombreLink='Ver Documento'" ng-repeat="item in vpcp.list.documentosAdjuntos.values">
+<td>CATALOGO REGISTRO NACIONAL DE OFERENTE </td>
+<td>Anexos</td>
+<td>02-12-2020 02:49 PM</td>
+<td><a href="/includes/veranexo.aspx?idattach=JCQsICwgLSU=" ng-href="/includes/veranexo.aspx?idattach=JCQsICwgLSU=" target="_blank" title="Ver Documento"><img src="/imagenes/iconos/ic_ver_generico.gif"/></a></td>
+</tr><!-- --><tr ng-init="item.nombreLink='Ver Documento'" ng-repeat="item in vpcp.list.documentosAdjuntos.values">
+<td>VERIFICACION REGISTRO NACIONAL DE OFERENTE </td>
+<td>Anexos</td>
+<td>02-12-2020 02:50 PM</td>
+<td><a href="/includes/veranexo.aspx?idattach=JCQsICwgLSE=" ng-href="/includes/veranexo.aspx?idattach=JCQsICwgLSE=" target="_blank" title="Ver Documento"><img src="/imagenes/iconos/ic_ver_generico.gif"/></a></td>
+</tr><!-- --><tr ng-init="item.nombreLink='Ver Documento'" ng-repeat="item in vpcp.list.documentosAdjuntos.values">
+<td>CRITERIO TECNICO VERIFICACO REGISTRO NACIONAL DE OFERENTE </td>
+<td>Anexos</td>
+<td>02-12-2020 02:51 PM</td>
+<td><a href="/includes/veranexo.aspx?idattach=JCQsICwgLS0=" ng-href="/includes/veranexo.aspx?idattach=JCQsICwgLS0=" target="_blank" title="Ver Documento"><img src="/imagenes/iconos/ic_ver_generico.gif"/></a></td>
+</tr><!-- --><tr ng-init="item.nombreLink='Ver Documento'" ng-repeat="item in vpcp.list.documentosAdjuntos.values">
+<td>CRITERIO TECNICO  ROCAYOL SAFETY </td>
+<td>Anexos</td>
+<td>02-12-2020 02:51 PM</td>
+<td><a href="/includes/veranexo.aspx?idattach=JCQsICwgLCw=" ng-href="/includes/veranexo.aspx?idattach=JCQsICwgLCw=" target="_blank" title="Ver Documento"><img src="/imagenes/iconos/ic_ver_generico.gif"/></a></td>
+</tr><!-- --><tr ng-init="item.nombreLink='Ver Documento'" ng-repeat="item in vpcp.list.documentosAdjuntos.values">
+<td>PROPUESTA ROCAYOL SAFETY </td>
+<td>Anexos</td>
+<td>02-12-2020 02:52 PM</td>
+<td><a href="/includes/veranexo.aspx?idattach=JCQsICwjJCU=" ng-href="/includes/veranexo.aspx?idattach=JCQsICwjJCU=" target="_blank" title="Ver Documento"><img src="/imagenes/iconos/ic_ver_generico.gif"/></a></td>
+</tr><!-- --><tr ng-init="item.nombreLink='Ver Documento'" ng-repeat="item in vpcp.list.documentosAdjuntos.values">
+<td>PROPUESTA ELECTRONICA DE PANAMA COMPRAS </td>
+<td>Propuestas</td>
+<td>02-12-2020 02:53 PM</td>
+<td><a href="/includes/veranexo.aspx?idattach=JCQsICwjJyE=" ng-href="/includes/veranexo.aspx?idattach=JCQsICwjJyE=" target="_blank" title="Ver Documento"><img src="/imagenes/iconos/ic_ver_generico.gif"/></a></td>
+</tr><!-- --><tr ng-init="item.nombreLink='Ver Documento'" ng-repeat="item in vpcp.list.documentosAdjuntos.values">
+<td>SOLICITUD DE DOCUMENTOS  A SOLICITAR CON POSTERIORIDAD </td>
+<td>Anexos</td>
+<td>02-12-2020 02:54 PM</td>
+<td><a href="/includes/veranexo.aspx?idattach=JCQsICwjJiY=" ng-href="/includes/veranexo.aspx?idattach=JCQsICwjJiY=" target="_blank" title="Ver Documento"><img src="/imagenes/iconos/ic_ver_generico.gif"/></a></td>
+</tr><!-- --><tr ng-init="item.nombreLink='Ver Documento'" ng-repeat="item in vpcp.list.documentosAdjuntos.values">
+<td>solicitud de bloqueo</td>
+<td>Anexos</td>
+<td>02-12-2020 02:54 PM</td>
+<td><a href="/includes/veranexo.aspx?idattach=JCQsICwjJi0=" ng-href="/includes/veranexo.aspx?idattach=JCQsICwjJi0=" target="_blank" title="Ver Documento"><img src="/imagenes/iconos/ic_ver_generico.gif"/></a></td>
+</tr><!-- --><tr ng-init="item.nombreLink='Ver Documento'" ng-repeat="item in vpcp.list.documentosAdjuntos.values">
+<td>CORREO DE RESPUESTA DE LA EMPRESA ROCAYOL SAFETY </td>
+<td>Anexos</td>
+<td>02-12-2020 02:55 PM</td>
+<td><a href="/includes/veranexo.aspx?idattach=JCQsICwjISU=" ng-href="/includes/veranexo.aspx?idattach=JCQsICwjISU=" target="_blank" title="Ver Documento"><img src="/imagenes/iconos/ic_ver_generico.gif"/></a></td>
+</tr><!-- --><tr ng-init="item.nombreLink='Ver Documento'" ng-repeat="item in vpcp.list.documentosAdjuntos.values">
+<td>MODELO DE DECLARACIÓN JURADA INCAPACIDAD LEGAL PARA CONTRATAR </td>
+<td>Anexos</td>
+<td>02-12-2020 02:57 PM</td>
+<td><a href="/includes/veranexo.aspx?idattach=JCQsICwjICw=" ng-href="/includes/veranexo.aspx?idattach=JCQsICwjICw=" target="_blank" title="Ver Documento"><img src="/imagenes/iconos/ic_ver_generico.gif"/></a></td>
+</tr><!-- --><tr ng-init="item.nombreLink='Ver Documento'" ng-repeat="item in vpcp.list.documentosAdjuntos.values">
+<td>DECLARACION JURADA MEDIDA DE RETORCION </td>
+<td>Anexos</td>
+<td>02-12-2020 02:57 PM</td>
+<td><a href="/includes/veranexo.aspx?idattach=JCQsICwjIiY=" ng-href="/includes/veranexo.aspx?idattach=JCQsICwjIiY=" target="_blank" title="Ver Documento"><img src="/imagenes/iconos/ic_ver_generico.gif"/></a></td>
+</tr><!-- --><tr ng-init="item.nombreLink='Ver Documento'" ng-repeat="item in vpcp.list.documentosAdjuntos.values">
+<td>PROPUESTA</td>
+<td>Propuestas</td>
+<td>02-12-2020 02:58 PM</td>
+<td><a href="/includes/veranexo.aspx?idattach=JCQsICwjLSc=" ng-href="/includes/veranexo.aspx?idattach=JCQsICwjLSc=" target="_blank" title="Ver Documento"><img src="/imagenes/iconos/ic_ver_generico.gif"/></a></td>
+</tr><!-- --><tr ng-init="item.nombreLink='Ver Documento'" ng-repeat="item in vpcp.list.documentosAdjuntos.values">
+<td>SOLICITUD DE EVALUACION </td>
+<td>Anexos</td>
+<td>02-12-2020 02:59 PM</td>
+<td><a href="/includes/veranexo.aspx?idattach=JCQsICwjLS0=" ng-href="/includes/veranexo.aspx?idattach=JCQsICwjLS0=" target="_blank" title="Ver Documento"><img src="/imagenes/iconos/ic_ver_generico.gif"/></a></td>
+</tr><!-- --><tr ng-init="item.nombreLink='Ver Documento'" ng-repeat="item in vpcp.list.documentosAdjuntos.values">
+<td>EVALUACION DEL SERVICIO SOLICITANTE </td>
+<td>Anexos</td>
+<td>02-12-2020 03:00 PM</td>
+<td><a href="/includes/veranexo.aspx?idattach=JCQsICwjLCE=" ng-href="/includes/veranexo.aspx?idattach=JCQsICwjLCE=" target="_blank" title="Ver Documento"><img src="/imagenes/iconos/ic_ver_generico.gif"/></a></td>
+</tr><!-- --><tr ng-init="item.nombreLink='Ver Documento'" ng-repeat="item in vpcp.list.documentosAdjuntos.values">
+<td>BLOQUEO</td>
+<td>Anexos</td>
+<td>02-12-2020 03:02 PM</td>
+<td><a href="/includes/veranexo.aspx?idattach=JCQsICwiJSE=" ng-href="/includes/veranexo.aspx?idattach=JCQsICwiJSE=" target="_blank" title="Ver Documento"><img src="/imagenes/iconos/ic_ver_generico.gif"/></a></td>
+</tr><!-- --><tr ng-init="item.nombreLink='Ver Documento'" ng-repeat="item in vpcp.list.documentosAdjuntos.values">
+<td>COMPROMETIDO </td>
+<td>Anexos</td>
+<td>02-12-2020 03:02 PM</td>
+<td><a href="/includes/veranexo.aspx?idattach=JCQsICwiJCQ=" ng-href="/includes/veranexo.aspx?idattach=JCQsICwiJCQ=" target="_blank" title="Ver Documento"><img src="/imagenes/iconos/ic_ver_generico.gif"/></a></td>
+</tr><!-- --><tr ng-init="item.nombreLink='Ver Documento'" ng-repeat="item in vpcp.list.documentosAdjuntos.values">
+<td>CUADRO DE ADJUDICACION</td>
+<td>Anexos</td>
+<td>02-12-2020 03:06 PM</td>
+<td><a href="/includes/veranexo.aspx?idattach=JCQsICwiIS0=" ng-href="/includes/veranexo.aspx?idattach=JCQsICwiIS0=" target="_blank" title="Ver Documento"><img src="/imagenes/iconos/ic_ver_generico.gif"/></a></td>
+</tr><!-- --><tr ng-init="item.nombreLink='Ver Documento'" ng-repeat="item in vpcp.list.documentosAdjuntos.values">
+<td>COTIZACION EN LINEA CL-023530</td>
+<td>Terminos de referencia</td>
+<td>02-12-2020 03:09 PM</td>
+<td><a href="/includes/veranexo.aspx?idattach=JCQsICwiIyA=" ng-href="/includes/veranexo.aspx?idattach=JCQsICwiIyA=" target="_blank" title="Ver Documento"><img src="/imagenes/iconos/ic_ver_generico.gif"/></a></td>
+</tr><!-- --><tr ng-init="item.nombreLink='Ver Documento'" ng-repeat="item in vpcp.list.documentosAdjuntos.values">
+<td>ISTMO 4200322302 ROCAYOL SAFE IND.CENT.</td>
+<td>Orden de Compra</td>
+<td>07-12-2020 02:09 PM</td>
+<td><a href="/includes/veranexo.aspx?idattach=JCQsIi0hJSM=" ng-href="/includes/veranexo.aspx?idattach=JCQsIi0hJSM=" target="_blank" title="Ver Documento"><img src="/imagenes/iconos/ic_ver_generico.gif"/></a></td>
+</tr><!-- -->
+</tbody></table>
+</div>
+</div><!-- -->
+<!--Documentos del Acto Público-->
+<!-- --><div class="panel panel-default export-pdf" ng-if="vpcp.list.documetosPliego">
+<div class="panel-heading" style="padding:5px 15px;"><b>Documentos del Acto Público</b></div>
+<div class="panel-body table-responsive" style="padding:15px;">
+<table class="table table-condensed table-bordered table-striped last-line-table" style="margin:0;" width="100%">
+<thead>
+<tr>
+<th>Nombre Documento</th>
+<th>Fecha Creación</th>
+<th>Acciones</th>
+</tr>
+</thead>
+<tbody><!-- --><tr ng-if="vpcp.list.documetosPliego.values.length==0">
+<td colspan="4"><center>No hay documentos del acto público</center></td>
+</tr><!-- -->
+<!-- -->
+</tbody></table>
+</div>
+</div><!-- -->
+<!--Publicaciones Anteriores-->
+<!-- -->
+<!--Convocatorias Anteriores-->
+<!-- -->
+<!--opciones-->
+<!-- --><div class="panel panel-default export-pdf" ng-if="vpcp.list.opciones">
+<div class="panel-heading" style="padding:5px 15px;"><b>Opciones</b></div>
+<div class="panel-body table-responsive" style="padding:15px;">
+<!-- --><a class="btn btn-default" id="vap" ng-click="vpcp.clickpdf(0)" ng-if="!vpcp.isIE9" title="Ver Acto Público en Formato PDF para imprimir">
+<img src="/Inicio/images/ic_descargar_pdf.gif"/>
+</a><!-- -->
+<!-- --><a class="btn btn-default" ng-click="vpcp.clickpdf(1)" ng-if="!vpcp.isIE" style="margin-left:5px;" title="Imprimir Acto Publico">
+<img src="/Inicio/images/ic_imprimir.gif"/>
+</a><!-- -->
+<!-- -->
+<!-- -->
+</div>
+</div><!-- -->
+<!-- --><button class="btn btn-default btn-sm" ng-click="vpcp.backbutton()" ng-if="!vpcp.param.hiddenBB">« Volver</button><!-- -->
+</div>
+</div>

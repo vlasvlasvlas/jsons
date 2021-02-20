@@ -1,0 +1,452 @@
+<div class="col-sm-12 col-md-12" id="elementToPDF" ng-if="vpcp.list!=undefined &amp;&amp; vpcp.list!=false" style="font-size: 12px; background-color: rgb(255, 255, 255);">
+<!--Encabezado del pliego-->
+<!-- --><div class="well export-pdf table-responsive" ng-if="vpcp.list.header" style="margin-top:10px;">
+<table class="table table-condensed table-bordered last-line-table" style="margin:0;" width="100%">
+<tbody><!-- --><tr ng-repeat="item in vpcp.list.header.values">
+<td width="250"><b>Número:</b></td>
+<td>2020-0-12-119-04-EM-022902</td>
+</tr><!-- --><tr ng-repeat="item in vpcp.list.header.values">
+<td width="250"><b>Nombre del Acto:</b></td>
+<td>BATA QUIRÚRGICA ESTÉRIL. 
+Req-157/20. 
+Licda. Marissin Valdés D.</td>
+</tr><!-- --><tr ng-repeat="item in vpcp.list.header.values">
+<td width="250"><b>Objeto de la Contratación:</b></td>
+<td>Bien</td>
+</tr><!-- -->
+</tbody></table>
+</div><!-- -->
+<!-- --><div ng-include="'configVP.html'">
+<!--Información de la Entidad-->
+<!-- --><div class="panel panel-default export-pdf" ng-if="vpcp.list.entityInformation">
+<div class="panel-heading" style="padding:5px 15px;"><b>Información de la Entidad</b></div>
+<div class="panel-body table-responsive" style="padding:15px;">
+<table class="table table-condensed table-bordered last-line-table" style="margin:0;" width="100%">
+<tbody><!-- --><tr ng-repeat="item in vpcp.list.entityInformation.values">
+<td width="250"><b>Entidad:</b></td>
+<td>MINISTERIO DE SALUD</td>
+</tr><!-- --><tr ng-repeat="item in vpcp.list.entityInformation.values">
+<td width="250"><b>Dependencia:</b></td>
+<td>HOSPITAL JOSE DOMINGO DE OBALDÍA</td>
+</tr><!-- --><tr ng-repeat="item in vpcp.list.entityInformation.values">
+<td width="250"><b>Unidad De Compra:</b></td>
+<td>DEPARTAMENTO DE COMPRAS(H. JOSÉ DOMINGO DE OBALDIA)</td>
+</tr><!-- --><tr ng-repeat="item in vpcp.list.entityInformation.values">
+<td width="250"><b>Dirección:</b></td>
+<td>PATRONATO HOSPITAL JOSÉ DOMINGO DE OBALDIA DAVID, CHIRIQUÍ REP. DE PANAMA</td>
+</tr><!-- -->
+</tbody></table>
+</div>
+</div><!-- -->
+<!--Contacto de la Unidad de Compra-->
+<!-- --><div class="panel panel-default export-pdf" ng-if="vpcp.list.contactUser">
+<div class="panel-heading" style="padding:5px 15px;"><b>Contacto de la Unidad de Compra</b></div>
+<div class="panel-body table-responsive" style="padding:15px;">
+<table class="table table-condensed table-bordered last-line-table" style="margin:0;" width="100%">
+<tbody><!-- --><tr ng-repeat="item in vpcp.list.contactUser.values">
+<td width="250"><b>nombre</b></td>
+<td>MARISIN VALDÉS</td>
+</tr><!-- --><tr ng-repeat="item in vpcp.list.contactUser.values">
+<td width="250"><b>cargo</b></td>
+<td></td>
+</tr><!-- -->
+</tbody></table>
+</div>
+</div><!-- -->
+<!--Aviso de Convocatoria-->
+<!-- --><div class="panel panel-default export-pdf" ng-if="vpcp.list.aviso">
+<div class="panel-heading" style="padding:5px 15px;"><b>Aviso de Convocatoria</b></div>
+<div class="panel-body table-responsive" style="padding:15px;">
+<table class="table table-condensed table-bordered last-line-table" style="margin:0;" width="100%">
+<tbody><!-- --><tr ng-init="isjson = vpcp.isJson(item)" ng-repeat="item in vpcp.list.aviso.values">
+<td width="250"><b>Número de Acto:</b></td>
+<!-- --><td ng-if="!isjson">2020-0-12-119-04-EM-022902</td><!-- -->
+<!-- -->
+</tr><!-- --><tr ng-init="isjson = vpcp.isJson(item)" ng-repeat="item in vpcp.list.aviso.values">
+<td width="250"><b>Tipo de Procedimiento:</b></td>
+<!-- --><td ng-if="!isjson">Compras Mesa COVID-19</td><!-- -->
+<!-- -->
+</tr><!-- --><tr ng-init="isjson = vpcp.isJson(item)" ng-repeat="item in vpcp.list.aviso.values">
+<td width="250"><b>Fundamento de la Excepción</b></td>
+<!-- --><td ng-if="!isjson">D) Resolución No. 18 del 31 de Marzo de 2020</td><!-- -->
+<!-- -->
+</tr><!-- --><tr ng-init="isjson = vpcp.isJson(item)" ng-repeat="item in vpcp.list.aviso.values">
+<td width="250"><b>Objeto Contractual:</b></td>
+<!-- --><td ng-if="!isjson">Bien</td><!-- -->
+<!-- -->
+</tr><!-- --><tr ng-init="isjson = vpcp.isJson(item)" ng-repeat="item in vpcp.list.aviso.values">
+<td width="250"><b>Descripción:</b></td>
+<!-- --><td ng-if="!isjson">BATA QUIRÚRGICA ESTÉRIL. 
+Req-157/20. 
+Licda. Marissin Valdés D.</td><!-- -->
+<!-- -->
+</tr><!-- --><tr ng-init="isjson = vpcp.isJson(item)" ng-repeat="item in vpcp.list.aviso.values">
+<td width="250"><b>Fecha de Publicación:</b></td>
+<!-- --><td ng-if="!isjson">17-09-2020 09:00 AM</td><!-- -->
+<!-- -->
+</tr><!-- --><tr ng-init="isjson = vpcp.isJson(item)" ng-repeat="item in vpcp.list.aviso.values">
+<td width="250"><b>Monto de la Contratación:</b></td>
+<!-- --><td ng-if="!isjson">B/.  14,412.90</td><!-- -->
+<!-- -->
+</tr><!-- --><tr ng-init="isjson = vpcp.isJson(item)" ng-repeat="item in vpcp.list.aviso.values">
+<td width="250"><b>Partidas presupuestales:</b></td>
+<!-- -->
+<!-- --><td ng-if="isjson">
+<table border="1" id="table_inter_np" type="table_inter">
+<tbody><tr style="background-color:#f5f5f5;">
+<th style="padding:2px 5px;">N°</th>
+<th style="padding:2px 5px;">Número Partida</th>
+</tr>
+<!-- --><tr ng-repeat="item1 in item.value">
+<td style="padding:2px 5px;">1</td>
+<td style="padding:2px 5px;">F.T.0.12.0.3.001.02.19-911</td>
+</tr><!-- -->
+</tbody></table>
+</td><!-- -->
+</tr><!-- --><tr ng-init="isjson = vpcp.isJson(item)" ng-repeat="item in vpcp.list.aviso.values">
+<td width="250"><b>Programa:</b></td>
+<!-- --><td ng-if="!isjson">---</td><!-- -->
+<!-- -->
+</tr><!-- --><tr ng-init="isjson = vpcp.isJson(item)" ng-repeat="item in vpcp.list.aviso.values">
+<td width="250"><b>Datos de Contacto</b></td>
+<!-- --><td ng-if="!isjson"></td><!-- -->
+<!-- -->
+</tr><!-- --><tr ng-init="isjson = vpcp.isJson(item)" ng-repeat="item in vpcp.list.aviso.values">
+<td width="250"><b>Nombre:</b></td>
+<!-- --><td ng-if="!isjson">MARISIN VALDÉS</td><!-- -->
+<!-- -->
+</tr><!-- --><tr ng-init="isjson = vpcp.isJson(item)" ng-repeat="item in vpcp.list.aviso.values">
+<td width="250"><b>Cargo:</b></td>
+<!-- --><td ng-if="!isjson"></td><!-- -->
+<!-- -->
+</tr><!-- --><tr ng-init="isjson = vpcp.isJson(item)" ng-repeat="item in vpcp.list.aviso.values">
+<td width="250"><b>Teléfono:</b></td>
+<!-- --><td ng-if="!isjson">507-7753719</td><!-- -->
+<!-- -->
+</tr><!-- --><tr ng-init="isjson = vpcp.isJson(item)" ng-repeat="item in vpcp.list.aviso.values">
+<td width="250"><b>Correo Electrónico:</b></td>
+<!-- --><td ng-if="!isjson">marissin.valdes@obaldia.sld.pa</td><!-- -->
+<!-- -->
+</tr><!-- -->
+</tbody></table>
+</div>
+</div><!-- -->
+<!--Condiciones Generales-->
+<!-- -->
+<!--Condiciones Especiales-->
+<!-- -->
+<!--Especificaciones Técnicas-->
+<!-- --><div class="panel panel-default export-pdf" ng-if="vpcp.list.especificacionesTecnicas">
+<div class="panel-heading" style="padding:5px 15px;"><b>Especificaciones Técnicas</b></div>
+<div class="panel-body table-responsive" style="padding:15px;">
+<!-- --><span ng-repeat-start="item in vpcp.list.especificacionesTecnicas.values" style="font-size:13px;font-weight:bold;">Proponente Seleccionado</span>
+<div class="table-responsive" ng-repeat-end="">
+<!-- --><table class="table table-condensed table-bordered last-line-table" ng-if="item.type=='ps'" style="margin:0;margin-bottom:10px;" width="100%">
+<tbody><!-- --><tr ng-repeat="item1 in item.values">
+<td width="250"><b>Nombre:</b></td>
+<td>4 HOSPITALS,INC</td>
+</tr><!-- --><tr ng-repeat="item1 in item.values">
+<td width="250"><b>Número de Identificación:</b></td>
+<td>2103660-1-757288-9</td>
+</tr><!-- --><tr ng-repeat="item1 in item.values">
+<td width="250"><b>Dirección:</b></td>
+<td>URBANIZACION INDUSTRIAL LOS ANGELES , CALLE 64B  L</td>
+</tr><!-- --><tr ng-repeat="item1 in item.values">
+<td width="250"><b>Provincia:</b></td>
+<td>PANAMÁ</td>
+</tr><!-- --><tr ng-repeat="item1 in item.values">
+<td width="250"><b>Distrito:</b></td>
+<td>Panamá</td>
+</tr><!-- --><tr ng-repeat="item1 in item.values">
+<td width="250"><b>Correo Electrónico:</b></td>
+<td>forhospitals@4hospitalsinc.com</td>
+</tr><!-- --><tr ng-repeat="item1 in item.values">
+<td width="250"><b>Teléfono:</b></td>
+<td>507229-4529</td>
+</tr><!-- -->
+</tbody></table><!-- -->
+<!-- -->
+</div><!-- --><span ng-repeat-start="item in vpcp.list.especificacionesTecnicas.values" style="font-size:13px;font-weight:bold;">Bien/Servicio/Obra Seleccionados</span>
+<div class="table-responsive" ng-repeat-end="">
+<!-- -->
+<!-- --><table class="table table-condensed table-bordered table-striped last-line-table" ng-if="item.type=='bs'" style="margin:0;" width="100%">
+<thead>
+<tr>
+<th>R</th>
+<th>Código</th>
+<th>Clasificación</th>
+<th>Cantidad</th>
+<th>U. Medida</th>
+<th>Descripción</th>
+<!-- -->
+<!-- -->
+<th>SES</th>
+<!-- -->
+</tr>
+</thead>
+<tbody><!-- -->
+<!-- --><tr ng-repeat="item1 in item.values">
+<td>1</td>
+<td>95101011</td>
+<td>Equipo-Accesorios-Suministros Médicos</td>
+<td>3,000</td>
+<td>Unidad</td>
+<td>BATA QUIRÚRGICA  ESTÉRIL  FT- 102756
+NIVEL 3 TAMAÑO GRANDE.</td>
+<!-- -->
+<!-- -->
+<td>---</td>
+<!-- -->
+</tr><!-- -->
+</tbody></table><!-- -->
+</div><!-- -->
+</div>
+</div><!-- -->
+<!--Documentos Adjuntos-->
+<!-- --><div class="panel panel-default export-pdf" ng-if="vpcp.list.documentosAdjuntos">
+<div class="panel-heading" style="padding:5px 15px;"><b>Documentos Adjuntos</b></div>
+<div class="panel-body table-responsive" style="padding:15px;">
+<table class="table table-condensed table-bordered table-striped last-line-table" style="margin:0;" width="100%">
+<thead>
+<tr>
+<th>Descripción</th>
+<th>Tipo</th>
+<th>Fecha</th>
+<th>Acciones</th>
+</tr>
+</thead>
+<tbody><!-- -->
+<!-- --><tr ng-init="item.nombreLink='Ver Documento'" ng-repeat="item in vpcp.list.documentosAdjuntos.values">
+<td>PLIEGO DE CARGO DE BATAS QUIRÚRGICA N°1</td>
+<td>Anexos</td>
+<td>07-08-2020 01:03 PM</td>
+<td><a href="/includes/veranexo.aspx?idattach=JCQmJSEjJCA=" ng-href="/includes/veranexo.aspx?idattach=JCQmJSEjJCA=" target="_blank" title="Ver Documento"><img src="/imagenes/iconos/ic_ver_generico.gif"/></a></td>
+</tr><!-- --><tr ng-init="item.nombreLink='Ver Documento'" ng-repeat="item in vpcp.list.documentosAdjuntos.values">
+<td>COMPRABANTE DE ENVIO N°1</td>
+<td>Anexos</td>
+<td>07-08-2020 01:06 PM</td>
+<td><a href="/includes/veranexo.aspx?idattach=JCQmJSEjISA=" ng-href="/includes/veranexo.aspx?idattach=JCQmJSEjISA=" target="_blank" title="Ver Documento"><img src="/imagenes/iconos/ic_ver_generico.gif"/></a></td>
+</tr><!-- --><tr ng-init="item.nombreLink='Ver Documento'" ng-repeat="item in vpcp.list.documentosAdjuntos.values">
+<td>PLIEGO DE CARGO DE BATAS QUIRÚRGICA N°2</td>
+<td>Anexos</td>
+<td>07-08-2020 01:12 PM</td>
+<td><a href="/includes/veranexo.aspx?idattach=JCQmJSEjLS0=" ng-href="/includes/veranexo.aspx?idattach=JCQmJSEjLS0=" target="_blank" title="Ver Documento"><img src="/imagenes/iconos/ic_ver_generico.gif"/></a></td>
+</tr><!-- --><tr ng-init="item.nombreLink='Ver Documento'" ng-repeat="item in vpcp.list.documentosAdjuntos.values">
+<td>COMPRABANTE DE ENVIO N°2 BATA</td>
+<td>Anexos</td>
+<td>07-08-2020 01:12 PM</td>
+<td><a href="/includes/veranexo.aspx?idattach=JCQmJSEjLCE=" ng-href="/includes/veranexo.aspx?idattach=JCQmJSEjLCE=" target="_blank" title="Ver Documento"><img src="/imagenes/iconos/ic_ver_generico.gif"/></a></td>
+</tr><!-- --><tr ng-init="item.nombreLink='Ver Documento'" ng-repeat="item in vpcp.list.documentosAdjuntos.values">
+<td>REGISTRO PUBLICO</td>
+<td>Otros</td>
+<td>07-08-2020 01:16 PM</td>
+<td><a href="/includes/veranexo.aspx?idattach=JCQmJSEiJyQ=" ng-href="/includes/veranexo.aspx?idattach=JCQmJSEiJyQ=" target="_blank" title="Ver Documento"><img src="/imagenes/iconos/ic_ver_generico.gif"/></a></td>
+</tr><!-- --><tr ng-init="item.nombreLink='Ver Documento'" ng-repeat="item in vpcp.list.documentosAdjuntos.values">
+<td>CEDULA REP. LEGAL</td>
+<td>Otros</td>
+<td>07-08-2020 01:16 PM</td>
+<td><a href="/includes/veranexo.aspx?idattach=JCQmJSEiJyM=" ng-href="/includes/veranexo.aspx?idattach=JCQmJSEiJyM=" target="_blank" title="Ver Documento"><img src="/imagenes/iconos/ic_ver_generico.gif"/></a></td>
+</tr><!-- --><tr ng-init="item.nombreLink='Ver Documento'" ng-repeat="item in vpcp.list.documentosAdjuntos.values">
+<td>CERTIFICADO DE AMPYME</td>
+<td>Otros</td>
+<td>07-08-2020 01:18 PM</td>
+<td><a href="/includes/veranexo.aspx?idattach=JCQmJSEiJiA=" ng-href="/includes/veranexo.aspx?idattach=JCQmJSEiJiA=" target="_blank" title="Ver Documento"><img src="/imagenes/iconos/ic_ver_generico.gif"/></a></td>
+</tr><!-- --><tr ng-init="item.nombreLink='Ver Documento'" ng-repeat="item in vpcp.list.documentosAdjuntos.values">
+<td>PAZ Y SALVO NACIONALES </td>
+<td>Otros</td>
+<td>07-08-2020 01:20 PM</td>
+<td><a href="/includes/veranexo.aspx?idattach=JCQmJSEiICI=" ng-href="/includes/veranexo.aspx?idattach=JCQmJSEiICI=" target="_blank" title="Ver Documento"><img src="/imagenes/iconos/ic_ver_generico.gif"/></a></td>
+</tr><!-- --><tr ng-init="item.nombreLink='Ver Documento'" ng-repeat="item in vpcp.list.documentosAdjuntos.values">
+<td>INCAPACIDAD LEGAL DE 4 HOSPITALS INC</td>
+<td>Otros</td>
+<td>07-08-2020 01:23 PM</td>
+<td><a href="/includes/veranexo.aspx?idattach=JCQmJSEiIyI=" ng-href="/includes/veranexo.aspx?idattach=JCQmJSEiIyI=" target="_blank" title="Ver Documento"><img src="/imagenes/iconos/ic_ver_generico.gif"/></a></td>
+</tr><!-- --><tr ng-init="item.nombreLink='Ver Documento'" ng-repeat="item in vpcp.list.documentosAdjuntos.values">
+<td>MEDIDA DE RETORSION</td>
+<td>Otros</td>
+<td>07-08-2020 01:25 PM</td>
+<td><a href="/includes/veranexo.aspx?idattach=JCQmJSEiIiI=" ng-href="/includes/veranexo.aspx?idattach=JCQmJSEiIiI=" target="_blank" title="Ver Documento"><img src="/imagenes/iconos/ic_ver_generico.gif"/></a></td>
+</tr><!-- --><tr ng-init="item.nombreLink='Ver Documento'" ng-repeat="item in vpcp.list.documentosAdjuntos.values">
+<td>AVISO DE OPERACIONES 4 HOSPITALS INC</td>
+<td>Otros</td>
+<td>07-08-2020 01:27 PM</td>
+<td><a href="/includes/veranexo.aspx?idattach=JCQmJSEiLCc=" ng-href="/includes/veranexo.aspx?idattach=JCQmJSEiLCc=" target="_blank" title="Ver Documento"><img src="/imagenes/iconos/ic_ver_generico.gif"/></a></td>
+</tr><!-- --><tr ng-init="item.nombreLink='Ver Documento'" ng-repeat="item in vpcp.list.documentosAdjuntos.values">
+<td>OFERENTE DE 4 HOSPITALS INC.</td>
+<td>Otros</td>
+<td>07-08-2020 01:28 PM</td>
+<td><a href="/includes/veranexo.aspx?idattach=JCQmJSEtJSI=" ng-href="/includes/veranexo.aspx?idattach=JCQmJSEtJSI=" target="_blank" title="Ver Documento"><img src="/imagenes/iconos/ic_ver_generico.gif"/></a></td>
+</tr><!-- --><tr ng-init="item.nombreLink='Ver Documento'" ng-repeat="item in vpcp.list.documentosAdjuntos.values">
+<td>LICENCIA DE OPERACIONES 4 HOSPITAL INC</td>
+<td>Otros</td>
+<td>07-08-2020 01:31 PM</td>
+<td><a href="/includes/veranexo.aspx?idattach=JCQmJSEtJyI=" ng-href="/includes/veranexo.aspx?idattach=JCQmJSEtJyI=" target="_blank" title="Ver Documento"><img src="/imagenes/iconos/ic_ver_generico.gif"/></a></td>
+</tr><!-- --><tr ng-init="item.nombreLink='Ver Documento'" ng-repeat="item in vpcp.list.documentosAdjuntos.values">
+<td>CERTIFICADO DE OFERENTE 4 HOSPITALS INC</td>
+<td>Otros</td>
+<td>07-08-2020 01:34 PM</td>
+<td><a href="/includes/veranexo.aspx?idattach=JCQmJSEtIyQ=" ng-href="/includes/veranexo.aspx?idattach=JCQmJSEtIyQ=" target="_blank" title="Ver Documento"><img src="/imagenes/iconos/ic_ver_generico.gif"/></a></td>
+</tr><!-- --><tr ng-init="item.nombreLink='Ver Documento'" ng-repeat="item in vpcp.list.documentosAdjuntos.values">
+<td>MÉTODO DE DESTRUCCIÓN 4 HOSPITALS INC</td>
+<td>Otros</td>
+<td>07-08-2020 01:38 PM</td>
+<td><a href="/includes/veranexo.aspx?idattach=JCQmJSEtIiA=" ng-href="/includes/veranexo.aspx?idattach=JCQmJSEtIiA=" target="_blank" title="Ver Documento"><img src="/imagenes/iconos/ic_ver_generico.gif"/></a></td>
+</tr><!-- --><tr ng-init="item.nombreLink='Ver Documento'" ng-repeat="item in vpcp.list.documentosAdjuntos.values">
+<td>CATALOGO DE ESPECIFICACIONES TÉCNICAS.</td>
+<td>Otros</td>
+<td>07-08-2020 01:41 PM</td>
+<td><a href="/includes/veranexo.aspx?idattach=JCQmJSEsJSU=" ng-href="/includes/veranexo.aspx?idattach=JCQmJSEsJSU=" target="_blank" title="Ver Documento"><img src="/imagenes/iconos/ic_ver_generico.gif"/></a></td>
+</tr><!-- --><tr ng-init="item.nombreLink='Ver Documento'" ng-repeat="item in vpcp.list.documentosAdjuntos.values">
+<td>CRITERIO TÉCNICO DE 4 HOSPITALS INC.</td>
+<td>Otros</td>
+<td>07-08-2020 01:44 PM</td>
+<td><a href="/includes/veranexo.aspx?idattach=JCQmJSEsJyI=" ng-href="/includes/veranexo.aspx?idattach=JCQmJSEsJyI=" target="_blank" title="Ver Documento"><img src="/imagenes/iconos/ic_ver_generico.gif"/></a></td>
+</tr><!-- --><tr ng-init="item.nombreLink='Ver Documento'" ng-repeat="item in vpcp.list.documentosAdjuntos.values">
+<td>COMPROBANTE DE RECIBIDO</td>
+<td>Otros</td>
+<td>07-08-2020 01:49 PM</td>
+<td><a href="/includes/veranexo.aspx?idattach=JCQmJSEsLSQ=" ng-href="/includes/veranexo.aspx?idattach=JCQmJSEsLSQ=" target="_blank" title="Ver Documento"><img src="/imagenes/iconos/ic_ver_generico.gif"/></a></td>
+</tr><!-- --><tr ng-init="item.nombreLink='Ver Documento'" ng-repeat="item in vpcp.list.documentosAdjuntos.values">
+<td>COMPROBANTE DE INSCRITO EN EL S. DE OFERENTE</td>
+<td>Otros</td>
+<td>07-08-2020 01:53 PM</td>
+<td><a href="/includes/veranexo.aspx?idattach=JCQmJSAlJyU=" ng-href="/includes/veranexo.aspx?idattach=JCQmJSAlJyU=" target="_blank" title="Ver Documento"><img src="/imagenes/iconos/ic_ver_generico.gif"/></a></td>
+</tr><!-- --><tr ng-init="item.nombreLink='Ver Documento'" ng-repeat="item in vpcp.list.documentosAdjuntos.values">
+<td>HOJA DE COTEJO DE DOCUMENTOS</td>
+<td>Otros</td>
+<td>07-08-2020 01:55 PM</td>
+<td><a href="/includes/veranexo.aspx?idattach=JCQmJSAlISU=" ng-href="/includes/veranexo.aspx?idattach=JCQmJSAlISU=" target="_blank" title="Ver Documento"><img src="/imagenes/iconos/ic_ver_generico.gif"/></a></td>
+</tr><!-- --><tr ng-init="item.nombreLink='Ver Documento'" ng-repeat="item in vpcp.list.documentosAdjuntos.values">
+<td>SOLICITUD DE EVALUACIÓN</td>
+<td>Otros</td>
+<td>07-08-2020 01:56 PM</td>
+<td><a href="/includes/veranexo.aspx?idattach=JCQmJSAlICw=" ng-href="/includes/veranexo.aspx?idattach=JCQmJSAlICw=" target="_blank" title="Ver Documento"><img src="/imagenes/iconos/ic_ver_generico.gif"/></a></td>
+</tr><!-- --><tr ng-init="item.nombreLink='Ver Documento'" ng-repeat="item in vpcp.list.documentosAdjuntos.values">
+<td>EVALUACIÓN TÉCNICA DEL DPTO. SOLICITANTE</td>
+<td>Otros</td>
+<td>07-08-2020 01:58 PM</td>
+<td><a href="/includes/veranexo.aspx?idattach=JCQmJSAlIiI=" ng-href="/includes/veranexo.aspx?idattach=JCQmJSAlIiI=" target="_blank" title="Ver Documento"><img src="/imagenes/iconos/ic_ver_generico.gif"/></a></td>
+</tr><!-- --><tr ng-init="item.nombreLink='Ver Documento'" ng-repeat="item in vpcp.list.documentosAdjuntos.values">
+<td>CUADRO DE ADJUDICACIÓN</td>
+<td>Otros</td>
+<td>07-08-2020 02:00 PM</td>
+<td><a href="/includes/veranexo.aspx?idattach=JCQmJSAlLCE=" ng-href="/includes/veranexo.aspx?idattach=JCQmJSAlLCE=" target="_blank" title="Ver Documento"><img src="/imagenes/iconos/ic_ver_generico.gif"/></a></td>
+</tr><!-- --><tr ng-init="item.nombreLink='Ver Documento'" ng-repeat="item in vpcp.list.documentosAdjuntos.values">
+<td>ACTO PUBLICO</td>
+<td>Otros</td>
+<td>07-08-2020 02:03 PM</td>
+<td><a href="/includes/veranexo.aspx?idattach=JCQmJSAkJSA=" ng-href="/includes/veranexo.aspx?idattach=JCQmJSAkJSA=" target="_blank" title="Ver Documento"><img src="/imagenes/iconos/ic_ver_generico.gif"/></a></td>
+</tr><!-- --><tr ng-init="item.nombreLink='Ver Documento'" ng-repeat="item in vpcp.list.documentosAdjuntos.values">
+<td>SOLICITUD DE BLOQUEO PRESUPUESTARIO</td>
+<td>Otros</td>
+<td>07-08-2020 02:04 PM</td>
+<td><a href="/includes/veranexo.aspx?idattach=JCQmJSAkJSw=" ng-href="/includes/veranexo.aspx?idattach=JCQmJSAkJSw=" target="_blank" title="Ver Documento"><img src="/imagenes/iconos/ic_ver_generico.gif"/></a></td>
+</tr><!-- --><tr ng-init="item.nombreLink='Ver Documento'" ng-repeat="item in vpcp.list.documentosAdjuntos.values">
+<td>ASIGNACIÓN DE BLOQUEO</td>
+<td>Otros</td>
+<td>07-08-2020 02:08 PM</td>
+<td><a href="/includes/veranexo.aspx?idattach=JCQmJSAkIS0=" ng-href="/includes/veranexo.aspx?idattach=JCQmJSAkIS0=" target="_blank" title="Ver Documento"><img src="/imagenes/iconos/ic_ver_generico.gif"/></a></td>
+</tr><!-- --><tr ng-init="item.nombreLink='Ver Documento'" ng-repeat="item in vpcp.list.documentosAdjuntos.values">
+<td>COMPROMETIDO DE BLOQUEO</td>
+<td>Otros</td>
+<td>07-08-2020 02:11 PM</td>
+<td><a href="/includes/veranexo.aspx?idattach=JCQmJSAkIiE=" ng-href="/includes/veranexo.aspx?idattach=JCQmJSAkIiE=" target="_blank" title="Ver Documento"><img src="/imagenes/iconos/ic_ver_generico.gif"/></a></td>
+</tr><!-- --><tr ng-init="item.nombreLink='Ver Documento'" ng-repeat="item in vpcp.list.documentosAdjuntos.values">
+<td>O/C ANULADA</td>
+<td>Otros</td>
+<td>07-08-2020 02:13 PM</td>
+<td><a href="/includes/veranexo.aspx?idattach=JCQmJSAnJSQ=" ng-href="/includes/veranexo.aspx?idattach=JCQmJSAnJSQ=" target="_blank" title="Ver Documento"><img src="/imagenes/iconos/ic_ver_generico.gif"/></a></td>
+</tr><!-- --><tr ng-init="item.nombreLink='Ver Documento'" ng-repeat="item in vpcp.list.documentosAdjuntos.values">
+<td>O/C 4200298145 4 HOSPITALS INC.</td>
+<td>Orden de Compra</td>
+<td>17-09-2020 08:29 AM</td>
+<td><a href="/includes/veranexo.aspx?idattach=JCQhLSYkISc=" ng-href="/includes/veranexo.aspx?idattach=JCQhLSYkISc=" target="_blank" title="Ver Documento"><img src="/imagenes/iconos/ic_ver_generico.gif"/></a></td>
+</tr><!-- --><tr ng-init="item.nombreLink='Ver Documento'" ng-repeat="item in vpcp.list.documentosAdjuntos.values">
+<td>RESOLUCION DE GABINETE N°11</td>
+<td>Resolución Fundamento Legal Mesa Covid-19</td>
+<td>17-09-2020 08:31 AM</td>
+<td><a href="/includes/veranexo.aspx?idattach=JCQhLSYkIC0=" ng-href="/includes/veranexo.aspx?idattach=JCQhLSYkIC0=" target="_blank" title="Ver Documento"><img src="/imagenes/iconos/ic_ver_generico.gif"/></a></td>
+</tr><!-- --><tr ng-init="item.nombreLink='Ver Documento'" ng-repeat="item in vpcp.list.documentosAdjuntos.values">
+<td>RESOLUCION DE GABINETE N°18</td>
+<td>Resolución Fundamento Legal Mesa Covid-19</td>
+<td>17-09-2020 08:31 AM</td>
+<td><a href="/includes/veranexo.aspx?idattach=JCQhLSYkIyM=" ng-href="/includes/veranexo.aspx?idattach=JCQhLSYkIyM=" target="_blank" title="Ver Documento"><img src="/imagenes/iconos/ic_ver_generico.gif"/></a></td>
+</tr><!-- --><tr ng-init="item.nombreLink='Ver Documento'" ng-repeat="item in vpcp.list.documentosAdjuntos.values">
+<td>PROPUESTA DE 4 HOSPITALS INC.</td>
+<td>Propuestas</td>
+<td>17-09-2020 08:36 AM</td>
+<td><a href="/includes/veranexo.aspx?idattach=JCQhLSYnJSE=" ng-href="/includes/veranexo.aspx?idattach=JCQhLSYnJSE=" target="_blank" title="Ver Documento"><img src="/imagenes/iconos/ic_ver_generico.gif"/></a></td>
+</tr><!-- --><tr ng-init="item.nombreLink='Ver Documento'" ng-repeat="item in vpcp.list.documentosAdjuntos.values">
+<td>TERMINO DE REFERENCIA</td>
+<td>Terminos de referencia</td>
+<td>17-09-2020 08:39 AM</td>
+<td><a href="/includes/veranexo.aspx?idattach=JCQhLSYnISY=" ng-href="/includes/veranexo.aspx?idattach=JCQhLSYnISY=" target="_blank" title="Ver Documento"><img src="/imagenes/iconos/ic_ver_generico.gif"/></a></td>
+</tr><!-- --><tr ng-init="item.nombreLink='Ver Documento'" ng-repeat="item in vpcp.list.documentosAdjuntos.values">
+<td>MULTA N°96</td>
+<td>Anexos</td>
+<td>18-09-2020 01:03 PM</td>
+<td><a href="/includes/veranexo.aspx?idattach=JCQhLCIiLCQ=" ng-href="/includes/veranexo.aspx?idattach=JCQhLCIiLCQ=" target="_blank" title="Ver Documento"><img src="/imagenes/iconos/ic_ver_generico.gif"/></a></td>
+</tr><!-- --><tr ng-init="item.nombreLink='Ver Documento'" ng-repeat="item in vpcp.list.documentosAdjuntos.values">
+<td>Resolucion de Prorroga</td>
+<td>Resoluciones</td>
+<td>16-10-2020 01:55 PM</td>
+<td><a href="/includes/veranexo.aspx?idattach=JCQjLSwjICc=" ng-href="/includes/veranexo.aspx?idattach=JCQjLSwjICc=" target="_blank" title="Ver Documento"><img src="/imagenes/iconos/ic_ver_generico.gif"/></a></td>
+</tr><!-- --><tr ng-init="item.nombreLink='Ver Documento'" ng-repeat="item in vpcp.list.documentosAdjuntos.values">
+<td>Prorroga</td>
+<td>Anexos</td>
+<td>16-10-2020 02:00 PM</td>
+<td><a href="/includes/veranexo.aspx?idattach=JCQjLSwiISE=" ng-href="/includes/veranexo.aspx?idattach=JCQjLSwiISE=" target="_blank" title="Ver Documento"><img src="/imagenes/iconos/ic_ver_generico.gif"/></a></td>
+</tr><!-- --><tr ng-init="item.nombreLink='Ver Documento'" ng-repeat="item in vpcp.list.documentosAdjuntos.values">
+<td>multa </td>
+<td>Otros</td>
+<td>16-10-2020 02:45 PM</td>
+<td><a href="/includes/veranexo.aspx?idattach=JCQjLCUnLCU=" ng-href="/includes/veranexo.aspx?idattach=JCQjLCUnLCU=" target="_blank" title="Ver Documento"><img src="/imagenes/iconos/ic_ver_generico.gif"/></a></td>
+</tr><!-- --><tr ng-init="item.nombreLink='Ver Documento'" ng-repeat="item in vpcp.list.documentosAdjuntos.values">
+<td>comprobante de orden </td>
+<td>Anexos</td>
+<td>21-10-2020 01:47 PM</td>
+<td><a href="/includes/veranexo.aspx?idattach=JCQiJyUhIyc=" ng-href="/includes/veranexo.aspx?idattach=JCQiJyUhIyc=" target="_blank" title="Ver Documento"><img src="/imagenes/iconos/ic_ver_generico.gif"/></a></td>
+</tr><!-- -->
+</tbody></table>
+</div>
+</div><!-- -->
+<!--Documentos del Acto Público-->
+<!-- --><div class="panel panel-default export-pdf" ng-if="vpcp.list.documetosPliego">
+<div class="panel-heading" style="padding:5px 15px;"><b>Documentos del Acto Público</b></div>
+<div class="panel-body table-responsive" style="padding:15px;">
+<table class="table table-condensed table-bordered table-striped last-line-table" style="margin:0;" width="100%">
+<thead>
+<tr>
+<th>Nombre Documento</th>
+<th>Fecha Creación</th>
+<th>Acciones</th>
+</tr>
+</thead>
+<tbody><!-- --><tr ng-if="vpcp.list.documetosPliego.values.length==0">
+<td colspan="4"><center>No hay documentos del acto público</center></td>
+</tr><!-- -->
+<!-- -->
+</tbody></table>
+</div>
+</div><!-- -->
+<!--Publicaciones Anteriores-->
+<!-- -->
+<!--Convocatorias Anteriores-->
+<!-- -->
+<!--opciones-->
+<!-- --><div class="panel panel-default export-pdf" ng-if="vpcp.list.opciones">
+<div class="panel-heading" style="padding:5px 15px;"><b>Opciones</b></div>
+<div class="panel-body table-responsive" style="padding:15px;">
+<!-- --><a class="btn btn-default" id="vap" ng-click="vpcp.clickpdf(0)" ng-if="!vpcp.isIE9" title="Ver Acto Público en Formato PDF para imprimir">
+<img src="/Inicio/images/ic_descargar_pdf.gif"/>
+</a><!-- -->
+<!-- --><a class="btn btn-default" ng-click="vpcp.clickpdf(1)" ng-if="!vpcp.isIE" style="margin-left:5px;" title="Imprimir Acto Publico">
+<img src="/Inicio/images/ic_imprimir.gif"/>
+</a><!-- -->
+<!-- -->
+<!-- -->
+</div>
+</div><!-- -->
+<!-- --><button class="btn btn-default btn-sm" ng-click="vpcp.backbutton()" ng-if="!vpcp.param.hiddenBB">« Volver</button><!-- -->
+</div>
+</div>

@@ -1,0 +1,680 @@
+<div class="col-sm-12 col-md-12" id="elementToPDF" ng-if="vpcp.list!=undefined &amp;&amp; vpcp.list!=false" style="font-size: 12px; background-color: rgb(255, 255, 255);">
+<!--Encabezado del pliego-->
+<!-- --><div class="well export-pdf table-responsive" ng-if="vpcp.list.header" style="margin-top:10px;">
+<table class="table table-condensed table-bordered last-line-table" style="margin:0;" width="100%">
+<tbody><!-- --><tr ng-repeat="item in vpcp.list.header.values">
+<td width="250"><b>Número:</b></td>
+<td>2020-2-66-0-04-EM-016854</td>
+</tr><!-- --><tr ng-repeat="item in vpcp.list.header.values">
+<td width="250"><b>Nombre del Acto:</b></td>
+<td>UNION COMPRESION DE PVC, COLLARINES PVC, ACOPLADOR PVC</td>
+</tr><!-- --><tr ng-repeat="item in vpcp.list.header.values">
+<td width="250"><b>Objeto de la Contratación:</b></td>
+<td>Bien</td>
+</tr><!-- -->
+</tbody></table>
+</div><!-- -->
+<!-- --><div ng-include="'configVP.html'">
+<!--Información de la Entidad-->
+<!-- --><div class="panel panel-default export-pdf" ng-if="vpcp.list.entityInformation">
+<div class="panel-heading" style="padding:5px 15px;"><b>Información de la Entidad</b></div>
+<div class="panel-body table-responsive" style="padding:15px;">
+<table class="table table-condensed table-bordered last-line-table" style="margin:0;" width="100%">
+<tbody><!-- --><tr ng-repeat="item in vpcp.list.entityInformation.values">
+<td width="250"><b>Entidad:</b></td>
+<td>INSTITUTO DE ACUEDUCTOS Y ALCANTARILLADOS NACIONALES</td>
+</tr><!-- --><tr ng-repeat="item in vpcp.list.entityInformation.values">
+<td width="250"><b>Dependencia:</b></td>
+<td>SEDE</td>
+</tr><!-- --><tr ng-repeat="item in vpcp.list.entityInformation.values">
+<td width="250"><b>Unidad De Compra:</b></td>
+<td>DEPARTAMENTO DE COMPRA</td>
+</tr><!-- --><tr ng-repeat="item in vpcp.list.entityInformation.values">
+<td width="250"><b>Dirección:</b></td>
+<td>Panamá, IDAAN VIA BRASIL, SÓTANO DPTO. DE COMPRAS</td>
+</tr><!-- -->
+</tbody></table>
+</div>
+</div><!-- -->
+<!--Contacto de la Unidad de Compra-->
+<!-- --><div class="panel panel-default export-pdf" ng-if="vpcp.list.contactUser">
+<div class="panel-heading" style="padding:5px 15px;"><b>Contacto de la Unidad de Compra</b></div>
+<div class="panel-body table-responsive" style="padding:15px;">
+<table class="table table-condensed table-bordered last-line-table" style="margin:0;" width="100%">
+<tbody><!-- --><tr ng-repeat="item in vpcp.list.contactUser.values">
+<td width="250"><b>nombre</b></td>
+<td>Edgar Espinosa </td>
+</tr><!-- --><tr ng-repeat="item in vpcp.list.contactUser.values">
+<td width="250"><b>cargo</b></td>
+<td>Cotizador</td>
+</tr><!-- -->
+</tbody></table>
+</div>
+</div><!-- -->
+<!--Aviso de Convocatoria-->
+<!-- --><div class="panel panel-default export-pdf" ng-if="vpcp.list.aviso">
+<div class="panel-heading" style="padding:5px 15px;"><b>Aviso de Convocatoria</b></div>
+<div class="panel-body table-responsive" style="padding:15px;">
+<table class="table table-condensed table-bordered last-line-table" style="margin:0;" width="100%">
+<tbody><!-- --><tr ng-init="isjson = vpcp.isJson(item)" ng-repeat="item in vpcp.list.aviso.values">
+<td width="250"><b>Número de Acto:</b></td>
+<!-- --><td ng-if="!isjson">2020-2-66-0-04-EM-016854</td><!-- -->
+<!-- -->
+</tr><!-- --><tr ng-init="isjson = vpcp.isJson(item)" ng-repeat="item in vpcp.list.aviso.values">
+<td width="250"><b>Tipo de Procedimiento:</b></td>
+<!-- --><td ng-if="!isjson">Compras Mesa COVID-19</td><!-- -->
+<!-- -->
+</tr><!-- --><tr ng-init="isjson = vpcp.isJson(item)" ng-repeat="item in vpcp.list.aviso.values">
+<td width="250"><b>Fundamento de la Excepción</b></td>
+<!-- --><td ng-if="!isjson">D) Resolución No. 18 del 31 de Marzo de 2020</td><!-- -->
+<!-- -->
+</tr><!-- --><tr ng-init="isjson = vpcp.isJson(item)" ng-repeat="item in vpcp.list.aviso.values">
+<td width="250"><b>Objeto Contractual:</b></td>
+<!-- --><td ng-if="!isjson">Bien</td><!-- -->
+<!-- -->
+</tr><!-- --><tr ng-init="isjson = vpcp.isJson(item)" ng-repeat="item in vpcp.list.aviso.values">
+<td width="250"><b>Descripción:</b></td>
+<!-- --><td ng-if="!isjson">UNION COMPRESION DE PVC, COLLARINES PVC, ACOPLADOR PVC</td><!-- -->
+<!-- -->
+</tr><!-- --><tr ng-init="isjson = vpcp.isJson(item)" ng-repeat="item in vpcp.list.aviso.values">
+<td width="250"><b>Fecha de Publicación:</b></td>
+<!-- --><td ng-if="!isjson">11-09-2020 11:37 AM</td><!-- -->
+<!-- -->
+</tr><!-- --><tr ng-init="isjson = vpcp.isJson(item)" ng-repeat="item in vpcp.list.aviso.values">
+<td width="250"><b>Monto de la Contratación:</b></td>
+<!-- --><td ng-if="!isjson">B/.  39,489.57</td><!-- -->
+<!-- -->
+</tr><!-- --><tr ng-init="isjson = vpcp.isJson(item)" ng-repeat="item in vpcp.list.aviso.values">
+<td width="250"><b>Partidas presupuestales:</b></td>
+<!-- -->
+<!-- --><td ng-if="isjson">
+<table border="1" id="table_inter_np" type="table_inter">
+<tbody><tr style="background-color:#f5f5f5;">
+<th style="padding:2px 5px;">N°</th>
+<th style="padding:2px 5px;">Número Partida</th>
+</tr>
+<!-- --><tr ng-repeat="item1 in item.value">
+<td style="padding:2px 5px;">1</td>
+<td style="padding:2px 5px;">266.1.4.501.02.05 911</td>
+</tr><!-- -->
+</tbody></table>
+</td><!-- -->
+</tr><!-- --><tr ng-init="isjson = vpcp.isJson(item)" ng-repeat="item in vpcp.list.aviso.values">
+<td width="250"><b>Programa:</b></td>
+<!-- --><td ng-if="!isjson">---</td><!-- -->
+<!-- -->
+</tr><!-- --><tr ng-init="isjson = vpcp.isJson(item)" ng-repeat="item in vpcp.list.aviso.values">
+<td width="250"><b>Datos de Contacto</b></td>
+<!-- --><td ng-if="!isjson"></td><!-- -->
+<!-- -->
+</tr><!-- --><tr ng-init="isjson = vpcp.isJson(item)" ng-repeat="item in vpcp.list.aviso.values">
+<td width="250"><b>Nombre:</b></td>
+<!-- --><td ng-if="!isjson">Edgar Espinosa </td><!-- -->
+<!-- -->
+</tr><!-- --><tr ng-init="isjson = vpcp.isJson(item)" ng-repeat="item in vpcp.list.aviso.values">
+<td width="250"><b>Cargo:</b></td>
+<!-- --><td ng-if="!isjson">Cotizador</td><!-- -->
+<!-- -->
+</tr><!-- --><tr ng-init="isjson = vpcp.isJson(item)" ng-repeat="item in vpcp.list.aviso.values">
+<td width="250"><b>Teléfono:</b></td>
+<!-- --><td ng-if="!isjson">507-5238561</td><!-- -->
+<!-- -->
+</tr><!-- --><tr ng-init="isjson = vpcp.isJson(item)" ng-repeat="item in vpcp.list.aviso.values">
+<td width="250"><b>Correo Electrónico:</b></td>
+<!-- --><td ng-if="!isjson">eespinosa@idaan.gob.pa</td><!-- -->
+<!-- -->
+</tr><!-- -->
+</tbody></table>
+</div>
+</div><!-- -->
+<!--Condiciones Generales-->
+<!-- -->
+<!--Condiciones Especiales-->
+<!-- -->
+<!--Especificaciones Técnicas-->
+<!-- --><div class="panel panel-default export-pdf" ng-if="vpcp.list.especificacionesTecnicas">
+<div class="panel-heading" style="padding:5px 15px;"><b>Especificaciones Técnicas</b></div>
+<div class="panel-body table-responsive" style="padding:15px;">
+<!-- --><span ng-repeat-start="item in vpcp.list.especificacionesTecnicas.values" style="font-size:13px;font-weight:bold;">Proponente Seleccionado</span>
+<div class="table-responsive" ng-repeat-end="">
+<!-- --><table class="table table-condensed table-bordered last-line-table" ng-if="item.type=='ps'" style="margin:0;margin-bottom:10px;" width="100%">
+<tbody><!-- --><tr ng-repeat="item1 in item.values">
+<td width="250"><b>Nombre:</b></td>
+<td>BCN DISTRIBUCION</td>
+</tr><!-- --><tr ng-repeat="item1 in item.values">
+<td width="250"><b>Número de Identificación:</b></td>
+<td>1698408-1-685988-25</td>
+</tr><!-- --><tr ng-repeat="item1 in item.values">
+<td width="250"><b>Dirección:</b></td>
+<td>PH Albrook Office Center (Frente ANAM)  Piso 5 Ofi</td>
+</tr><!-- --><tr ng-repeat="item1 in item.values">
+<td width="250"><b>Provincia:</b></td>
+<td>PANAMÁ</td>
+</tr><!-- --><tr ng-repeat="item1 in item.values">
+<td width="250"><b>Distrito:</b></td>
+<td>Panamá</td>
+</tr><!-- --><tr ng-repeat="item1 in item.values">
+<td width="250"><b>Correo Electrónico:</b></td>
+<td>j.martin@bcndistribucion.com</td>
+</tr><!-- --><tr ng-repeat="item1 in item.values">
+<td width="250"><b>Teléfono:</b></td>
+<td>507-2151005</td>
+</tr><!-- -->
+</tbody></table><!-- -->
+<!-- -->
+</div><!-- --><span ng-repeat-start="item in vpcp.list.especificacionesTecnicas.values" style="font-size:13px;font-weight:bold;">Bien/Servicio/Obra Seleccionados</span>
+<div class="table-responsive" ng-repeat-end="">
+<!-- -->
+<!-- --><table class="table table-condensed table-bordered table-striped last-line-table" ng-if="item.type=='bs'" style="margin:0;" width="100%">
+<thead>
+<tr>
+<th>R</th>
+<th>Código</th>
+<th>Clasificación</th>
+<th>Cantidad</th>
+<th>U. Medida</th>
+<th>Descripción</th>
+<!-- -->
+<!-- -->
+<th>SES</th>
+<!-- -->
+</tr>
+</thead>
+<tbody><!-- -->
+<!-- --><tr ng-repeat="item1 in item.values">
+<td>1</td>
+<td>40142320</td>
+<td>Uniones de tubería</td>
+<td>60</td>
+<td>Unidad</td>
+<td>	UNION COMPRESION DE 1/2'' PVC C/G Y ROS.</td>
+<!-- -->
+<!-- -->
+<td>---</td>
+<!-- -->
+</tr><!-- --><tr ng-repeat="item1 in item.values">
+<td>2</td>
+<td>40142320</td>
+<td>Uniones de tubería</td>
+<td>60</td>
+<td>Unidad</td>
+<td>	UNION COMPRESION DE 3/4'' PVC C/G Y ROS.</td>
+<!-- -->
+<!-- -->
+<td>---</td>
+<!-- -->
+</tr><!-- --><tr ng-repeat="item1 in item.values">
+<td>3</td>
+<td>40142320</td>
+<td>Uniones de tubería</td>
+<td>60</td>
+<td>Unidad</td>
+<td>UNION DE COMPRESION 1'' PVC C/G Y ROSCA</td>
+<!-- -->
+<!-- -->
+<td>---</td>
+<!-- -->
+</tr><!-- --><tr ng-repeat="item1 in item.values">
+<td>4</td>
+<td>40142320</td>
+<td>Uniones de tubería</td>
+<td>60</td>
+<td>Unidad</td>
+<td>UNION 1-1/2''PVC C/G.Y TUERCA ENROSCABLE</td>
+<!-- -->
+<!-- -->
+<td>---</td>
+<!-- -->
+</tr><!-- --><tr ng-repeat="item1 in item.values">
+<td>5</td>
+<td>40142320</td>
+<td>Uniones de tubería</td>
+<td>70</td>
+<td>Unidad</td>
+<td>ACOPLADOR 2'' PVC C/ROSCA Y GLANDULA</td>
+<!-- -->
+<!-- -->
+<td>---</td>
+<!-- -->
+</tr><!-- --><tr ng-repeat="item1 in item.values">
+<td>6</td>
+<td>40142320</td>
+<td>Uniones de tubería</td>
+<td>60</td>
+<td>Unidad</td>
+<td>COLLARINES 4''X 1/2'' PVC</td>
+<!-- -->
+<!-- -->
+<td>---</td>
+<!-- -->
+</tr><!-- --><tr ng-repeat="item1 in item.values">
+<td>7</td>
+<td>40142320</td>
+<td>Uniones de tubería</td>
+<td>60</td>
+<td>Unidad</td>
+<td>COLLARINES 4''X 3/4'' P.V.C. C/R.</td>
+<!-- -->
+<!-- -->
+<td>---</td>
+<!-- -->
+</tr><!-- --><tr ng-repeat="item1 in item.values">
+<td>8</td>
+<td>40142320</td>
+<td>Uniones de tubería</td>
+<td>70</td>
+<td>Unidad</td>
+<td>COLLARINES 3''X 1/2'' PVC</td>
+<!-- -->
+<!-- -->
+<td>---</td>
+<!-- -->
+</tr><!-- --><tr ng-repeat="item1 in item.values">
+<td>9</td>
+<td>40142320</td>
+<td>Uniones de tubería</td>
+<td>75</td>
+<td>Unidad</td>
+<td>	COLLARINES 3''X 3/4'' PVC C/ROSCA</td>
+<!-- -->
+<!-- -->
+<td>---</td>
+<!-- -->
+</tr><!-- --><tr ng-repeat="item1 in item.values">
+<td>10</td>
+<td>40142320</td>
+<td>Uniones de tubería</td>
+<td>100</td>
+<td>Unidad</td>
+<td>ACOPLADOR DE 3'' PVC C/G.</td>
+<!-- -->
+<!-- -->
+<td>---</td>
+<!-- -->
+</tr><!-- --><tr ng-repeat="item1 in item.values">
+<td>11</td>
+<td>40142320</td>
+<td>Uniones de tubería</td>
+<td>100</td>
+<td>Unidad</td>
+<td>ACOPLADOR DE 4'' PVC C/G</td>
+<!-- -->
+<!-- -->
+<td>---</td>
+<!-- -->
+</tr><!-- --><tr ng-repeat="item1 in item.values">
+<td>12</td>
+<td>27112103</td>
+<td>Abrazaderas</td>
+<td>60</td>
+<td>Unidad</td>
+<td>ABRAZADERA A.I. 3'' X 7-1/2'' R. 3.73-4.</td>
+<!-- -->
+<!-- -->
+<td>---</td>
+<!-- -->
+</tr><!-- --><tr ng-repeat="item1 in item.values">
+<td>13</td>
+<td>27112103</td>
+<td>Abrazaderas</td>
+<td>70</td>
+<td>Unidad</td>
+<td>ABRAZADERA A.I.4''X7.5'' R.4.74-5.14 P/A</td>
+<!-- -->
+<!-- -->
+<td>---</td>
+<!-- -->
+</tr><!-- --><tr ng-repeat="item1 in item.values">
+<td>14</td>
+<td>27112103</td>
+<td>Abrazaderas</td>
+<td>30</td>
+<td>Unidad</td>
+<td>	ABRAZADERA A.I. 3'' X 12'' R.3.73-4.13</td>
+<!-- -->
+<!-- -->
+<td>---</td>
+<!-- -->
+</tr><!-- --><tr ng-repeat="item1 in item.values">
+<td>15</td>
+<td>27112103</td>
+<td>Abrazaderas</td>
+<td>30</td>
+<td>Unidad</td>
+<td>ABRAZADERA A.I. 4'' X 12'' R. 4.74-5.57</td>
+<!-- -->
+<!-- -->
+<td>---</td>
+<!-- -->
+</tr><!-- --><tr ng-repeat="item1 in item.values">
+<td>16</td>
+<td>31201603</td>
+<td>Gomas</td>
+<td>150</td>
+<td>Unidad</td>
+<td>PEGAMENTO PVC (PINTA) (CEMENTO SOLVENTE)</td>
+<!-- -->
+<!-- -->
+<td>---</td>
+<!-- -->
+</tr><!-- --><tr ng-repeat="item1 in item.values">
+<td>17</td>
+<td>31231313</td>
+<td>Tubería de plástico</td>
+<td>4,000</td>
+<td>Pie</td>
+<td>TUBERIA PVC 3''X20'CON GLANDULA SDR 26.</td>
+<!-- -->
+<!-- -->
+<td>---</td>
+<!-- -->
+</tr><!-- --><tr ng-repeat="item1 in item.values">
+<td>18</td>
+<td>31231313</td>
+<td>Tubería de plástico</td>
+<td>4,000</td>
+<td>Pie</td>
+<td>TUBERIA PVC DE 4'' X 20´ SDR .26 C/G</td>
+<!-- -->
+<!-- -->
+<td>---</td>
+<!-- -->
+</tr><!-- --><tr ng-repeat="item1 in item.values">
+<td>19</td>
+<td>40141613</td>
+<td>Válvulas de compuerta</td>
+<td>8</td>
+<td>Unidad</td>
+<td>VALVULA DE COMPUERTA HF. DE 3'' J.M.</td>
+<!-- -->
+<!-- -->
+<td>---</td>
+<!-- -->
+</tr><!-- --><tr ng-repeat="item1 in item.values">
+<td>20</td>
+<td>40141613</td>
+<td>Válvulas de compuerta</td>
+<td>10</td>
+<td>Unidad</td>
+<td>VALVULA DE COMPUERTA DE 4'' HF. JM</td>
+<!-- -->
+<!-- -->
+<td>---</td>
+<!-- -->
+</tr><!-- --><tr ng-repeat="item1 in item.values">
+<td>21</td>
+<td>31231311</td>
+<td>Tubería de hierro</td>
+<td>20</td>
+<td>Pie</td>
+<td>TUBERIA H.G.2''X20' CAL. 40 ROSCA Y ACOP</td>
+<!-- -->
+<!-- -->
+<td>---</td>
+<!-- -->
+</tr><!-- --><tr ng-repeat="item1 in item.values">
+<td>22</td>
+<td>46191610</td>
+<td>Cabezales de hidrantes</td>
+<td>2</td>
+<td>Unidad</td>
+<td>HIDRANTES TIPO TRAF. PATA DE 4'' CON JM</td>
+<!-- -->
+<!-- -->
+<td>---</td>
+<!-- -->
+</tr><!-- --><tr ng-repeat="item1 in item.values">
+<td>23</td>
+<td>40142320</td>
+<td>Uniones de tubería</td>
+<td>15</td>
+<td>Unidad</td>
+<td>CODOS PVC 90º X 3'' LISO</td>
+<!-- -->
+<!-- -->
+<td>---</td>
+<!-- -->
+</tr><!-- --><tr ng-repeat="item1 in item.values">
+<td>24</td>
+<td>40142320</td>
+<td>Uniones de tubería</td>
+<td>10</td>
+<td>Unidad</td>
+<td>CODOS P.V.C. 90º X 4'' LISO</td>
+<!-- -->
+<!-- -->
+<td>---</td>
+<!-- -->
+</tr><!-- --><tr ng-repeat="item1 in item.values">
+<td>25</td>
+<td>40142320</td>
+<td>Uniones de tubería</td>
+<td>10</td>
+<td>Unidad</td>
+<td>CODOS P.V.C. 90 X 6'' LISO</td>
+<!-- -->
+<!-- -->
+<td>---</td>
+<!-- -->
+</tr><!-- --><tr ng-repeat="item1 in item.values">
+<td>26</td>
+<td>40142320</td>
+<td>Uniones de tubería</td>
+<td>10</td>
+<td>Unidad</td>
+<td>CODOS P.V.C. 45 X 3'' LISO</td>
+<!-- -->
+<!-- -->
+<td>---</td>
+<!-- -->
+</tr><!-- --><tr ng-repeat="item1 in item.values">
+<td>27</td>
+<td>40142320</td>
+<td>Uniones de tubería</td>
+<td>15</td>
+<td>Unidad</td>
+<td>	CODOS P.V.C. 45 X 4'' LISO</td>
+<!-- -->
+<!-- -->
+<td>---</td>
+<!-- -->
+</tr><!-- --><tr ng-repeat="item1 in item.values">
+<td>28</td>
+<td>40142320</td>
+<td>Uniones de tubería</td>
+<td>10</td>
+<td>Unidad</td>
+<td>CODOS 6 X 45 PVC LISO</td>
+<!-- -->
+<!-- -->
+<td>---</td>
+<!-- -->
+</tr><!-- --><tr ng-repeat="item1 in item.values">
+<td>29</td>
+<td>40142320</td>
+<td>Uniones de tubería</td>
+<td>10</td>
+<td>Unidad</td>
+<td>	CODOS P.V.C. 90º X 3'' C/G</td>
+<!-- -->
+<!-- -->
+<td>---</td>
+<!-- -->
+</tr><!-- --><tr ng-repeat="item1 in item.values">
+<td>30</td>
+<td>40142320</td>
+<td>Uniones de tubería</td>
+<td>10</td>
+<td>Unidad</td>
+<td>CODOS P.V.C. 90º X 4'' C/G</td>
+<!-- -->
+<!-- -->
+<td>---</td>
+<!-- -->
+</tr><!-- --><tr ng-repeat="item1 in item.values">
+<td>31</td>
+<td>40142320</td>
+<td>Uniones de tubería</td>
+<td>10</td>
+<td>Unidad</td>
+<td>	CODO PVC DE 90 X 6'' C/G. SDR 21</td>
+<!-- -->
+<!-- -->
+<td>---</td>
+<!-- -->
+</tr><!-- --><tr ng-repeat="item1 in item.values">
+<td>32</td>
+<td>40142320</td>
+<td>Uniones de tubería</td>
+<td>10</td>
+<td>Unidad</td>
+<td>	CODO PVC DE 45 X 3'' C/G. SDR 21</td>
+<!-- -->
+<!-- -->
+<td>---</td>
+<!-- -->
+</tr><!-- --><tr ng-repeat="item1 in item.values">
+<td>33</td>
+<td>40142320</td>
+<td>Uniones de tubería</td>
+<td>10</td>
+<td>Unidad</td>
+<td>	CODOS P.V.C. 45 X 4'' C/G.</td>
+<!-- -->
+<!-- -->
+<td>---</td>
+<!-- -->
+</tr><!-- --><tr ng-repeat="item1 in item.values">
+<td>34</td>
+<td>40142320</td>
+<td>Uniones de tubería</td>
+<td>10</td>
+<td>Unidad</td>
+<td>CODOS 6 X 45 PVC LISO Garantía: Tres (3) meses por desperfecto de fabricación</td>
+<!-- -->
+<!-- -->
+<td>---</td>
+<!-- -->
+</tr><!-- -->
+</tbody></table><!-- -->
+</div><!-- -->
+</div>
+</div><!-- -->
+<!--Documentos Adjuntos-->
+<!-- --><div class="panel panel-default export-pdf" ng-if="vpcp.list.documentosAdjuntos">
+<div class="panel-heading" style="padding:5px 15px;"><b>Documentos Adjuntos</b></div>
+<div class="panel-body table-responsive" style="padding:15px;">
+<table class="table table-condensed table-bordered table-striped last-line-table" style="margin:0;" width="100%">
+<thead>
+<tr>
+<th>Descripción</th>
+<th>Tipo</th>
+<th>Fecha</th>
+<th>Acciones</th>
+</tr>
+</thead>
+<tbody><!-- -->
+<!-- --><tr ng-init="item.nombreLink='Ver Documento'" ng-repeat="item in vpcp.list.documentosAdjuntos.values">
+<td>UNION COMPRESION DE PVC, COLLARINES PVC, ACOPLADOR PVC</td>
+<td>Resolución Fundamento Legal Mesa Covid-19</td>
+<td>11-09-2020 10:54 AM</td>
+<td><a href="/includes/veranexo.aspx?idattach=JCQhICcmIiA=" ng-href="/includes/veranexo.aspx?idattach=JCQhICcmIiA=" target="_blank" title="Ver Documento"><img src="/imagenes/iconos/ic_ver_generico.gif"/></a></td>
+</tr><!-- --><tr ng-init="item.nombreLink='Ver Documento'" ng-repeat="item in vpcp.list.documentosAdjuntos.values">
+<td>UNION COMPRESION DE PVC, COLLARINES PVC, ACOPLADOR PVC</td>
+<td>Terminos de referencia</td>
+<td>11-09-2020 10:54 AM</td>
+<td><a href="/includes/veranexo.aspx?idattach=JCQhICcmLCw=" ng-href="/includes/veranexo.aspx?idattach=JCQhICcmLCw=" target="_blank" title="Ver Documento"><img src="/imagenes/iconos/ic_ver_generico.gif"/></a></td>
+</tr><!-- --><tr ng-init="item.nombreLink='Ver Documento'" ng-repeat="item in vpcp.list.documentosAdjuntos.values">
+<td>UNION COMPRESION DE PVC, COLLARINES PVC, ACOPLADOR PVC</td>
+<td>Propuestas</td>
+<td>11-09-2020 10:55 AM</td>
+<td><a href="/includes/veranexo.aspx?idattach=JCQhICchISQ=" ng-href="/includes/veranexo.aspx?idattach=JCQhICchISQ=" target="_blank" title="Ver Documento"><img src="/imagenes/iconos/ic_ver_generico.gif"/></a></td>
+</tr><!-- --><tr ng-init="item.nombreLink='Ver Documento'" ng-repeat="item in vpcp.list.documentosAdjuntos.values">
+<td>CERTIFICADO DE REGISTRO PUBLICO</td>
+<td>Otros</td>
+<td>11-09-2020 10:57 AM</td>
+<td><a href="/includes/veranexo.aspx?idattach=JCQhICchLCc=" ng-href="/includes/veranexo.aspx?idattach=JCQhICchLCc=" target="_blank" title="Ver Documento"><img src="/imagenes/iconos/ic_ver_generico.gif"/></a></td>
+</tr><!-- --><tr ng-init="item.nombreLink='Ver Documento'" ng-repeat="item in vpcp.list.documentosAdjuntos.values">
+<td>AVISO DE OPERACIÓN</td>
+<td>Otros</td>
+<td>11-09-2020 10:58 AM</td>
+<td><a href="/includes/veranexo.aspx?idattach=JCQhICcgJyc=" ng-href="/includes/veranexo.aspx?idattach=JCQhICcgJyc=" target="_blank" title="Ver Documento"><img src="/imagenes/iconos/ic_ver_generico.gif"/></a></td>
+</tr><!-- --><tr ng-init="item.nombreLink='Ver Documento'" ng-repeat="item in vpcp.list.documentosAdjuntos.values">
+<td>PAZ Y SALVO CSS</td>
+<td>Otros</td>
+<td>11-09-2020 10:58 AM</td>
+<td><a href="/includes/veranexo.aspx?idattach=JCQhICcgJiY=" ng-href="/includes/veranexo.aspx?idattach=JCQhICcgJiY=" target="_blank" title="Ver Documento"><img src="/imagenes/iconos/ic_ver_generico.gif"/></a></td>
+</tr><!-- --><tr ng-init="item.nombreLink='Ver Documento'" ng-repeat="item in vpcp.list.documentosAdjuntos.values">
+<td>PAZ U SALVO DGI</td>
+<td>Otros</td>
+<td>11-09-2020 10:59 AM</td>
+<td><a href="/includes/veranexo.aspx?idattach=JCQhICcgISA=" ng-href="/includes/veranexo.aspx?idattach=JCQhICcgISA=" target="_blank" title="Ver Documento"><img src="/imagenes/iconos/ic_ver_generico.gif"/></a></td>
+</tr><!-- --><tr ng-init="item.nombreLink='Ver Documento'" ng-repeat="item in vpcp.list.documentosAdjuntos.values">
+<td>CERTIFICADO REGISTRO DE PROPONENTE</td>
+<td>Otros</td>
+<td>11-09-2020 10:59 AM</td>
+<td><a href="/includes/veranexo.aspx?idattach=JCQhICcgICI=" ng-href="/includes/veranexo.aspx?idattach=JCQhICcgICI=" target="_blank" title="Ver Documento"><img src="/imagenes/iconos/ic_ver_generico.gif"/></a></td>
+</tr><!-- --><tr ng-init="item.nombreLink='Ver Documento'" ng-repeat="item in vpcp.list.documentosAdjuntos.values">
+<td>CUADRO DE COTIZACIONES  	</td>
+<td>Otros</td>
+<td>11-09-2020 11:00 AM</td>
+<td><a href="/includes/veranexo.aspx?idattach=JCQhICcgIiM=" ng-href="/includes/veranexo.aspx?idattach=JCQhICcgIiM=" target="_blank" title="Ver Documento"><img src="/imagenes/iconos/ic_ver_generico.gif"/></a></td>
+</tr><!-- --><tr ng-init="item.nombreLink='Ver Documento'" ng-repeat="item in vpcp.list.documentosAdjuntos.values">
+<td>cédula de representante</td>
+<td>Otros</td>
+<td>11-09-2020 11:03 AM</td>
+<td><a href="/includes/veranexo.aspx?idattach=JCQhICcjISA=" ng-href="/includes/veranexo.aspx?idattach=JCQhICcjISA=" target="_blank" title="Ver Documento"><img src="/imagenes/iconos/ic_ver_generico.gif"/></a></td>
+</tr><!-- --><tr ng-init="item.nombreLink='Ver Documento'" ng-repeat="item in vpcp.list.documentosAdjuntos.values">
+<td>INFORME TÉCNICO</td>
+<td>Otros</td>
+<td>11-09-2020 11:06 AM</td>
+<td><a href="/includes/veranexo.aspx?idattach=JCQhICciJSw=" ng-href="/includes/veranexo.aspx?idattach=JCQhICciJSw=" target="_blank" title="Ver Documento"><img src="/imagenes/iconos/ic_ver_generico.gif"/></a></td>
+</tr><!-- --><tr ng-init="item.nombreLink='Ver Documento'" ng-repeat="item in vpcp.list.documentosAdjuntos.values">
+<td>REFRENDADA</td>
+<td>Orden de Compra</td>
+<td>29-10-2020 04:03 PM</td>
+<td><a href="/includes/veranexo.aspx?idattach=JCQiLSMjIyE=" ng-href="/includes/veranexo.aspx?idattach=JCQiLSMjIyE=" target="_blank" title="Ver Documento"><img src="/imagenes/iconos/ic_ver_generico.gif"/></a></td>
+</tr><!-- -->
+</tbody></table>
+</div>
+</div><!-- -->
+<!--Documentos del Acto Público-->
+<!-- --><div class="panel panel-default export-pdf" ng-if="vpcp.list.documetosPliego">
+<div class="panel-heading" style="padding:5px 15px;"><b>Documentos del Acto Público</b></div>
+<div class="panel-body table-responsive" style="padding:15px;">
+<table class="table table-condensed table-bordered table-striped last-line-table" style="margin:0;" width="100%">
+<thead>
+<tr>
+<th>Nombre Documento</th>
+<th>Fecha Creación</th>
+<th>Acciones</th>
+</tr>
+</thead>
+<tbody><!-- --><tr ng-if="vpcp.list.documetosPliego.values.length==0">
+<td colspan="4"><center>No hay documentos del acto público</center></td>
+</tr><!-- -->
+<!-- -->
+</tbody></table>
+</div>
+</div><!-- -->
+<!--Publicaciones Anteriores-->
+<!-- -->
+<!--Convocatorias Anteriores-->
+<!-- -->
+<!--opciones-->
+<!-- --><div class="panel panel-default export-pdf" ng-if="vpcp.list.opciones">
+<div class="panel-heading" style="padding:5px 15px;"><b>Opciones</b></div>
+<div class="panel-body table-responsive" style="padding:15px;">
+<!-- --><a class="btn btn-default" id="vap" ng-click="vpcp.clickpdf(0)" ng-if="!vpcp.isIE9" title="Ver Acto Público en Formato PDF para imprimir">
+<img src="/Inicio/images/ic_descargar_pdf.gif"/>
+</a><!-- -->
+<!-- --><a class="btn btn-default" ng-click="vpcp.clickpdf(1)" ng-if="!vpcp.isIE" style="margin-left:5px;" title="Imprimir Acto Publico">
+<img src="/Inicio/images/ic_imprimir.gif"/>
+</a><!-- -->
+<!-- -->
+<!-- -->
+</div>
+</div><!-- -->
+<!-- --><button class="btn btn-default btn-sm" ng-click="vpcp.backbutton()" ng-if="!vpcp.param.hiddenBB">« Volver</button><!-- -->
+</div>
+</div>
